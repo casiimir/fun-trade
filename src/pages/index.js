@@ -8,6 +8,7 @@ import { useState } from "react";
 //Image
 import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
+import logo from "@/assets/iconsProject/logo.svg";
 
 export default function Home() {
   const router = useRouter();
@@ -35,7 +36,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.main__title} >Funtrade</h1>
+        <div className={styles.main__header}>
+          <Image src={logo} alt="logo" width={70} height={70} />
+          <h1 className={styles.main__header__title} >Funtrade</h1>
+        </div>
         <div className={styles.main__login}>
           <h2 className={styles.main__login__title}>Accedi</h2>
           <form className={styles.main__login__form} onSubmit={onHandleSubmit}>
