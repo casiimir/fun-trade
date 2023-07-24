@@ -1,0 +1,22 @@
+.Navbar {
+  height: rem(80px);
+  @include flexboxCenter();
+  justify-content: space-between;
+  padding: 0 rem($paddingSmall);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.wrapper {
+  @include flexboxCenterColumn;
+  padding: rem($paddingExtraSmall);
+  border: 1px solid black;
+  border-radius: $roundedMedium;
+  cursor: pointer;
+
+  p {
+    font-size: rem($paragraphExtraSmall);
+  }
+}
