@@ -14,4 +14,42 @@ body {
   overflow-x: hidden;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
+  background-color: $background-main;
+  color: $btn-main;
+}
+
+h1 {
+  font-size: rem($heading1);
+  @extend %heading;
+}
+
+h2 {
+  font-size: rem($subHeading1);
+  @extend %heading;
+}
+
+h3 {
+  font-size: rem($heading2);
+  @extend %heading;
+}
+
+p {
+  @extend %paragraph;
+}
+
+a,
+input,
+button {
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+a {
+  &:hover {
+    color: colorShade(white, $btn-main, 40%);
+  }
+}
+
+input[type="submit"]:hover {
+  color: colorShade(white, $btn-main, 40%);
 }
