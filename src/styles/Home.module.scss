@@ -11,10 +11,13 @@
     justify-content: flex-start;
     gap: 30px;
     color: $btn-main;
-    width: 390px;
+    max-width: 430px;
     margin: 0 auto;
     background-color: $btn-secondary;
-    // background-image: url("../assets/graphics/graphicsLogin.svg");
+    background-image: url("../assets/iconsProject/loginI.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 
     &__header {
@@ -127,7 +130,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 35px;
+        gap: 15px;
 
         &__title {
           position: relative;
