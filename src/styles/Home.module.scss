@@ -14,5 +14,146 @@
     &__title {
       padding: 30px;
     }
+
+    &__login {
+      // border: 1px solid red;
+      border-radius: 15px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      width: 80%;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+
+      &__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+
+        &__email {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          &__input {
+            height: 30px;
+            border-radius: 8px;
+          }
+        }
+
+        &__password {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          &__input {
+            height: 30px;
+            border-radius: 8px;
+          }
+        }
+
+        &__submit {
+          padding: 10px 25px;
+          border-radius: 50px;
+          background-color: transparent;
+          border: none;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+        }
+      }
+
+      &__link {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        &__title {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
+          &__h3 {
+
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 55px;
+              border: 1px solid #8e8e8e;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              right: 0;
+              width: 55px;
+              border: 1px solid #8e8e8e;
+            }
+          }
+        }
+      }
+
+      &__sing_in {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+
+        &__title {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
+          &__h3 {
+
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 30px;
+              border: 1px solid #8e8e8e;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              right: 0;
+              width: 30px;
+              border: 1px solid #8e8e8e;
+            }
+          }
+        }
+
+        &__btn {
+          padding: 10px 25px;
+          border-radius: 50px;
+          border: none;
+          background-color: transparent;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+        }
+      }
+    }
+
+
   }
 }

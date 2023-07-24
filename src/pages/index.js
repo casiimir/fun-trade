@@ -1,13 +1,31 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import styles from "@/styles/Home.module.scss";
 import Link from "next/link";
+import { useState } from "react";
 
 //Image
 import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
 
 export default function Home() {
+  const router = useRouter();
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const onHandleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const onHandlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const onHandleSubmit = (e) => {
+    e.preventDefault();
+    router.push("/HomePage")
+  }
   return (
     <>
       <Head>
@@ -19,32 +37,33 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.main__title} >Funtrade</h1>
         <div className={styles.main__login}>
-          <form className={styles.main__form}>
-            <div className={styles.main__form__email}>
-              <label for="email" className={styles.main__form__email__label}>Email</label>
-              <input type="email" name="email" value="" placeholder="Inserisci la tua email" required className={styles.main__form__email__input} />
+          <h2 className={styles.main__login__title}>Accedi</h2>
+          <form className={styles.main__login__form} onSubmit={onHandleSubmit}>
+            <div className={styles.main__login__form__email}>
+              <label for="email" className={styles.main__login__form__email__label}>Email</label>
+              <input type="email" name="email" value={email} onChange={onHandleEmail} placeholder="Inserisci la tua email" required className={styles.main__login__form__email__input} />
             </div>
-            <div className={styles.main__form__password}>
-              <label for="password" className={styles.main__form__password__label}>Password</label>
-              <input type="password" name="password" value="" placeholder="**********" required className={styles.main__form__password__input} />
+            <div className={styles.main__login__form__password}>
+              <label for="password" className={styles.main__login__form__password__label}>Password</label>
+              <input type="password" name="password" value={password} onChange={onHandlePassword} placeholder="**********" required className={styles.main__login__form__password__input} />
             </div>
-            <input type="submit" name="submit" value="Accedi" />
+            <input type="submit" name="submit" value="Accedi" className={styles.main__login__form__submit} />
           </form>
-          <div className={styles.main__link}>
-            <div className={styles.main__link__title}>
-              <h3 className={styles.main__link__title__h3}>Oppure accedi con</h3>
+          <div className={styles.main__login__link}>
+            <div className={styles.main__login__link__title}>
+              <h3 className={styles.main__login__link__title__h3}>Oppure accedi con</h3>
             </div>
-            <div className={styles.main__link__icons}>
+            <div className={styles.main__login__link__icons}>
               <Image src={google} alt="logo google" width={50} height={50} />
               <Image src={facebook} alt="logo google" width={50} height={50} />
             </div>
           </div>
-          <div className={styles.main__sing_in}>
-            <div className={styles.main__sing_in__title}>
-              <h3 className={styles.main__sing_in__title__h3}>Non possiedi un account?</h3>
+          <div className={styles.main__login__sing_in}>
+            <div className={styles.main__login__sing_in__title}>
+              <h3 className={styles.main__login__sing_in__title__h3}>Non possiedi un account?</h3>
             </div>
-            <button>
-              <Link href="/iscriviti"> Iscriviti </Link>
+            <button className={styles.main__login__sing_in__btn}>
+              <Link href="/Iscriviti"> Iscriviti </Link>
             </button>
           </div>
         </div>
