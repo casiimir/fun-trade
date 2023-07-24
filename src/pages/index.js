@@ -1,12 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.scss";
-import NavbarBottom from "@/components/navbarBottom";
-import NavbarTop from "@/components/navbarTop";
-import { navbarItems } from "../mock/navbarItems";
 
 export default function Home() {
-  console.log(navbarItems);
-
   return (
     <>
       <Head>
@@ -16,9 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <NavbarTop items={navbarItems[0].items} />
         <h1>DREAM TEAM</h1>
-        <NavbarBottom items={navbarItems[1].items} />
       </main>
     </>
   );
