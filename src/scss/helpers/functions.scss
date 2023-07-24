@@ -1,0 +1,12 @@
+@use "sass:math";
+
+$basesize: 16px;
+
+// Conversione da px a rem
+@function rem($px) {
+  @return math.div($px, $basesize) * 1rem;
+}
+
+@function colorShade($background, $color, $percentage) {
+  @return mix($background, $color, $percentage);
+}
