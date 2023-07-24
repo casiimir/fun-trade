@@ -94,7 +94,7 @@ export default function Home() {
               </h3>
             </div>
             <button className={styles.main__login__sing_in__btn}>
-              <Link href="/Iscriviti"> Iscriviti </Link>
+              <Link href="/iscriviti"> Iscriviti </Link>
             </button>
           </div>
         </div>
