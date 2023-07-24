@@ -10,6 +10,9 @@
     align-items: center;
     justify-content: flex-start;
     gap: 30px;
+    color: $btn-main;
+    width: 409px;
+    margin: 0 auto;
 
     &__title {
       padding: 30px;
@@ -63,9 +66,10 @@
         &__submit {
           padding: 10px 25px;
           border-radius: 50px;
-          background-color: transparent;
+          background-color: $btn-secondary;
           border: none;
-          box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+          -webkit-box-shadow: 13px 9px 8px 0px rgba(158, 158, 158, 0.57);
+          box-shadow: 13px 9px 8px 0px rgba(158, 158, 158, 0.57);
         }
       }
 
@@ -91,7 +95,7 @@
               position: absolute;
               top: 50%;
               left: 0;
-              width: 55px;
+              width: 50px;
               border: 1px solid #8e8e8e;
             }
 
@@ -100,7 +104,7 @@
               position: absolute;
               top: 50%;
               right: 0;
-              width: 55px;
+              width: 50px;
               border: 1px solid #8e8e8e;
             }
           }
@@ -129,7 +133,7 @@
               position: absolute;
               top: 50%;
               left: 0;
-              width: 30px;
+              width: 20px;
               border: 1px solid #8e8e8e;
             }
 
@@ -138,7 +142,7 @@
               position: absolute;
               top: 50%;
               right: 0;
-              width: 30px;
+              width: 20px;
               border: 1px solid #8e8e8e;
             }
           }
@@ -148,8 +152,9 @@
           padding: 10px 25px;
           border-radius: 50px;
           border: none;
-          background-color: transparent;
-          box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+          background-color: $btn-secondary;
+          -webkit-box-shadow: 13px 9px 8px 0px rgba(158, 158, 158, 0.57);
+          box-shadow: 13px 9px 8px 0px rgba(158, 158, 158, 0.57);
         }
       }
     }
