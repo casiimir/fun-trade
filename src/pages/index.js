@@ -3,18 +3,26 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
 import styles from "@/styles/Home.module.scss";
+import { useEffect, useState } from "react";
 
 //Image
 import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
 import logo from "@/assets/iconsProject/logo.svg";
 
+
+
 export default function Home() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+
+    setUsers(JSON.parse(localStorage.getItem("users")))
+  }, [])
 
   const onHandleEmail = (e) => {
     setEmail(e.target.value);
@@ -26,8 +34,13 @@ export default function Home() {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    router.push("/HomePage");
+    if (users.email.toLowerCase() === email.toLowerCase() && users.password.toLowerCase() === password.toLowerCase()) {
+      router.push("/homepage");
+    } else {
+      alert("incorrect email or password")
+    }
   };
+
   return (
     <>
       <Head>
@@ -45,7 +58,7 @@ export default function Home() {
           <h2 className={styles.main__login__title}>Accedi</h2>
           <form className={styles.main__login__form} onSubmit={onHandleSubmit}>
             <div className={styles.main__login__form__email}>
-              <label for="email" className={styles.main__login__form__email__label}>
+              <label htmlFor="email" className={styles.main__login__form__email__label}>
                 Email
               </label>
               <input
@@ -59,7 +72,7 @@ export default function Home() {
               />
             </div>
             <div className={styles.main__login__form__password}>
-              <label for="password" className={styles.main__login__form__password__label}>
+              <label htmlFor="password" className={styles.main__login__form__password__label}>
                 Password
               </label>
               <input

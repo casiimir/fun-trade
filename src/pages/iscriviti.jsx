@@ -30,7 +30,17 @@ export default function iscriviti() {
 
 	const onHandleSubmit = (e) => {
 		e.preventDefault();
-		router.push("/HomePage");
+		localStorage.setItem(
+			"users",
+			JSON.stringify({
+				username: name,
+				email: email,
+				password: password,
+				balance: Math.floor(Math.random() * 1500),
+				avatar: `https://robohash.org/${name}`,
+			})
+		);
+		router.push("/");
 	};
 	return (
 		<>
@@ -60,7 +70,7 @@ export default function iscriviti() {
 					>
 						<div className={styles.iscriviti__wrap__form__name}>
 							<label
-								for="name"
+								htmlFor="name"
 								className={styles.iscriviti__wrap__form__name__label}
 							>
 								User Name
@@ -77,7 +87,7 @@ export default function iscriviti() {
 						</div>
 						<div className={styles.iscriviti__wrap__form__email}>
 							<label
-								for="email"
+								htmlFor="email"
 								className={styles.iscriviti__wrap__form__email__label}
 							>
 								Email
@@ -94,7 +104,7 @@ export default function iscriviti() {
 						</div>
 						<div className={styles.iscriviti__wrap__form__password}>
 							<label
-								for="password"
+								htmlFor="password"
 								className={styles.iscriviti__wrap__form__password__label}
 							>
 								Password
@@ -141,7 +151,7 @@ export default function iscriviti() {
 						<input
 							type="submit"
 							name="submit"
-							value="Accedi"
+							value="Registrati"
 							className={styles.iscriviti__wrap__form__submit}
 						/>
 					</form>
