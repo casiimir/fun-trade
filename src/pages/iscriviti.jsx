@@ -10,6 +10,9 @@ import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
 import logo from "@/assets/iconsProject/logo.svg";
 
+//Mocks
+import users from "@/mock/usersMock.js";
+
 export default function iscriviti() {
 	const router = useRouter();
 	const [name, setName] = useState("");
@@ -30,7 +33,12 @@ export default function iscriviti() {
 
 	const onHandleSubmit = (e) => {
 		e.preventDefault();
-		router.push("/HomePage");
+		users.push({
+			username: name,
+			email: email,
+			password: password,
+		});
+		router.push("/");
 	};
 	return (
 		<>
@@ -141,7 +149,7 @@ export default function iscriviti() {
 						<input
 							type="submit"
 							name="submit"
-							value="Accedi"
+							value="Registrati"
 							className={styles.iscriviti__wrap__form__submit}
 						/>
 					</form>
