@@ -1,26 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
-/* import Navbar from "../components/Navbar"; */
-import { useEffect, useState } from "react";
 import styles from "../styles/Profile.module.scss";
 import MyBalance from "@/components/myBalance";
 import UserAssets from "@/components/userAssets";
 
 const Profile = () => {
-  const [avatar, setAvatar] = useState(null);
-
-  useEffect(() => {
-    const getUserData = () => {
-      const userDataString = localStorage.getItem("users");
-      if (userDataString) {
-        const userDataObject = JSON.parse(userDataString);
-        setAvatar(userDataObject.avatar);
-      }
-    };
-
-    getUserData();
-  }, []);
-
   return (
     <>
       <Head>
@@ -29,9 +13,7 @@ const Profile = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/*  <Navbar /> */}
       <main className={`${styles.Profile}`}>
-        <img src={avatar}></img>
         <MyBalance />
         <div className={styles.__options}>
           <button>Negoziazioni</button>
