@@ -10,8 +10,7 @@ import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
 import logo from "@/assets/iconsProject/logo.svg";
 
-//Mocks
-import mock from "@/mock/usersMock.js"
+
 
 export default function Home() {
   const router = useRouter();

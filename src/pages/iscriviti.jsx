@@ -36,6 +36,8 @@ export default function iscriviti() {
 				username: name,
 				email: email,
 				password: password,
+				balance: Math.floor(Math.random() * 1500),
+				avatar: `https://robohash.org/${name}`,
 			})
 		);
 		router.push("/");
