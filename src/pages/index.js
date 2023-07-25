@@ -1,9 +1,10 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import styles from "@/styles/Home.module.scss";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
+import styles from "@/styles/Home.module.scss";
 
 //Image
 import google from "@/assets/7611770.png";
