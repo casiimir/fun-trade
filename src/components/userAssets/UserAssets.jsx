@@ -9,7 +9,6 @@ const UserAssets = () => {
           <div className={styles.__details}>
             <div className={styles.__left}>
               <h3>Amazon</h3>
-              <image></image>
             </div>
             <div className={styles.__right}>
               <span>grafico</span>
