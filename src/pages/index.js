@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "@/styles/Home.module.scss";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 //Image
 import google from "@/assets/7611770.png";
@@ -11,12 +11,18 @@ import facebook from "@/assets/facebook.png";
 import logo from "@/assets/iconsProject/logo.svg";
 
 //Mocks
-import users from "@/mock/usersMock.js"
+import mock from "@/mock/usersMock.js"
 
 export default function Home() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+
+    setUsers(JSON.parse(localStorage.getItem("users")))
+  }, [])
 
   const onHandleEmail = (e) => {
     setEmail(e.target.value);
@@ -28,14 +34,13 @@ export default function Home() {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    users.map(user => {
-      if (user.email.toLowerCase() === email.toLowerCase() && user.password.toLowerCase() === password.toLowerCase()) {
-        router.push("/HomePage");
-      } else {
-        alert("incorrect email or password")
-      }
-    })
+    if (users.email.toLowerCase() === email.toLowerCase() && users.password.toLowerCase() === password.toLowerCase()) {
+      router.push("/homepage");
+    } else {
+      alert("incorrect email or password")
+    }
   };
+
   return (
     <>
       <Head>
