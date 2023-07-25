@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { UserContext } from "@/pages/_app";
 import NavbarTop from "@/components/navbarTop";
 import NavbarBottom from "@/components/navbarBottom";
@@ -6,7 +6,7 @@ import { navbarItems } from "../mock/navbarItems";
 import styles from "./DefaultLayout.module.scss";
 
 const DefaultLayout = ({ children }) => {
-  const username = React.useContext(UserContext);
+	const { nav } = useContext(UserContext);
 
   return (
     <>
@@ -15,6 +15,7 @@ const DefaultLayout = ({ children }) => {
       {username && <NavbarBottom />}
     </>
   );
+
 };
 
 export default DefaultLayout;
