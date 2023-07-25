@@ -10,6 +10,9 @@ import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
 import logo from "@/assets/iconsProject/logo.svg";
 
+//Mocks
+import users from "@/mock/usersMock.js"
+
 export default function Home() {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -25,7 +28,13 @@ export default function Home() {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    router.push("/HomePage");
+    users.map(user => {
+      if (user.email.toLowerCase() === email.toLowerCase() && user.password.toLowerCase() === password.toLowerCase()) {
+        router.push("/HomePage");
+      } else {
+        alert("incorrect email or password")
+      }
+    })
   };
   return (
     <>
@@ -44,7 +53,7 @@ export default function Home() {
           <h2 className={styles.main__login__title}>Accedi</h2>
           <form className={styles.main__login__form} onSubmit={onHandleSubmit}>
             <div className={styles.main__login__form__email}>
-              <label for="email" className={styles.main__login__form__email__label}>
+              <label htmlFor="email" className={styles.main__login__form__email__label}>
                 Email
               </label>
               <input
@@ -58,7 +67,7 @@ export default function Home() {
               />
             </div>
             <div className={styles.main__login__form__password}>
-              <label for="password" className={styles.main__login__form__password__label}>
+              <label htmlFor="password" className={styles.main__login__form__password__label}>
                 Password
               </label>
               <input
