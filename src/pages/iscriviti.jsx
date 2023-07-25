@@ -10,9 +10,6 @@ import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
 import logo from "@/assets/iconsProject/logo.svg";
 
-//Mocks
-import users from "@/mock/usersMock.js";
-
 export default function iscriviti() {
 	const router = useRouter();
 	const [name, setName] = useState("");
@@ -33,11 +30,14 @@ export default function iscriviti() {
 
 	const onHandleSubmit = (e) => {
 		e.preventDefault();
-		users.push({
-			username: name,
-			email: email,
-			password: password,
-		});
+		localStorage.setItem(
+			"users",
+			JSON.stringify({
+				username: name,
+				email: email,
+				password: password,
+			})
+		);
 		router.push("/");
 	};
 	return (
@@ -68,7 +68,7 @@ export default function iscriviti() {
 					>
 						<div className={styles.iscriviti__wrap__form__name}>
 							<label
-								for="name"
+								htmlFor="name"
 								className={styles.iscriviti__wrap__form__name__label}
 							>
 								User Name
@@ -85,7 +85,7 @@ export default function iscriviti() {
 						</div>
 						<div className={styles.iscriviti__wrap__form__email}>
 							<label
-								for="email"
+								htmlFor="email"
 								className={styles.iscriviti__wrap__form__email__label}
 							>
 								Email
@@ -102,7 +102,7 @@ export default function iscriviti() {
 						</div>
 						<div className={styles.iscriviti__wrap__form__password}>
 							<label
-								for="password"
+								htmlFor="password"
 								className={styles.iscriviti__wrap__form__password__label}
 							>
 								Password
