@@ -52,16 +52,16 @@ export default function iscriviti() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<div className={styles.iscriviti}>
-				<Image
-					src={logo}
-					alt="logo"
-					width={150}
-					height={150}
-					className={styles.iscriviti__logo}
-				/>
+				<Image src={logo} alt="logo" className={styles.iscriviti__logo} />
 				<div className={styles.iscriviti__header}>
 					<Link href={"/"}>
-						<Image src={arrow} alt="arrow" width={20} height={20} />
+						<Image
+							src={arrow}
+							alt="arrow"
+							width={20}
+							height={20}
+							className={styles.iscriviti__header__image}
+						/>
 					</Link>
 					<h3 className={styles.iscriviti__header__title}>Login Page</h3>
 				</div>
