@@ -23,7 +23,7 @@ const NavbarTop = ({ items }) => {
           {item.icon}
         </div>
       ))}
-      {isVisible && <Menu setIsVisible={setIsVisible} />};
+      {isVisible && <Menu setIsVisible={setIsVisible} />}
     </header>
   );
 };
