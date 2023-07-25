@@ -11,7 +11,7 @@ const DefaultLayout = ({ children }) => {
   return (
     <>
       {nav && <NavbarTop items={navbarItems[0].items} />}
-      <section className={styles.content}>{children}</section>
+      <section className={`${nav && styles.content}`}>{children}</section>
       {nav && <NavbarBottom />}
     </>
   );
