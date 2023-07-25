@@ -19,7 +19,7 @@ const MyBalance = () => {
   return (
     <div className={styles.MyBalance}>
       <h1>My Balance</h1>
-      <p>{balance}</p>
+      <p>{balance}$</p>
     </div>
   );
 };
