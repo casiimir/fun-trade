@@ -1,0 +1,38 @@
+.UserAssets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+  height: 200px;
+  width: 90vw;
+  margin-top: 20px;
+  border-radius: 40px;
+  background: #ecf0f3;
+  box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
+
+  .__assets {
+    display: flex;
+    padding: 18px;
+    width: 96%;
+    border-radius: 28px;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 28px #cbced1, -14px -14px 28px #ffffff;
+
+    .__singleAsset {
+      display: flex;
+
+      .__details {
+        display: flex;
+
+        .__left {
+        }
+
+        .__right {
+          display: flex;
+          justify-content: flex-end;
+          margin-left: 6rem;
+        }
+      }
+    }
+  }
+}

@@ -12,8 +12,8 @@ import logo from "@/assets/iconsProject/logo.svg";
 
 export default function Home() {
   const router = useRouter();
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const onHandleEmail = (e) => {
     setEmail(e.target.value);
@@ -25,8 +25,8 @@ export default function Home() {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    router.push("/HomePage")
-  }
+    router.push("/HomePage");
+  };
   return (
     <>
       <Head>
@@ -38,20 +38,45 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.main__header}>
           <Image src={logo} alt="logo" width={70} height={70} />
-          <h1 className={styles.main__header__title} >Funtrade</h1>
+          <h1 className={styles.main__header__title}>Funtrade</h1>
         </div>
         <div className={styles.main__login}>
           <h2 className={styles.main__login__title}>Accedi</h2>
           <form className={styles.main__login__form} onSubmit={onHandleSubmit}>
             <div className={styles.main__login__form__email}>
-              <label for="email" className={styles.main__login__form__email__label}>Email</label>
-              <input type="email" name="email" value={email} onChange={onHandleEmail} placeholder="Inserisci la tua email" required className={styles.main__login__form__email__input} />
+              <label for="email" className={styles.main__login__form__email__label}>
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={onHandleEmail}
+                placeholder="Inserisci la tua email"
+                required
+                className={styles.main__login__form__email__input}
+              />
             </div>
             <div className={styles.main__login__form__password}>
-              <label for="password" className={styles.main__login__form__password__label}>Password</label>
-              <input type="password" name="password" value={password} onChange={onHandlePassword} placeholder="**********" required className={styles.main__login__form__password__input} />
+              <label for="password" className={styles.main__login__form__password__label}>
+                Password
+              </label>
+              <input
+                type="password"
+                name="password"
+                value={password}
+                onChange={onHandlePassword}
+                placeholder="**********"
+                required
+                className={styles.main__login__form__password__input}
+              />
             </div>
-            <input type="submit" name="submit" value="Accedi" className={styles.main__login__form__submit} />
+            <input
+              type="submit"
+              name="submit"
+              value="Accedi"
+              className={styles.main__login__form__submit}
+            />
           </form>
           <div className={styles.main__login__link}>
             <div className={styles.main__login__link__title}>
@@ -64,10 +89,12 @@ export default function Home() {
           </div>
           <div className={styles.main__login__sing_in}>
             <div className={styles.main__login__sing_in__title}>
-              <h3 className={styles.main__login__sing_in__title__h3}>Non possiedi un account?</h3>
+              <h3 className={styles.main__login__sing_in__title__h3}>
+                Non possiedi un account?
+              </h3>
             </div>
             <button className={styles.main__login__sing_in__btn}>
-              <Link href="/Iscriviti"> Iscriviti </Link>
+              <Link href="/iscriviti"> Iscriviti </Link>
             </button>
           </div>
         </div>
