@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "../styles/homepage.module.scss";
+import CardList from "@/components/cardList/CardList";
 
 export default function homepage() {
   const [cryptoDatas, setCryptoDatas] = useState();
@@ -15,29 +16,18 @@ export default function homepage() {
     <div className={styles.homepage}>
       <div className={styles.my_balance_contain}>
         <h1 className={styles.my_balance}>My Balance</h1>
-        <p>99.999</p>
+        <p>99.999 $</p>
       </div>
-      <div className={styles.categories}>sfoglia categorie</div>
+      <div className={styles.categories}>
+        <h3>sfoglia categorie</h3>
+        <div>
+          <p>Cryptovalute</p>
+          <img src="" alt="" />
+        </div>
+      </div>
       <div>
         <h3 className={styles.mover_principali}>Mover Principali</h3>
-        <ul className={styles.balance_list}>
-          {cryptoDatas &&
-            cryptoDatas.map((item) => (
-              <li className={styles.crypto} key={item.id}>
-                <div className={styles.image_contain}>
-                  <img
-                    className={styles.image_crypto}
-                    src={item?.image}
-                    alt={item?.name}
-                  />
-                </div>
-                <div className={styles.info_cripto}>
-                  <h4>{item?.name}</h4>
-                  <p>{item?.price_change_percentage_24h}</p>
-                </div>
-              </li>
-            ))}
-        </ul>
+        <CardList cryptoDatas={cryptoDatas} />
       </div>
     </div>
   );
