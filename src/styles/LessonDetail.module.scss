@@ -1,0 +1,52 @@
+.detailContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lessonBackContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.backArrow {   
+    margin-left: 40px;
+}
+
+.lessonNumber {
+    text-align: center;
+    margin-right:43%;
+    margin-top: 10px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.videoContainer {
+    border-radius: 20px;
+    margin-top: 30px;
+    video {
+        border-radius: 10px;
+    }
+}
+
+.descriptionContainer {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #ECF0F3;
+    box-shadow:  -10px -10px 20px #C8D1DA, 10px 10px 20px #ffffff;
+}
+
+.description {
+    text-align: center;
+}
+
+.progress {
+    text-align: center;
+    margin-top: 1rem;
+}

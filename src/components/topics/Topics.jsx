@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './topics.module.scss';
 import Image from 'next/image';
 import fast_video from "@/assets/iconsProject/fast_video.svg";
 import { useRouter } from 'next/router';
+
+import { topics as mockTopics } from "@/mock/topics" ;
 
 const Topics = () => {
     const [topics, setTopics] = useState([]);
     const router = useRouter();
 
     useEffect(() => {
-        const Topics = localStorage.getItem('topics');
-        const topicsFromLocalStorage = JSON.parse(Topics);
-
-        setTopics(topicsFromLocalStorage);
+        setTopics(mockTopics);
     }, []);
 
     return (
@@ -26,7 +25,7 @@ const Topics = () => {
                     </div>
                     <div className={styles.progressArgoment}>
                         <p className={styles.progressPercent}>{topic.progress}</p>
-                        <div onClick={() => router.push('/LessonDetail')}>
+                        <div onClick={() => router.push('/LessonDetail?id=' + topic.id)}>
                             <Image src={fast_video} alt="Show Argoment" />
                         </div>
                     </div>
@@ -38,3 +37,7 @@ const Topics = () => {
 };
 
 export default Topics;
+
+
+
+
