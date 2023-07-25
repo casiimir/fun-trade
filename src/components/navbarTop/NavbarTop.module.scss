@@ -1,7 +1,7 @@
 .Navbar {
+  min-width: 390px;
   height: rem(160px);
   @include flexboxCenter();
-  justify-content: space-between;
   padding: rem($paddingSmall);
   width: 100%;
   position: absolute;
@@ -48,5 +48,25 @@
   svg {
     width: 100%;
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Navbar {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .Navbar {
+    justify-content: center;
+    gap: rem(100px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Navbar {
+    justify-content: center;
+    gap: rem(100px);
   }
 }
