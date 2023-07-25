@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from '@/styles/FunAcademy.module.scss';
+import Link from 'next/link';
 
+// import icon
 import school from "@/assets/iconsProject/school.svg";
 import search from "@/assets/iconsProject/search.svg";
 import hamburger from "@/assets/iconsProject/hamburger.svg";
@@ -10,7 +12,7 @@ import Topics from '@/components/topics';
 export default function FunAcademy() {
     return (
         <>
-        <div className={styles.container}>
+        {/* <div className={styles.container}>
             <button className={styles.hamburgerButton}>
                 <Image src={hamburger} alt="Menu" width={25} height={25} />
             </button>
@@ -22,7 +24,7 @@ export default function FunAcademy() {
             <button className={styles.searchButton}>
                 <Image src={search} alt="Search" width={25} height={25} />
             </button>
-        </div>
+        </div> */}
         <div className={styles.container1}>
                 <button className={styles.neumorphicButton}>
                     <h2 className={styles.heading1}>FUNACADEMY</h2>
