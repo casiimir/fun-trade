@@ -1,4 +1,5 @@
-.homepage{
+@media screen and (max-width: 767px) {
+    .homepage{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,37 +83,7 @@
         padding: 20px;
     }
 
-    .balance_list{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
-    }
+    
+}
 
-    .crypto{
-        height: 200px;
-    width: 90vw;
-    border-radius: 40px;
-    background: #ecf0f3;
-    box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
-    }
-
-    .image_crypto{
-        width: 50px;
-        height: 50px;
-    }
-
-    .info_cripto h4{
-        font-size: 20px;
-    }
-
-    .info_cripto p{
-        font-size: 15px;
-        color: lightslategrey;
-    }
 }
