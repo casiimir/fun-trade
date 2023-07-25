@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
   // console.log(username);
 
   return (
-    <UserContext.Provider value={(nav, setNav)}>
+    <UserContext.Provider value={{ nav, setNav }}>
       <DefaultLayout>
         <Component {...pageProps} />
       </DefaultLayout>
