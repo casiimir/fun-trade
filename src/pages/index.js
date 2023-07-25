@@ -11,18 +11,15 @@ import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
 import logo from "@/assets/iconsProject/logo.svg";
 
-
-
 export default function Home() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-
-    setUsers(JSON.parse(localStorage.getItem("users")))
-  }, [])
+    setUsers(JSON.parse(localStorage.getItem("users")));
+  }, []);
 
   const onHandleEmail = (e) => {
     setEmail(e.target.value);
@@ -34,10 +31,13 @@ export default function Home() {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    if (users.email.toLowerCase() === email.toLowerCase() && users.password.toLowerCase() === password.toLowerCase()) {
+    if (
+      users.email.toLowerCase() === email.toLowerCase() &&
+      users.password.toLowerCase() === password.toLowerCase()
+    ) {
       router.push("/homepage");
     } else {
-      alert("incorrect email or password")
+      alert("incorrect email or password");
     }
   };
 
@@ -72,7 +72,10 @@ export default function Home() {
               />
             </div>
             <div className={styles.main__login__form__password}>
-              <label htmlFor="password" className={styles.main__login__form__password__label}>
+              <label
+                htmlFor="password"
+                className={styles.main__login__form__password__label}
+              >
                 Password
               </label>
               <input

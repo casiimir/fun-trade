@@ -1,18 +1,52 @@
 .Navbar {
-  height: rem(80px);
+  height: rem(160px);
   @include flexboxCenter();
   justify-content: space-between;
-  padding: 0 rem($paddingSmall);
+  padding: rem($paddingSmall);
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  background-color: $background-main;
 }
 
-.wrapper {
-  @include flexboxCenterColumn;
-  padding: rem($paddingExtraSmall);
-  border: 1px solid black;
+.container {
+  @include flexboxCenter;
+  width: rem(65px);
+  height: rem(55px);
+  padding: rem($paddingSmall);
   border-radius: $roundedMedium;
   cursor: pointer;
+  background: linear-gradient(145deg, #e6eaec, $background-main);
+  box-shadow: 22px 22px 44px #b8b8b8, -22px -22px 44px #ffffff;
+
+  svg {
+    width: rem(30px);
+    height: rem(30px);
+  }
+}
+
+.logo {
+  width: rem(120px);
+  height: rem(120px);
+  padding: rem($paddingExtraLarge);
+  position: relative;
+  border-radius: 100%;
+  background: $background-main;
+  box-shadow: 26px 26px 52px #b8b8b8, -26px -26px 52px #ffffff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: rem(70px);
+    height: rem(70px);
+    border-radius: 100%;
+    background: transparent;
+    box-shadow: 15px 15px 30px #b8b8b8, -15px -15px 30px #ffffff;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
