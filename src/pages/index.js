@@ -4,23 +4,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "@/styles/Home.module.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 
 //Image
 import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
 import logo from "@/assets/iconsProject/logo.svg";
 
-
+//Context
+import { UserContext } from "@/pages/_app"
 
 export default function Home() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [users, setUsers] = useState([])
-
+  const { setNav } = useContext(UserContext)
   useEffect(() => {
-
     setUsers(JSON.parse(localStorage.getItem("users")))
   }, [])
 
@@ -35,6 +35,7 @@ export default function Home() {
   const onHandleSubmit = (e) => {
     e.preventDefault();
     if (users.email.toLowerCase() === email.toLowerCase() && users.password.toLowerCase() === password.toLowerCase()) {
+      setNav(true)
       router.push("/homepage");
     } else {
       alert("incorrect email or password")

@@ -9,6 +9,7 @@ import { useState } from "react";
 import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
 import logo from "@/assets/iconsProject/logo.svg";
+import arrow from "@/assets/iconsProject/arrow.svg";
 
 export default function iscriviti() {
 	const router = useRouter();
@@ -59,7 +60,9 @@ export default function iscriviti() {
 					className={styles.iscriviti__logo}
 				/>
 				<div className={styles.iscriviti__header}>
-					<p className={styles.iscriviti__header__arrow}>⬅</p>
+					<Link href={"/"}>
+						<Image src={arrow} alt="arrow" width={20} height={20} />
+					</Link>
 					<h3 className={styles.iscriviti__header__title}>Login Page</h3>
 				</div>
 				<div className={styles.iscriviti__wrap}>
