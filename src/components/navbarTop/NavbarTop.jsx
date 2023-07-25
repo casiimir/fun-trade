@@ -13,11 +13,10 @@ const NavbarTop = ({ items }) => {
       {items.map((item) => (
         <div
           key={item.id}
-          className={styles.wrapper}
+          className={`${styles.container} ${item.label === "logo" ? styles.logo : ""}`}
           onClick={() => onHandleClick(item.label)}
         >
-          <div className={styles.icon}>ICON</div>
-          <p className={styles.label}>{item.label}</p>
+          {item.icon}
         </div>
       ))}
     </header>

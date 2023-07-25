@@ -8,13 +8,14 @@ import styles from "./DefaultLayout.module.scss";
 const DefaultLayout = ({ children }) => {
 	const { nav } = useContext(UserContext);
 
-	return (
-		<>
-			{nav && <NavbarTop items={navbarItems[0].items} />}
-			<section className={styles.content}>{children}</section>
-			{nav && <NavbarBottom items={navbarItems[1].items} />}
-		</>
-	);
+  return (
+    <>
+      {username && <NavbarTop items={navbarItems[0].items} />}
+      <section className={styles.content}>{children}</section>
+      {username && <NavbarBottom />}
+    </>
+  );
+
 };
 
 export default DefaultLayout;

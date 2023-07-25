@@ -11,13 +11,11 @@ import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
 import logo from "@/assets/iconsProject/logo.svg";
 
-//Context
-import { UserContext } from "@/pages/_app"
-
 export default function Home() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const [users, setUsers] = useState([])
   const { setNav } = useContext(UserContext)
   useEffect(() => {
@@ -38,7 +36,7 @@ export default function Home() {
       setNav(true)
       router.push("/homepage");
     } else {
-      alert("incorrect email or password")
+      alert("incorrect email or password");
     }
   };
 
@@ -73,7 +71,10 @@ export default function Home() {
               />
             </div>
             <div className={styles.main__login__form__password}>
-              <label htmlFor="password" className={styles.main__login__form__password__label}>
+              <label
+                htmlFor="password"
+                className={styles.main__login__form__password__label}
+              >
                 Password
               </label>
               <input

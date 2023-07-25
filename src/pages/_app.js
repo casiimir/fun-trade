@@ -4,7 +4,7 @@ import "@/styles/globals.scss";
 export const UserContext = React.createContext();
 
 export default function App({ Component, pageProps }) {
-  const [nav, setNav] = useState(false);
+  const [nav, setNav] = useState(true);
   // console.log(username);
 
   return (

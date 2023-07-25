@@ -1,7 +1,7 @@
 .Navbar {
   height: rem(80px);
   @include flexboxCenter();
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 rem($paddingSmall);
   width: 100%;
   position: absolute;
@@ -11,12 +11,16 @@
 
 .wrapper {
   @include flexboxCenterColumn;
-  padding: rem($paddingExtraSmall);
-  border: 1px solid black;
+  width: rem(60px);
+  height: rem(60px);
   border-radius: $roundedMedium;
+  background: $background-main;
   cursor: pointer;
+  background: linear-gradient(145deg, #e6eaec, $background-main);
+  box-shadow: 5px 5px 14px #b8b8b8, -5px -5px 14px #ffffff;
 
   p {
+    @extend %paragraphBold;
     font-size: rem($paragraphExtraSmall);
   }
 }
