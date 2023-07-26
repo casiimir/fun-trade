@@ -1,0 +1,13 @@
+.Chart {
+  display: flex;
+}
+
+@media screen and (min-width: 1024px) {
+  .Chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+  }
+}
