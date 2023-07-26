@@ -34,7 +34,7 @@ const HistoryChart = ({ id }) => {
 		const fetchData = async () => {
 			try {
 				const response = await fetch(
-					`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=2`
+					`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=1`
 				);
 				const data = await response.json();
 				const formattedData = data.prices.map((value) => ({
@@ -73,7 +73,7 @@ const HistoryChart = ({ id }) => {
 		labels: coinChartData.map((value) => moment(value.x).format("MMM DD")),
 		datasets: [
 			{
-				fill: true,
+				fill: false,
 				label: id,
 				data: coinChartData.map((val) => val.y),
 				borderColor: "rgb(53, 162, 235)",
