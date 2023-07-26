@@ -23,6 +23,8 @@ const NavbarTop = ({ items }) => {
           {item.icon}
         </div>
       ))}
+      {isOpen && <div className={styles.overlay} onClick={onHandleClick} />}
+
       <div className={`${styles.burger} ${isOpen && styles.open}`}>
         <Menu setIsOpen={setIsOpen} />
       </div>
