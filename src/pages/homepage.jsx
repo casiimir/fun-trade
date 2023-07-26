@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import styles from "../styles/Homepage.module.scss";
+import styles from "../styles/homepage.module.scss";
 import CardList from "@/components/cardList";
 
 //Mocks
 import crypto from "@/mock/cryptoCardMock";
+import Chart from "@/components/chart";
 
-export default function Homepage() {
+export default function homepage() {
 	const [cryptoDatas, setCryptoDatas] = useState([]);
 
 	useEffect(() => {
@@ -13,16 +14,21 @@ export default function Homepage() {
 	}, []);
 
 	return (
-		<div className={styles.Homepage}>
-			<div className={styles.HomePage__myBalance}>
-				<h1 className={styles.HomePage__myBalance__title}>My Balance</h1>
-				<p className={styles.HomePage__myBalance__wallet}>99.999 $</p>
+		<div className={styles.homepage}>
+			<div className={styles.homepage__myBalance}>
+				<div className={styles.homepage__myBalance__info}>
+					<p className={styles.homepage__myBalance__info__title}>My Balance</p>
+					<p className={styles.homepage__myBalance__info__wallet}>99.999 $</p>
+				</div>
+				<div className={styles.homepage__myBalance__chart}>
+					<Chart />
+				</div>
 			</div>
-			<div className={styles.Homepage__categories}>
-				<h3 className={styles.Homepage__categories__h3}>sfoglia categorie</h3>
+			<div className={styles.homepage__categories}>
+				<h3 className={styles.homepage__categories__h3}>sfoglia categorie</h3>
 
-				<div className={styles.Homepage__categories__crypto_list}>
-					<p className={styles.Homepage__categories__crypto_list__title}>
+				<div className={styles.homepage__categories__crypto_list}>
+					<p className={styles.homepage__categories__crypto_list__title}>
 						Criptovalute
 					</p>
 					<svg
