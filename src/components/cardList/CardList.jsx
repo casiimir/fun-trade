@@ -9,7 +9,8 @@ const CardList = ({ cryptoDatas }) => {
 			<h1>Criptovalute</h1>
 			<div className={styles.CardList}>
 				<ul className={styles.balance_list}>
-					{cryptoDatas && cryptoDatas.map((item) => <Card data={item} />)}
+					{cryptoDatas &&
+						cryptoDatas.map((item) => <Card data={item} key={item.id} />)}
 				</ul>
 			</div>
 		</div>

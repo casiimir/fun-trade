@@ -3,6 +3,29 @@ import { Line } from "react-chartjs-2";
 import moment from "moment";
 /* import Skeleton from "./Skeleton"; */ //implementazione futura skeleton loader
 
+import {
+	Chart as ChartJS,
+	CategoryScale,
+	LinearScale,
+	PointElement,
+	LineElement,
+	Title,
+	Tooltip,
+	Filler,
+	Legend,
+} from "chart.js";
+
+ChartJS.register(
+	CategoryScale,
+	LinearScale,
+	PointElement,
+	LineElement,
+	Title,
+	Tooltip,
+	Filler,
+	Legend
+);
+
 const HistoryChart = ({ id }) => {
 	const [loading, setLoading] = useState(true);
 	const [coinChartData, setCoinChartData] = useState([]);
@@ -34,13 +57,23 @@ const HistoryChart = ({ id }) => {
 
 	const options = {
 		responsive: true,
+		plugins: {
+			legend: {
+				display: false,
+				position: "",
+			},
+			title: {
+				display: false,
+				text: "Chart.js Line Chart",
+			},
+		},
 	};
 
 	const data = {
 		labels: coinChartData.map((value) => moment(value.x).format("MMM DD")),
 		datasets: [
 			{
-				fill: false,
+				fill: true,
 				label: id,
 				data: coinChartData.map((val) => val.y),
 				borderColor: "rgb(53, 162, 235)",
