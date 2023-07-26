@@ -55,7 +55,7 @@
   // }
 }
 
-.burger {
+.burgerModal {
   @extend %neumorphism;
   width: 300px;
   height: auto;
@@ -69,6 +69,34 @@
   visibility: hidden;
   z-index: 99;
   transform: translateX(-50%);
+  transition: all 0.25s ease-in-out;
+  cursor: default;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+.search {
+  position: relative;
+}
+
+.searchModal {
+  @extend %neumorphism;
+  width: 400px;
+  height: rem(55px);
+  max-height: calc(100vh - rem(50px));
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: $paddingSmall;
+  border-radius: $roundedMedium;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99;
+  transform: translateX(50%);
   transition: all 0.25s ease-in-out;
   cursor: default;
 

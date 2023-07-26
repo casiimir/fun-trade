@@ -1,9 +1,7 @@
 import styles from "./Overlay.module.scss";
 
 const Overlay = ({ setIsOpen }) => {
-  const onHandleClick = () => {
-    setIsOpen((prev) => !prev);
-  };
+  const onHandleClick = () => setIsOpen((prev) => !prev);
 
   return <div className={styles.overlay} onClick={onHandleClick} />;
 };
