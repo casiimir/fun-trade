@@ -8,7 +8,6 @@ import Link from 'next/link';
 // import icon
 import arrow from  "@/assets/iconsProject/arrow.svg"
 
-
 const LessonDetail = () => {
     const [topic, setTopic] = useState(null);
     const router = useRouter();
@@ -19,30 +18,73 @@ const LessonDetail = () => {
         setTopic(foundTopic);
     }, [id]);
 
+    const handleNextLesson = () => {
+        const currentId = Number(id);
+        const nextId = currentId + 1;
+        const nextTopic = mockTopics.find(topic => topic.id === nextId);
+        
+        if (nextTopic) {
+            router.push({
+                pathname: '/LessonDetail',
+                query: { id: nextId }
+            }, undefined, { scroll: false });
+        } else {
+            console.log('No next lesson');
+        }
+    }
+
+    const handlePreviousLesson = () => {
+        const currentId = Number(id);
+        const previousId = currentId - 1;
+        const previousTopic = mockTopics.find(topic => topic.id === previousId);
+
+        if (previousTopic) {
+            router.push({
+                pathname: '/LessonDetail',
+                query: { id: previousId }
+            }, undefined, { scroll: false });
+        } else {
+            console.log('No previous lesson');
+        }
+    }
+
     if (!topic) {
         return <p>Loading...</p>;
     }
 
     return (
         <div className={styles.detailContainer}>
-        <div className={styles.lessonBackContainer}>
-    <Link href="/funAcademy">
-            <Image className={styles.backArrow} src={arrow} alt="Back to funAcademy" />
-    </Link>
-    <h3 className={styles.lessonNumber}>{topic.lessonNumber}</h3>
-</div>
-        <h1 className={styles.title}>{topic.title}</h1>
-        <video className={styles.videoContainer} controls src={topic.videoURL}>
-            Your browser does not support the video tag.
-        </video>
-        <div className={styles.descriptionContainer}>
-            <p>{topic.description}</p>
+            <div className={styles.lessonBackContainer}>
+                <Link href="/funAcademy">
+                    <Image className={styles.backArrow} src={arrow} alt="Back to funAcademy" />
+                </Link>
+                <h3 className={styles.lessonNumber}>{topic.lessonNumber}</h3>
+            </div>
+            <h1 className={styles.title}>{topic.title}</h1>
+            <div className={styles.videoContainer}>
+            <iframe 
+                className={styles.videoNeo}
+                src={topic.videoURL} 
+                title={topic.title} 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+                sandbox="allow-scripts allow-same-origin"
+            >
+            </iframe>
+            </div>
+            <div className={styles.descriptionContainer}>
+                <p>{topic.description}</p>
+            </div>
+            <p className={styles.progress}>Progress: {topic.progress}</p>
+            <div>
+                <button className={styles.buttonLesson} onClick={handlePreviousLesson}>Previous Lesson</button>
+                <button className={styles.buttonLesson} onClick={handleNextLesson}>Next Lesson</button>
+            </div>
         </div>
-        <p className={styles.progress}>Progress: {topic.progress}</p>
-    </div>
-    
     );
 };
 
 export default LessonDetail;
+
+
 
