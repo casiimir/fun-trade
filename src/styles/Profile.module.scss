@@ -1,10 +1,10 @@
-@media screen and (max-width: 767px) {
+//media query MOBILE
+@media screen and (max-width: 480px) {
   .Profile {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin-top: 1em;
 
     .__options {
       display: flex;
@@ -41,6 +41,50 @@
   }
 }
 
+//media query TABLETS & LAPTOPS
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .Profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    .__options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+
+      button {
+        width: 104px;
+        height: 30px;
+        margin-top: 18px;
+        border: none;
+        border-radius: $roundedMedium;
+        background-color: $background-main;
+        box-shadow: 5px 5px 10px #b8b8b8, -4px -5px 10px #ffffff;
+      }
+    }
+    .__functions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 44px;
+
+      button {
+        width: 104px;
+        height: 30px;
+        margin-top: 20px;
+        border: none;
+        border-radius: $roundedMedium;
+        background-color: $background-main;
+        box-shadow: 5px 5px 10px #b8b8b8, -4px -5px 10px #ffffff;
+      }
+    }
+  }
+}
+
+//media query DESKTOP
 @media screen and (min-width: 1024px) {
   .Profile {
     display: flex;
