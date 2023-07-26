@@ -1,6 +1,48 @@
 @media screen and (max-width: 767px) {
-  .card {
+  .Card {
+    width: 100%;
     display: flex;
-    border: 1px solid red;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+    border-radius: 15px;
+    padding: 5px;
+
+
+    &__image {
+      width: 50px;
+      aspect-ratio: 1;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__balance {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__negative {
+          color: red;
+        }
+
+        &__positive {
+          color: rgb(35, 209, 35);
+        }
+
+        &__p {
+          font-size: 10px;
+        }
+      }
+    }
+
+    &__chart {
+      width: 200px;
+      height: 60px;
+      overflow: hidden;
+    }
   }
 }

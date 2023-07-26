@@ -1,144 +1,76 @@
-// @media screen and (max-width: 767px) {
-//   .homepage {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     width: 100%;
-//     background-color: #ECF0F3;
-//     background-color: #ecf0f3;
+@media screen and (max-width: 767px) {
+  .homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    gap: 25px;
 
-//     .menu {
-//       background: #ecf0f3;
-//       box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
-//       border-radius: 10px;
-//       padding: 10px;
-//       width: 70px;
-//       height: 70px;
-//       display: flex;
-//       align-items: center;
-//     }
+    &__myBalance {
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+      border-radius: 30px;
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+      width: 100%;
 
-    
+      &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
 
-//     .menu_contain {
-//       display: flex;
-//       justify-content: space-around;
-//       width: 100%;
-//       padding: 20px;
-//     }
+        &__title {
+          font-weight: 600;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+          border-radius: 12px;
+          padding: 5px 10px
+        }
 
-//     .my_balance_contain {
-//       height: 200px;
-//       width: 90vw;
-//       border-radius: 40px;
-//       background: #ecf0f3;
-//       box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
-//       display: flex;
-//       flex-direction: column;
-//       padding: 20px;
-//       gap: 20px;
-//     }
+        &__wallet {
+          font-weight: 600;
+        }
+      }
 
-//     .my_balance {
-//       height: 50px;
-//       width: 200px;
-//       border-radius: 40px;
-//       background: #ecf0f3;
-//       box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
-//       text-align: center;
-//     }
+      &__chart {
+        width: 200px;
+      }
+    }
 
-//     .categories {
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       align-items: start;
-//       gap: 20px;
-//       padding: 20px;
-//       width: 100%;
-//       cursor: pointer;
-//     }
+    &__categories {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 15px;
 
-//     .categories {
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       padding: 20px;
-//     }
+      &__crypto_list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        width: 100%;
+        overflow-x: auto;
+        padding: 5px;
 
+        &__card {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+          border-radius: 10px;
+          gap: 10px;
 
-//     .balance_list {
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       flex-direction: column;
-//       gap: 20px;
-//     }
-
-
-//     .balance_list {
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       flex-direction: column;
-//       gap: 20px;
-//     }
-
-//     .crypto {
-//       height: 150px;
-//       width: 90vw;
-//       border-radius: 40px;
-//       background: #ecf0f3;
-//       box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
-//       display: flex;
-//       align-items: center;
-//       padding: 20px;
-//       gap: 20px;
-//     }
-
-//     .info_cripto {
-//       display: flex;
-//       flex-direction: column;
-//       gap: 10px;
-//     }
-
-//     .image_crypto {
-//       width: 50px;
-//       height: 50px;
-
-//     }
-
-//     .info_cripto h4 {
-//       font-size: 20px;
-//     }
-
-//     .price_info {
-//       display: flex;
-//       gap: 10px;
-//       align-items: center;
-//     }
-
-//     .arrow_contain {
-//       background-color: #ecf0f3;
-//       box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
-//       border-radius: 5px;
-//     }
-
-//     .negative {
-//       gap: 10px;
-//       display: flex;
-//       font-size: 13px;
-//       color: #d98471;
-//     }
-
-//     .positive {
-//       gap: 10px;
-//       display: flex;
-//       font-size: 13px;
-//       color: #6fc675;
-//     }
-
-//   }
-
-// }
+          &__title {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

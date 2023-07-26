@@ -23,11 +23,11 @@ const Card = ({ data }) => {
 					<p
 						className={`${
 							data?.price_change_percentage_24h < 0
-								? styles.negative
-								: styles.positive
-						}`}
+								? styles.Card__info__balance__negative
+								: styles.Card__info__balance__positive
+						} ${styles.Card__info__balance__p}`}
 					>
-						{data?.price_change_percentage_24h} %
+						{`${data?.price_change_percentage_24h}`}
 					</p>
 				</div>
 			</div>
