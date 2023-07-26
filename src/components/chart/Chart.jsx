@@ -11,7 +11,6 @@ import {
 	Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import faker from "faker";
 
 ChartJS.register(
 	CategoryScale,
@@ -28,24 +27,25 @@ export const options = {
 	responsive: true,
 	plugins: {
 		legend: {
-			position: "top",
+			display: false,
+			position: "",
 		},
 		title: {
-			display: true,
+			display: false,
 			text: "Chart.js Line Chart",
 		},
 	},
 };
 
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
+const labels = ["1D", "1W", "1M", "1Y"];
 
 export const data = {
 	labels,
 	datasets: [
 		{
-			fill: true,
+			fill: false,
 			label: "Dataset 2",
-			data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+			data: labels.map(() => Math.floor(Math.random() * 100)),
 			borderColor: "rgb(53, 162, 235)",
 			backgroundColor: "rgba(53, 162, 235, 0.5)",
 		},
