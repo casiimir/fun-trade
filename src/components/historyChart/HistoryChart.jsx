@@ -74,7 +74,7 @@ const HistoryChart = ({ id }) => {
 		datasets: [
 			{
 				fill: false,
-				label: id,
+				label: "",
 				data: coinChartData.map((val) => val.y),
 				borderColor: "rgb(53, 162, 235)",
 				backgroundColor: "rgba(53, 162, 235, 0.5)",

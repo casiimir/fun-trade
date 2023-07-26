@@ -1,66 +1,19 @@
 @media screen and (max-width: 767px) {
-  .CardList_contain {
+  .CardList {
     display: flex;
+    width: 100%;
     flex-direction: column;
     gap: 30px;
     justify-content: center;
     align-items: center;
-  }
 
-  .balance_list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    overflow-y: auto;
-    height: 200px;
-    gap: 20px;
-  }
-
-  .crypto {
-    height: 150px;
-    width: 90vw;
-    border-radius: 40px;
-    background: #ecf0f3;
-    box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .image_crypto {
-    width: 50px;
-    height: 50px;
-  }
-
-  .info_cripto h4 {
-    font-size: 20px;
-  }
-
-  .price_info {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .arrow_contain {
-    background-color: #ecf0f3;
-    box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
-    border-radius: 5px;
-  }
-
-  .negative {
-    gap: 10px;
-    display: flex;
-    font-size: 13px;
-    color: #d98471;
-  }
-
-  .positive {
-    gap: 10px;
-    display: flex;
-    font-size: 13px;
-    color: #6fc675;
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 15px;
+      width: 100%;
+    }
   }
 }
