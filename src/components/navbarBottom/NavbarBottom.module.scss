@@ -11,14 +11,16 @@
 }
 
 .wrapper {
+  @extend %neumorphism;
   @include flexboxCenterColumn;
   width: rem(60px);
   height: rem(60px);
   border-radius: $roundedMedium;
-  background: $background-main;
   cursor: pointer;
-  background: linear-gradient(145deg, #e6eaec, $background-main);
-  box-shadow: 5px 5px 14px #b8b8b8, -5px -5px 14px #ffffff;
+
+  &:active {
+    @extend %neumorphismActive;
+  }
 
   p {
     @extend %paragraphBold;

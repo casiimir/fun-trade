@@ -8,10 +8,7 @@
   width: rem(65px);
   height: rem(55px);
   border: none;
-  background: $background-main;
   cursor: pointer;
-
-  box-shadow: 5px 5px 14px #b8b8b8, -5px -5px 14px #ffffff;
 
   &:active {
     @extend %neumorphismActive;
@@ -31,12 +28,11 @@
 }
 
 .image {
+  @extend %neumorphism;
+  @include flexboxCenter();
   width: rem(70px);
   height: rem(70px);
-  @include flexboxCenter();
   border-radius: 100%;
-  background: transparent;
-  box-shadow: 5px 5px 14px #b8b8b8, -5px -5px 14px #ffffff;
 }
 
 .text {
@@ -47,7 +43,6 @@
   &__name {
     width: 100%;
     @extend %heading;
-    // height: 50%;
   }
 
   &__accountType {
@@ -55,7 +50,6 @@
     @extend %paragraphBold;
     font-size: $paragraphExtraSmall;
     text-transform: uppercase;
-    // height: 50%;
   }
 }
 
@@ -66,6 +60,7 @@
 
 .menuList__content {
   @include flexboxCenter();
+  @extend %neumorphism;
   @extend %paragraphBold;
   width: 90%;
   height: auto;
@@ -73,7 +68,8 @@
   justify-content: flex-start;
   margin-bottom: rem(10px);
   font-size: $paddingSmall;
-  border-radius: $roundedMedium;
-  background: linear-gradient(145deg, #e6eaec, $background-main);
-  box-shadow: 5px 5px 14px #b8b8b8, -5px -5px 14px #ffffff;
+
+  &:active {
+    @extend %neumorphismActive;
+  }
 }

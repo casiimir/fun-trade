@@ -12,14 +12,17 @@
 }
 
 .container {
+  @extend %neumorphism;
   @include flexboxCenter;
   width: rem(65px);
   height: rem(55px);
   padding: rem($paddingSmall);
   border-radius: $roundedMedium;
   cursor: pointer;
-  background: linear-gradient(145deg, #e6eaec, $background-main);
-  box-shadow: 22px 22px 44px #b8b8b8, -22px -22px 44px #ffffff;
+
+  &:active {
+    @extend %neumorphismActive;
+  }
 
   svg {
     width: rem(30px);
@@ -28,22 +31,21 @@
 }
 
 .logo {
+  @extend %neumorphism;
   width: rem(120px);
   height: rem(120px);
   padding: rem($paddingExtraLarge);
   position: relative;
   border-radius: 100%;
-  background: $background-main;
-  box-shadow: 26px 26px 52px #b8b8b8, -26px -26px 52px #ffffff;
 
   &::after {
+    @extend %neumorphism;
     content: "";
     position: absolute;
     width: rem(70px);
     height: rem(70px);
     border-radius: 100%;
-    background: transparent;
-    box-shadow: 15px 15px 30px #b8b8b8, -15px -15px 30px #ffffff;
+    background-color: transparent;
   }
 
   svg {
@@ -64,6 +66,7 @@
 }
 
 .burger {
+  @extend %neumorphism;
   width: 300px;
   height: auto;
   max-height: calc(100vh - rem(50px));
@@ -72,8 +75,6 @@
   left: 0;
   padding: $paddingSmall;
   border-radius: $roundedMedium;
-  background-color: $background-main;
-  box-shadow: 5px 5px 14px #b8b8b8, -5px -5px 14px #ffffff;
   opacity: 0;
   visibility: hidden;
   z-index: 99;
