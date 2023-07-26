@@ -1,4 +1,9 @@
 .card {
   display: flex;
   border: 1px solid red;
+
+  &__image {
+    width: 50px;
+    aspect-ratio: 1;
+  }
 }

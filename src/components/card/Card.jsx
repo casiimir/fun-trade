@@ -10,7 +10,7 @@ import image from "@/assets/iconsProject/bitcoin-btc-logo.png";
 const Card = ({ data }) => {
 	return (
 		<div className={styles.Card}>
-			<Image src={image} alt="logo crypto" width={50} height={50} />
+			<img src={data.image} alt="logo crypto" className={styles.Card__image} />
 			<div className={styles.Card__info}>
 				<p className={styles.Card__info__title}>{data.name}</p>
 				<div className={styles.Card__info__balance}>
