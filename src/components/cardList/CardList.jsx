@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./index.module.scss";
 
-import arrowGreen from "../../assets/iconsProject/arrowGreen.svg";
-import arrowRed from "../../assets/iconsProject/arrowRed.svg";
 import Card from "../card/Card";
 
 const CardList = ({ cryptoDatas }) => {
