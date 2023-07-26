@@ -1,5 +1,5 @@
 .cardArgomentContainer {
-    max-height: 350px;  
+    max-height: 250px;  
     overflow-y: scroll; 
     margin-top: 20px;
 }
@@ -8,10 +8,11 @@
 .cardArgoment {
     display: flex;
     justify-content: space-between;
-    width: 400px;
+    width: 300px;
     padding: 10px;
     margin-top: 30px;
-    margin-left: 40px;
+    margin-left: 30px;
+    
     border-radius: 15px;
     background: #ECF0F3;
     box-shadow:  -10px -10px 20px #C8D1DA, 10px 10px 20px #ffffff;
@@ -39,7 +40,7 @@
     .progressArgoment {
       display: flex;
       align-items: center;
-      margin-left: 10px;
+      margin-left: 0px;
   
       .progressPercent {
         font-size: 15px;

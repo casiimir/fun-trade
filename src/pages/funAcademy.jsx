@@ -9,6 +9,8 @@ import search from "@/assets/iconsProject/search.svg";
 import hamburger from "@/assets/iconsProject/hamburger.svg";
 
 import Topics from '@/components/topics';
+import NavbarBottom from '@/components/navbarBottom';
+import NavbarTop from '@/components/navbarTop';
 export default function FunAcademy() {
     return (
         <>
@@ -24,7 +26,8 @@ export default function FunAcademy() {
             <button className={styles.searchButton}>
                 <Image src={search} alt="Search" width={25} height={25} />
             </button>
-        </div> */}
+        </div>
+       */}
         <div className={styles.container1}>
                 <button className={styles.neumorphicButton}>
                     <h2 className={styles.heading1}>FUNACADEMY</h2>
@@ -39,6 +42,7 @@ export default function FunAcademy() {
             </div>
             <h2 className={styles.heading2} >LISTA ARGOMENTI:</h2>
             <Topics />
+            <NavbarBottom/>
         </>
     );
 }
