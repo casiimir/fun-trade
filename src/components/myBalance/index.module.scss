@@ -19,6 +19,16 @@
   }
 }
 
+//media query TABLETS & LAPTOPS
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .MyBalance {
+    height: 440px;
+    width: 90vw;
+    margin-bottom: 7px;
+  }
+}
+
+//media query DESKTOP
 @media screen and (min-width: 1024px) {
   .MyBalance {
     display: flex;
