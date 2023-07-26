@@ -12,3 +12,15 @@
 %paragraphBold {
   font-weight: bold;
 }
+
+%neumorphism {
+  border-radius: rem(10px);
+  background: linear-gradient(145deg, #e6eaec, $background-main);
+  box-shadow: -10px -10px 20px #c8d1da, 10px 10px 20px #ffffff;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+%neumorphismActive {
+  box-shadow: inset -5px -5px 10px #c8d1da, inset 5px 5px 10px #ffffff;
+}
