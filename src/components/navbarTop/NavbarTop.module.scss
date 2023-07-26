@@ -24,14 +24,15 @@
     @extend %neumorphismActive;
   }
 
-  svg {
-    width: rem(30px);
-    height: rem(30px);
-  }
+  // svg {
+  //   width: rem(30px);
+  //   height: rem(30px);
+  // }
 }
 
 .logo {
   @extend %neumorphism;
+  @include flexboxCenter;
   width: rem(120px);
   height: rem(120px);
   padding: rem($paddingExtraLarge);
@@ -48,10 +49,10 @@
     background-color: transparent;
   }
 
-  svg {
-    width: 100%;
-    height: 100%;
-  }
+  // svg {
+  //   width: 100%;
+  //   height: 100%;
+  // }
 }
 
 .burger {
@@ -69,6 +70,7 @@
   z-index: 99;
   transform: translateX(-50%);
   transition: all 0.25s ease-in-out;
+  cursor: default;
 
   &.open {
     opacity: 1;
