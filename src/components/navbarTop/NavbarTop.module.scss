@@ -1,13 +1,14 @@
 .Navbar {
-  min-width: 390px;
+  width: 100%;
+  min-width: 370px;
   height: rem(160px);
   @include flexboxCenter();
   padding: rem($paddingSmall);
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   background-color: $background-main;
+  z-index: 1;
 }
 
 .container {
@@ -51,19 +52,31 @@
   }
 }
 
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  z-index: 1;
+  background-color: colorShade($background-main, white, 50%);
+}
+
 .burger {
   width: 300px;
-  height: 700px;
+  height: auto;
+  max-height: calc(100vh - rem(50px));
   position: absolute;
   top: 40px;
   left: 0;
   padding: $paddingSmall;
   border-radius: $roundedMedium;
-  z-index: 99;
   background-color: $background-main;
   box-shadow: 5px 5px 14px #b8b8b8, -5px -5px 14px #ffffff;
   opacity: 0;
   visibility: hidden;
+  z-index: 99;
   transform: translateX(-50%);
   transition: all 0.25s ease-in-out;
 

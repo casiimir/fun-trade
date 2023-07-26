@@ -5,9 +5,10 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #ECF0F3;
+    <<<<<<< HEAD background-color: #ECF0F3;
+    =======background-color: #ecf0f3;
 
-    .menu {
+    >>>>>>>618b3c694bcbb29408b77e0f4576f3b28555bf8e .menu {
       background: #ecf0f3;
       box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
       border-radius: 10px;
@@ -22,14 +23,16 @@
       background: #ecf0f3;
       box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
       border-radius: 100px;
-      padding: 10px
+      <<<<<<< HEAD padding: 10px=======padding: 10px;
+      >>>>>>>618b3c694bcbb29408b77e0f4576f3b28555bf8e
     }
 
     .logo {
       background: #ecf0f3;
       box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
       border-radius: 100px;
-      padding: 10px
+      <<<<<<< HEAD padding: 10px=======padding: 10px;
+      >>>>>>>618b3c694bcbb29408b77e0f4576f3b28555bf8e
     }
 
     .search {
@@ -82,22 +85,20 @@
       cursor: pointer;
     }
 
-    .crypto_list {
-      background: #ecf0f3;
-      box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
+    .categories {
       display: flex;
-      align-items: center;
-      flex-direction: column;
-      border-radius: 10px;
-      width: 150px;
-      height: 100px;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      padding: 20px;
     }
 
-    .mover_principali {
-      padding: 20px;
+
+    .balance_list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
     }
 
 
