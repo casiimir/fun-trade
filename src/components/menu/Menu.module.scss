@@ -4,14 +4,18 @@
 }
 
 .closeBtn {
+  @extend %neumorphism;
   width: rem(65px);
   height: rem(55px);
   border: none;
-  border-radius: $roundedMedium;
   background: $background-main;
   cursor: pointer;
   background: linear-gradient(145deg, #e6eaec, $background-main);
   box-shadow: 5px 5px 14px #b8b8b8, -5px -5px 14px #ffffff;
+
+  &:active {
+    @extend %neumorphism;
+  }
 }
 
 .container {
