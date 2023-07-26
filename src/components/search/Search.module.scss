@@ -10,6 +10,7 @@
 }
 
 .form {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -30,8 +31,7 @@
 .input {
   @extend %neumorphism;
   @extend %paragraphBold;
-  width: 200px;
-  width: rem(270px);
+  width: 100%;
   height: 100%;
   padding: 0 $paddingSmall;
   line-height: rem(20px);

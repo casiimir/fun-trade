@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import styles from "./Search.module.scss";
 import closeIcon from "../../assets/iconsProject/close-menu.svg";
 import { useState } from "react";
@@ -12,7 +11,6 @@ const Search = ({ setIsSearchOpen }) => {
   const onHandleChange = (e) => setInputText(e.target.value);
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputText);
   };
 
   return (
@@ -22,7 +20,7 @@ const Search = ({ setIsSearchOpen }) => {
       </button>
 
       <form className={styles.form} onSubmit={onHandleSubmit}>
-        <div className={styles.main__login__form__email}>
+        <div>
           <input
             type="text"
             name="search"
