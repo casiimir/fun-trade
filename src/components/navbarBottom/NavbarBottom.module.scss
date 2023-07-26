@@ -2,11 +2,12 @@
   @include flexboxCenter();
   padding: 0 rem($paddingSmall);
   width: 100%;
-  min-width: 390px;
+  min-width: 370px;
   height: rem(80px);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
+  background-color: $background-main;
 }
 
 .wrapper {
