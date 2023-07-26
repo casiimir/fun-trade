@@ -19,7 +19,6 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [users, setUsers] = useState({});
-  const { setNav } = useContext(UserContext);
   useEffect(() => {
     setUsers(JSON.parse(localStorage.getItem("users")));
   }, []);
@@ -38,7 +37,7 @@ export default function Home() {
       users?.email.toLowerCase() === email.toLowerCase() &&
       users?.password.toLowerCase() === password.toLowerCase()
     ) {
-      setNav(true);
+      localStorage.setItem("login", true)
       router.push("/homepage");
     } else {
       alert("incorrect email or password");
