@@ -59,7 +59,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 35px;
+
 }
 
 .neumorphicButton {
@@ -80,33 +81,39 @@
 .heading1 {
   font-size: 1.5em;
   text-align: center;
-  color:#154162
+  color:#154162;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
 .heading2 {
   font-size: 1em;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 40px;
   color:#154162
 }
 
 .videoContainer{
   width: 100%;  
-  margin-top: 30px;
+  margin-top: 10px;
   overflow-x: scroll;
   display: flex;
-
-  .video{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ECF0F3;
-    padding: 60px;
-    margin-left: 40px;
-    border-radius: 20px;
-    outline: none;
-  }
+  margin-left: 40px;
+  margin-right: 0px;
 }
+.videoNeo{
+  border-radius: 10px;
+  
+  border:none;
+  margin:20px;
+  outline: none;
+}
+
+.videoNeo:active {
+  box-shadow: inset -5px -5px 10px #C8D1DA, 
+              inset 5px 5px 10px #ffffff;
+}
+
 
 
 // Media Query per visualizzazione mobile

@@ -21,7 +21,7 @@ const Topics = () => {
                 <div className={styles.cardArgoment} key={topic.id}>
                     <div className={styles.lessonArgoment}>
                         <h2 className={styles.topic}>{topic.title}</h2>
-                        <p className={styles.lessonCount}>{topic.lessonNumber} lezioni</p>
+                        <p className={styles.lessonCount}>{topic.lessonNumber}</p>
                     </div>
                     <div className={styles.progressArgoment}>
                         <p className={styles.progressPercent}>{topic.progress}</p>

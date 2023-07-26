@@ -4,7 +4,7 @@ export const topics = [
       title: 'What is Bitcoin?',
       lessonNumber: 'Lesson 1',
       progress: '35%',
-      videoURL: 'https://example.com/video1',
+      videoURL:  'https://www.youtube.com/embed/s4g1XFU8Gto?modestbranding=1',
       description: 'This lesson will introduce you to Bitcoin and explain its origin, purpose, and functionality.',
     },
     {
@@ -12,7 +12,7 @@ export const topics = [
       title: 'Introduction to Ethereum',
       lessonNumber: 'Lesson 2',
       progress: '50%',
-      videoURL: 'https://example.com/video2',
+      videoURL: 'https://www.youtube.com/embed/IsXvoYeJxKA?modestbranding=1',
       description: 'In this lesson, we will explore Ethereum, its creation, and how it differs from Bitcoin.',
     },
     {
@@ -20,7 +20,7 @@ export const topics = [
       title: 'Understanding Blockchain',
       lessonNumber: 'Lesson 3',
       progress: '25%',
-      videoURL: 'https://example.com/video3',
+      videoURL: 'https://www.youtube.com/embed/sTFZras-1Lo?modestbranding=1',
       description: 'Blockchain is the underlying technology for many cryptocurrencies. This lesson will cover its design and uses.',
     },
     {
@@ -28,7 +28,7 @@ export const topics = [
       title: 'How Cryptocurrencies Work',
       lessonNumber: 'Lesson 4',
       progress: '60%',
-      videoURL: 'https://example.com/video4',
+      videoURL: 'https://www.youtube.com/embed/SzAuB2FG79A?modestbranding=1',
       description: 'This lesson will delve into the mechanics of cryptocurrencies and how transactions are validated.',
     },
     {
@@ -36,7 +36,7 @@ export const topics = [
         title: 'Cryptocurrency Mining Explained',
         lessonNumber: 'Lesson 5',
         progress: '40%',
-        videoURL: 'https://example.com/video5',
+        videoURL: 'https://www.youtube.com/embed/GmOzih6I1zs?modestbranding=1',
         description: 'Cryptocurrency mining is a complex process. This lesson will explain it in an easy to understand manner.',
     },
     {
@@ -44,7 +44,7 @@ export const topics = [
         title: 'Crypto Wallets and Security',
         lessonNumber: 'Lesson 6',
         progress: '20%',
-        videoURL: 'https://example.com/video6',
+        videoURL: 'https://www.youtube.com/embed/ofIm-w4OGCs?modestbranding=1',
         description: 'Security is paramount in crypto. This lesson covers how to secure your cryptocurrencies.',
     },
     {
@@ -52,7 +52,7 @@ export const topics = [
         title: 'Investing in Cryptocurrencies',
         lessonNumber: 'Lesson 7',
         progress: '70%',
-        videoURL: 'https://example.com/video7',
+        videoURL: 'https://www.youtube.com/embed/ke2VVDSSIks?modestbranding=1',
         description: 'This lesson provides an overview of investment strategies and considerations when dealing with cryptocurrencies.',
     },
   ];
