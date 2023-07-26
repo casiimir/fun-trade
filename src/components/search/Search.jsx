@@ -11,29 +11,33 @@ const Search = ({ setIsSearchOpen }) => {
   const onHandleChange = (e) => setInputText(e.target.value);
   const onHandleSubmit = (e) => {
     e.preventDefault();
+    setInputText("");
   };
 
   return (
     <section className={styles.Search}>
-      <button onClick={onHandleClick} className={styles.closeBtn}>
-        <Image src={closeIcon} alt="close" width={40} height={40} />
-      </button>
-
       <form className={styles.form} onSubmit={onHandleSubmit}>
-        <div>
-          <input
-            type="text"
-            name="search"
-            value={inputText}
-            onChange={onHandleChange}
-            placeholder="Cerca una crypto"
-            required
-            className={styles.input}
+        <button onClick={onHandleClick} className={styles.closeBtn}>
+          <Image src={closeIcon} alt="close" width={40} height={40} />
+        </button>
+        <button type="submit" name="submit" className={styles.submitBtn}>
+          <Image
+            src={searchIcon}
+            alt="search"
+            width={30}
+            height={30}
+            className={styles.icon}
           />
-        </div>
-        <div>
-          <input type="submit" name="submit" value="Cerca" className={styles.submitBtn} />
-        </div>
+        </button>
+        <input
+          type="text"
+          name="search"
+          value={inputText}
+          onChange={onHandleChange}
+          placeholder="Cerca una crypto"
+          required
+          className={styles.input}
+        />
       </form>
     </section>
   );
