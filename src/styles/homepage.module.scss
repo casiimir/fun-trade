@@ -5,6 +5,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 15px;
+    gap: 25px;
 
     &__myBalance {
       box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
@@ -35,6 +36,40 @@
 
       &__chart {
         width: 200px;
+      }
+    }
+
+    &__categories {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 15px;
+
+      &__crypto_list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        width: 100%;
+        overflow-x: auto;
+        padding: 5px;
+
+        &__card {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+          border-radius: 10px;
+          gap: 10px;
+
+          &__title {
+            font-weight: 600;
+          }
+        }
       }
     }
   }
