@@ -12,8 +12,7 @@
     "chart.js": "^4.3.1",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
-    "faker": "^6.6.6",
-    "moment": "^2.29.4",
+    "faker": "^5.5.3",
     "next": "13.4.12",
     "next-images": "^1.8.5",
     "react": "18.2.0",
@@ -21,6 +20,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
+    "moment": "^2.29.4",
     "react-chartjs-2": "^5.2.0",
     "sass": "^1.64.1"
   }
