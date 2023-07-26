@@ -6,15 +6,15 @@ import { navbarItems } from "../mock/navbarItems";
 import styles from "./DefaultLayout.module.scss";
 
 const DefaultLayout = ({ children }) => {
-	const { nav } = useContext(UserContext);
+  const { nav } = useContext(UserContext);
 
-	return (
-		<>
-			{nav && <NavbarTop items={navbarItems[0].items} />}
-			<section className={styles.content}>{children}</section>
-			{nav && <NavbarBottom items={navbarItems[1].items} />}
-		</>
-	);
+  return (
+    <>
+      {nav && <NavbarTop items={navbarItems[0].items} />}
+      <section className={`${nav && styles.content}`}>{children}</section>
+      {nav && <NavbarBottom />}
+    </>
+  );
 };
 
 export default DefaultLayout;

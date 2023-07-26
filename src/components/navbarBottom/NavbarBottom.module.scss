@@ -1,9 +1,9 @@
 .Navbar {
-  height: rem(80px);
   @include flexboxCenter();
-  justify-content: space-between;
   padding: 0 rem($paddingSmall);
   width: 100%;
+  min-width: 390px;
+  height: rem(80px);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -11,12 +11,36 @@
 
 .wrapper {
   @include flexboxCenterColumn;
-  padding: rem($paddingExtraSmall);
-  border: 1px solid black;
+  width: rem(60px);
+  height: rem(60px);
   border-radius: $roundedMedium;
+  background: $background-main;
   cursor: pointer;
+  background: linear-gradient(145deg, #e6eaec, $background-main);
+  box-shadow: 5px 5px 14px #b8b8b8, -5px -5px 14px #ffffff;
 
   p {
+    @extend %paragraphBold;
     font-size: rem($paragraphExtraSmall);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Navbar {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .Navbar {
+    justify-content: center;
+    gap: rem(60px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Navbar {
+    justify-content: center;
+    gap: rem(60px);
   }
 }

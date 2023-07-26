@@ -1,18 +1,95 @@
 .Navbar {
-  height: rem(80px);
+  min-width: 390px;
+  height: rem(160px);
   @include flexboxCenter();
-  justify-content: space-between;
-  padding: 0 rem($paddingSmall);
+  padding: rem($paddingSmall);
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  background-color: $background-main;
 }
 
-.wrapper {
-  @include flexboxCenterColumn;
-  padding: rem($paddingExtraSmall);
-  border: 1px solid black;
+.container {
+  @include flexboxCenter;
+  width: rem(65px);
+  height: rem(55px);
+  padding: rem($paddingSmall);
   border-radius: $roundedMedium;
   cursor: pointer;
+  background: linear-gradient(145deg, #e6eaec, $background-main);
+  box-shadow: 22px 22px 44px #b8b8b8, -22px -22px 44px #ffffff;
+
+  svg {
+    width: rem(30px);
+    height: rem(30px);
+  }
+}
+
+.logo {
+  width: rem(120px);
+  height: rem(120px);
+  padding: rem($paddingExtraLarge);
+  position: relative;
+  border-radius: 100%;
+  background: $background-main;
+  box-shadow: 26px 26px 52px #b8b8b8, -26px -26px 52px #ffffff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: rem(70px);
+    height: rem(70px);
+    border-radius: 100%;
+    background: transparent;
+    box-shadow: 15px 15px 30px #b8b8b8, -15px -15px 30px #ffffff;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.burger {
+  width: 300px;
+  height: 700px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  padding: $paddingSmall;
+  border-radius: $roundedMedium;
+  z-index: 99;
+  background-color: $background-main;
+  box-shadow: 5px 5px 14px #b8b8b8, -5px -5px 14px #ffffff;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%);
+  transition: all 0.25s ease-in-out;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Navbar {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .Navbar {
+    justify-content: center;
+    gap: rem(100px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Navbar {
+    justify-content: center;
+    gap: rem(100px);
+  }
 }

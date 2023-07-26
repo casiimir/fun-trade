@@ -5,7 +5,6 @@ export const UserContext = React.createContext();
 
 export default function App({ Component, pageProps }) {
   const [nav, setNav] = useState(false);
-  // console.log(username);
 
   return (
     <UserContext.Provider value={{ nav, setNav }}>

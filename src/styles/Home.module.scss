@@ -59,10 +59,12 @@
           display: flex;
           flex-direction: column;
           gap: 5px;
+          font-weight: 600;
 
           &__input {
-            height: 30px;
+            height: 35px;
             border-radius: 8px;
+            padding: 0 10px;
           }
         }
 
@@ -71,10 +73,12 @@
           display: flex;
           flex-direction: column;
           gap: 5px;
+          font-weight: 600;
 
           &__input {
-            height: 30px;
+            height: 35px;
             border-radius: 8px;
+            padding: 0 10px;
           }
         }
 
@@ -110,7 +114,7 @@
               position: absolute;
               top: 50%;
               left: 0;
-              width: 50px;
+              width: 75px;
               border: 1px solid #8e8e8e;
             }
 
@@ -119,7 +123,7 @@
               position: absolute;
               top: 50%;
               right: 0;
-              width: 50px;
+              width: 75px;
               border: 1px solid #8e8e8e;
             }
           }
@@ -148,7 +152,7 @@
               position: absolute;
               top: 50%;
               left: 0;
-              width: 20px;
+              width: 45px;
               border: 1px solid #8e8e8e;
             }
 
@@ -157,7 +161,361 @@
               position: absolute;
               top: 50%;
               right: 0;
-              width: 20px;
+              width: 45px;
+              border: 1px solid #8e8e8e;
+            }
+          }
+        }
+
+        &__btn {
+          padding: 10px 25px;
+          border-radius: 50px;
+          border: none;
+          background-color: $btn-secondary;
+          -webkit-box-shadow: 13px 9px 8px 0px rgba(158, 158, 158, 0.57);
+          box-shadow: 13px 9px 8px 0px rgba(158, 158, 158, 0.57);
+        }
+      }
+    }
+
+
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    gap: 30px;
+    color: $btn-main;
+    background-color: $btn-secondary;
+    background-image: url("../assets/iconsProject/logImageTablet.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    &__header {
+      width: 100%;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+
+    }
+
+    &__login {
+      // border: 1px solid red;
+      border-radius: 15px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      width: 450px;
+      max-height: 500px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+      background-color: #ffffff;
+
+      &__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+
+        &__email {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          font-weight: 600;
+
+          &__input {
+            height: 40px;
+            border-radius: 8px;
+            padding: 0 10px;
+          }
+        }
+
+        &__password {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          font-weight: 600;
+
+          &__input {
+            height: 40px;
+            border-radius: 8px;
+            padding: 0 10px;
+          }
+        }
+
+        &__submit {
+          padding: 10px 25px;
+          border-radius: 50px;
+          background-color: $btn-secondary;
+          border: none;
+          -webkit-box-shadow: 13px 9px 8px 0px rgba(158, 158, 158, 0.57);
+          box-shadow: 13px 9px 8px 0px rgba(158, 158, 158, 0.57);
+        }
+      }
+
+      &__link {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        &__title {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
+          &__h3 {
+
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 120px;
+              border: 1px solid #8e8e8e;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              right: 0;
+              width: 120px;
+              border: 1px solid #8e8e8e;
+            }
+          }
+        }
+      }
+
+      &__sing_in {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        &__title {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
+          &__h3 {
+
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 95px;
+              border: 1px solid #8e8e8e;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              right: 0;
+              width: 95px;
+              border: 1px solid #8e8e8e;
+            }
+          }
+        }
+
+        &__btn {
+          padding: 10px 25px;
+          border-radius: 50px;
+          border: none;
+          background-color: $btn-secondary;
+          -webkit-box-shadow: 13px 9px 8px 0px rgba(158, 158, 158, 0.57);
+          box-shadow: 13px 9px 8px 0px rgba(158, 158, 158, 0.57);
+        }
+      }
+    }
+
+
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    gap: 30px;
+    color: $btn-main;
+    background-color: $btn-secondary;
+    background-image: url("../assets/iconsProject/logIn-deskopt-img.svg");
+    background-repeat: no-repeat;
+    background-size: 110vw;
+    background-position: center;
+
+
+    &__header {
+      width: 100%;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+
+    }
+
+    &__login {
+      // border: 1px solid red;
+      border-radius: 15px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      width: 450px;
+      max-height: 500px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+      background-color: #ffffff;
+
+      &__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+
+        &__email {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          font-weight: 600;
+
+          &__input {
+            height: 40px;
+            border-radius: 8px;
+            padding: 0 10px;
+          }
+        }
+
+        &__password {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          font-weight: 600;
+
+          &__input {
+            height: 40px;
+            border-radius: 8px;
+            padding: 0 10px;
+          }
+        }
+
+        &__submit {
+          padding: 10px 25px;
+          border-radius: 50px;
+          background-color: $btn-secondary;
+          border: none;
+          -webkit-box-shadow: 13px 9px 8px 0px rgba(158, 158, 158, 0.57);
+          box-shadow: 13px 9px 8px 0px rgba(158, 158, 158, 0.57);
+        }
+      }
+
+      &__link {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        &__title {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
+          &__h3 {
+
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 120px;
+              border: 1px solid #8e8e8e;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              right: 0;
+              width: 120px;
+              border: 1px solid #8e8e8e;
+            }
+          }
+        }
+      }
+
+      &__sing_in {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        &__title {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
+          &__h3 {
+
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 95px;
+              border: 1px solid #8e8e8e;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              right: 0;
+              width: 95px;
               border: 1px solid #8e8e8e;
             }
           }
