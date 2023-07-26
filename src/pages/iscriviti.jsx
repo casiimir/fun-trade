@@ -12,22 +12,23 @@ import logo from "@/assets/iconsProject/logo.svg";
 import arrow from "@/assets/iconsProject/arrow.svg";
 
 export default function iscriviti() {
-	const router = useRouter();
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
+  const router = useRouter();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-	const onHandleName = (e) => {
-		setName(e.target.value);
-	};
+  const onHandleName = (e) => {
+    setName(e.target.value);
+  };
 
-	const onHandleEmail = (e) => {
-		setEmail(e.target.value);
-	};
+  const onHandleEmail = (e) => {
+    setEmail(e.target.value);
+  };
 
-	const onHandlePassword = (e) => {
-		setPassword(e.target.value);
-	};
+  const onHandlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
 
 	const onHandleSubmit = (e) => {
 		e.preventDefault();
@@ -173,4 +174,5 @@ export default function iscriviti() {
 			</div>
 		</>
 	);
+
 }
