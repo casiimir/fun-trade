@@ -5,25 +5,27 @@ import { useState } from "react";
 
 const NavbarTop = ({ items }) => {
   const router = useRouter();
-  const [isVisible, setIsVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const onHandleClick = (page) => {
     // router.push(`/${page}`);
-    setIsVisible((prev) => !prev);
+    setIsOpen((prev) => !prev);
   };
 
   return (
     <header className={styles.Navbar}>
-      {items.map((item) => (
+      {items?.map((item) => (
         <div
           key={item.id}
-          className={`${styles.container} ${item.label === "logo" ? styles.logo : ""}`}
+          className={`${styles.container} ${item?.label === "logo" ? styles.logo : ""}`}
           onClick={() => onHandleClick(item.label)}
         >
           {item.icon}
         </div>
       ))}
-      {isVisible && <Menu setIsVisible={setIsVisible} />}
+      <div className={`${styles.burger} ${isOpen && styles.open}`}>
+        <Menu setIsOpen={setIsOpen} />
+      </div>
     </header>
   );
 };
