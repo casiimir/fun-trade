@@ -4,6 +4,9 @@ import styles from "./index.module.scss";
 
 import { useRouter } from "next/router";
 
+//Mock
+import crypto from "../../mock/peppe.js";
+
 //Image
 import arrow from "../../assets/iconsProject/arrow.svg";
 
@@ -27,7 +30,9 @@ export default function cryptovalutes() {
 				<h1 className={styles.cryptovalutes__header__title}>Cryptovalute</h1>
 			</div>
 			<div className={styles.cryptovalutes__list}>
-				{/* {data.map((item) => <Card data={item} />)} */}
+				{crypto.map((item) => (
+					<Card data={item} />
+				))}
 			</div>
 		</div>
 	);
