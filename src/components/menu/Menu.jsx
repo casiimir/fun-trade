@@ -5,10 +5,8 @@ import { menuList } from "@/mock/menuList";
 import closeIcon from "../../assets/iconsProject/close-menu.svg";
 import profileIcon from "../../mock/profile-icon.svg";
 
-const Menu = ({ setIsOpen }) => {
-  const onHandleClick = () => {
-    setIsOpen((prev) => !prev);
-  };
+const Menu = ({ setIsBurgerOpen }) => {
+  const onHandleClick = () => setIsBurgerOpen((prev) => !prev);
   return (
     <section className={styles.Menu}>
       <button onClick={onHandleClick} className={styles.closeBtn}>
