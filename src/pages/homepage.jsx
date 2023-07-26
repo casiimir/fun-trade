@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "../styles/homepage.module.scss";
-import CardList from "@/components/cardList/CardList";
+import CardList from "@/components/cardList";
 
 import Image from "next/image";
 
@@ -12,11 +12,6 @@ export default function homepage() {
 	const [openCards, setOpenCards] = useState(false);
 
 	useEffect(() => {
-		// fetch(
-		// 	"https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en"
-		// )
-		// 	.then((res) => res.json())
-		// 	.then((data) => setCryptoDatas(data));
 		setCryptoDatas(crypto);
 	}, []);
 
@@ -24,7 +19,6 @@ export default function homepage() {
 		setOpenCards(true);
 	};
 
-	// const filterData = cryptoDatas.slice(0, 4) || [];
 	return (
 		<div className={styles.homepage}>
 			<div className={styles.my_balance_contain}>
@@ -62,53 +56,8 @@ export default function homepage() {
 						</defs>
 					</svg>
 				</div>
-
 				<CardList cryptoDatas={cryptoDatas} />
 			</div>
-			{/* <div>
-        <h3 className={styles.mover_principali}>Mover Principali</h3>
-        <ul className={styles.balance_list}>
-          {filterData &&
-            filterData.map((item) => (
-              <li className={styles.crypto} key={item.id}>
-                <div className={styles.image_contain}>
-                  <img
-                    className={styles.image_crypto}
-                    src={item?.image}
-                    alt={item?.name}
-                  />
-                </div>
-                <div className={styles.info_cripto}>
-                  <h4>{item?.name}</h4>
-                  <div className={styles.price_info}>
-                    <div className={styles.arrow_contain}>
-                      <Image
-                        src={
-                          item?.price_change_percentage_24h < 0
-                            ? arrowRed
-                            : arrowGreen
-                        }
-                        width={20}
-                        height={20}
-                        alt="Arrow"
-                      />
-                    </div>
-
-                    <p
-                      className={`${
-                        item?.price_change_percentage_24h < 0
-                          ? styles.negative
-                          : styles.positive
-                      }`}
-                    >
-                      {item?.price_change_percentage_24h} %
-                    </p>
-                  </div>
-                </div>
-              </li>
-            ))}
-        </ul>
-      </div> */}
 		</div>
 	);
 }
