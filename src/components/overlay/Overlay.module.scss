@@ -1,0 +1,10 @@
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  z-index: 1;
+  background-color: colorShade($background-main, white, 50%);
+}
