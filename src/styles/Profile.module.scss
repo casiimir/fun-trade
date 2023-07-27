@@ -1,42 +1,63 @@
-//media query MOBILE
-@media screen and (max-width: 480px) {
-  .Profile {
+.Profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  .__container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    justify-content: center;
+    /* border: solid red 2px; */
+    width: 90%;
 
-    .__options {
+    .__desktopLeftWrapper {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      gap: 14px;
+      /* border: solid violet 2px; */
+      width: 90%;
 
-      button {
-        width: 104px;
-        height: 30px;
-        margin-top: 20px;
-        border: none;
-        border-radius: $roundedMedium;
-        background-color: $background-main;
-        box-shadow: 5px 5px 10px #b8b8b8, -4px -5px 10px #ffffff;
+      .__options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+
+        button {
+          width: 104px;
+          height: 30px;
+          margin-top: 20px;
+          @extend %neumorphism;
+          border: none;
+          z-index: 9;
+
+          &:active {
+            @extend %neumorphismActive;
+          }
+        }
+      }
+      .__functions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 44px;
+
+        button {
+          width: 104px;
+          height: 30px;
+          margin-top: 20px;
+          @extend %neumorphism;
+          border: none;
+          z-index: 9;
+
+          &:active {
+            @extend %neumorphismActive;
+          }
+        }
       }
     }
-    .__functions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 44px;
-
-      button {
-        width: 104px;
-        height: 30px;
-        margin-top: 20px;
-        border: none;
-        border-radius: $roundedMedium;
-        background-color: $background-main;
-        box-shadow: 5px 5px 10px #b8b8b8, -4px -5px 10px #ffffff;
-      }
+    .__desktopRightWrapper {
+      display: none;
     }
   }
 }
@@ -49,36 +70,45 @@
     align-items: center;
     gap: 18px;
 
-    .__options {
+    .__container {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 14px;
+      /* border: solid red 2px; */
+      width: 90%;
 
-      button {
-        width: 104px;
-        height: 30px;
-        margin-top: 18px;
-        border: none;
-        border-radius: $roundedMedium;
-        background-color: $background-main;
-        box-shadow: 5px 5px 10px #b8b8b8, -4px -5px 10px #ffffff;
+      .__desktopLeftWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: solid violet 2px; */
+        width: 90%;
+
+        .__options {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 14px;
+
+          button {
+            width: 104px;
+            height: 30px;
+            margin-top: 18px;
+          }
+        }
+        .__functions {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 44px;
+
+          button {
+            width: 104px;
+            height: 30px;
+            margin-top: 20px;
+          }
+        }
       }
-    }
-    .__functions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 44px;
-
-      button {
-        width: 104px;
-        height: 30px;
-        margin-top: 20px;
-        border: none;
-        border-radius: $roundedMedium;
-        background-color: $background-main;
-        box-shadow: 5px 5px 10px #b8b8b8, -4px -5px 10px #ffffff;
+      .__desktopRightWrapper {
+        display: none;
       }
     }
   }
@@ -88,42 +118,79 @@
 @media screen and (min-width: 1024px) {
   .Profile {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     gap: 20px;
-    margin-top: 1em;
+    width: 100vw;
 
-    .__options {
+    .__container {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 14px;
+      /* border: solid red 2px; */
+      width: 90%;
+      .__desktopLeftWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: solid violet 2px; */
+        width: 75%;
+        .__options {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 14px;
 
-      button {
-        width: 104px;
-        height: 30px;
-        margin-top: 20px;
-        border: none;
-        border-radius: $roundedMedium;
-        background-color: $background-main;
-        box-shadow: 5px 5px 10px #b8b8b8, -4px -5px 10px #ffffff;
+          button {
+            width: 104px;
+            height: 45px;
+            margin-top: 20px;
+            border: none;
+          }
+        }
+        .__functions {
+          /* display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 44px; */
+          display: none;
+
+          button {
+            /* width: 104px;
+            height: 45px;
+            margin-top: 20px; */
+            border: none;
+          }
+        }
       }
-    }
-    .__functions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 44px;
+      .__desktopRightWrapper {
+        display: flex;
+        flex-direction: column;
+        /* border: solid rgb(224, 192, 49) 2px; */
+        width: 25%;
 
-      button {
-        width: 104px;
-        height: 30px;
-        margin-top: 20px;
-        border: none;
-        border-radius: $roundedMedium;
-        background-color: $background-main;
-        box-shadow: 5px 5px 10px #b8b8b8, -4px -5px 10px #ffffff;
+        .__functionsRight {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          button {
+            width: 104px;
+            height: 45px;
+            margin-top: 20px;
+            background-color: $background-main;
+            border-radius: rem(10px);
+            box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+            transition: box-shadow 0.4s ease-in-out;
+            outline: none;
+            border: none;
+            z-index: 9;
+
+            &:active {
+              box-shadow: inset -5px -5px 10px #c8d1da,
+                inset 5px 5px 10px #ffffff;
+            }
+          }
+        }
       }
     }
   }

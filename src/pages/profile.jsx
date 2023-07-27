@@ -1,9 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
+
 import DefaultLayout from "@/layouts/DefaultLayout";
+import { useState } from "react";
 import styles from "../styles/Profile.module.scss";
 import MyBalance from "@/components/myBalance";
 import UserAssets from "@/components/userAssets";
+import HistoryTransactions from "@/components/historyTransactions";
+import Search from "@/components/search";
 
 const Profile = () => {
   return (
@@ -14,21 +18,34 @@ const Profile = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <DefaultLayout>
-        <main className={`${styles.Profile}`}>
-          <MyBalance />
-          <div className={styles.__options}>
-            <button>Negoziazioni</button>
-            <button>Ordini</button>
-            <button>Avvisi</button>
+   <DefaultLayout>
+      <main className={`${styles.Profile}`}>
+        <div>{/* <Search /> */}</div>
+
+        <div className={styles.__container}>
+          <div className={styles.__desktopLeftWrapper}>
+            <MyBalance />
+            <div className={styles.__options}>
+              <button>Negoziazioni</button>
+              <button>Ordini</button>
+              <button>Avvisi</button>
+            </div>
+            <UserAssets />
+            <div className={styles.__functions}>
+              <button>Preleva</button>
+              <button>Deposita</button>
+            </div>
           </div>
-          <UserAssets />
-          <div className={styles.__functions}>
-            <button>Preleva</button>
-            <button>Deposita</button>
+          <div className={styles.__desktopRightWrapper}>
+            <HistoryTransactions />
+            <div className={styles.__functionsRight}>
+              <button>Preleva</button>
+              <button>Deposita</button>
+            </div>
           </div>
-        </main>
-      </DefaultLayout>
+        </div>
+      </main>
+   </DefaultLayout>
     </>
   );
 };
