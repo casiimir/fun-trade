@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "../styles/Profile.module.scss";
 import MyBalance from "@/components/myBalance";
 import UserAssets from "@/components/userAssets";
+import HistoryTransactions from "@/components/historyTransactions";
 
 const Profile = () => {
   return (
@@ -14,16 +15,24 @@ const Profile = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.Profile}`}>
-        <MyBalance />
-        <div className={styles.__options}>
-          <button>Negoziazioni</button>
-          <button>Ordini</button>
-          <button>Avvisi</button>
-        </div>
-        <UserAssets />
-        <div className={styles.__functions}>
-          <button>Preleva</button>
-          <button>Deposita</button>
+        {/* Searchbar  */}
+        <div className={styles.__container}>
+          <div className={styles.__desktopLeftWrapper}>
+            <MyBalance />
+            <div className={styles.__options}>
+              <button>Negoziazioni</button>
+              <button>Ordini</button>
+              <button>Avvisi</button>
+            </div>
+            <UserAssets />
+            <div className={styles.__functions}>
+              <button>Preleva</button>
+              <button>Deposita</button>
+            </div>
+          </div>
+          <div className={styles.__desktopRightWrapper}>
+            <HistoryTransactions />
+          </div>
         </div>
       </main>
     </>
