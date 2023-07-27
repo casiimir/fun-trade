@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 //Firebase
-import { postData, authGoogle, getData } from "@/firebase";
+import { postData, getData } from "@/firebase";
 
 //Image
 import google from "@/assets/7611770.png";
@@ -32,6 +32,12 @@ export default function iscriviti() {
 		setPassword(e.target.value);
 	};
 
+	/**
+	 * Register with email and password
+	 *
+	 * then it checks the user data in the db (getData) and if it doesn't exist it creates it (postData)
+	 * @param {*} e
+	 */
 	const onHandleSubmit = (e) => {
 		e.preventDefault();
 		getData()
@@ -41,12 +47,8 @@ export default function iscriviti() {
 			})
 			.then((post) => {
 				!post ? postData(name, email, password) : null;
+				router.push("/");
 			});
-		router.push("/");
-	};
-
-	const onHandleGoogle = () => {
-		authGoogle().then((res) => res.emailVerified && router.push("/homepage"));
 	};
 	return (
 		<>
@@ -163,23 +165,6 @@ export default function iscriviti() {
 							className={styles.iscriviti__wrap__form__submit}
 						/>
 					</form>
-					<div className={styles.iscriviti__wrap__link}>
-						<div className={styles.iscriviti__wrap__link__title}>
-							<h3 className={styles.iscriviti__wrap__link__title__h3}>
-								Oppure iscriviti con
-							</h3>
-						</div>
-						<div className={styles.iscriviti__wrap__link__icons}>
-							<Image
-								src={google}
-								alt="logo google"
-								width={50}
-								height={50}
-								onClick={onHandleGoogle}
-							/>
-							<Image src={facebook} alt="logo google" width={50} height={50} />
-						</div>
-					</div>
 				</div>
 			</div>
 		</>
