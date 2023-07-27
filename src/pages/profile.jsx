@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
+
+import DefaultLayout from "@/layouts/DefaultLayout";
 import { useState } from "react";
 import styles from "../styles/Profile.module.scss";
 import MyBalance from "@/components/myBalance";
@@ -16,6 +18,7 @@ const Profile = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+   <DefaultLayout>
       <main className={`${styles.Profile}`}>
         <div>{/* <Search /> */}</div>
 
@@ -42,6 +45,7 @@ const Profile = () => {
           </div>
         </div>
       </main>
+   </DefaultLayout>
     </>
   );
 };
