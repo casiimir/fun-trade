@@ -36,14 +36,20 @@ export const getData = async () => {
 	}
 };
 
-export const postData = async (username, email, password, id = 0) => {
+export const postData = async (
+	username,
+	email,
+	password,
+	id = 0,
+	avatar = `https://robohash.org/${username}`
+) => {
 	try {
 		const docRef = await addDoc(collection(db, "users"), {
 			username,
 			email,
 			password,
 			balance: Math.floor(Math.random() * 1500),
-			avatar: `https://robohash.org/${username}`,
+			avatar,
 			preference: [],
 			id,
 		});
@@ -73,7 +79,8 @@ export const authGoogle = async () => {
 						res.user.displayName,
 						res.user.email,
 						res.user.uid,
-						res.user.uid
+						res.user.uid,
+						res.user.photoURL
 				  )
 				: null;
 		});
