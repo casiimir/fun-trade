@@ -31,10 +31,8 @@ export default function Home({ data }) {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    if (
-      users[0]?.email.toLowerCase() === email.toLowerCase() &&
-      users[0]?.password.toLowerCase() === password.toLowerCase()
-    ) {
+    const login = users.find(user => user.email.toLowerCase() === email.toLowerCase() && user.password.toLowerCase() === password.toLowerCase())
+    if (login) {
       router.push("/homepage");
     } else {
       alert("incorrect email or password");
@@ -108,9 +106,7 @@ export default function Home({ data }) {
               <h3 className={styles.main__login__link__title__h3}>Oppure accedi con</h3>
             </div>
             <div className={styles.main__login__link__icons}>
-              <button onClick={onHandleGoogle}>
-                <Image src={google} alt="logo google" width={50} height={50} />
-              </button>
+              <Image src={google} alt="logo google" width={50} height={50} onClick={onHandleGoogle} className={styles.main__login__link__icons__google} />
               <Image src={facebook} alt="logo google" width={50} height={50} />
             </div>
           </div>

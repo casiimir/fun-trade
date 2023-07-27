@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 //Firebase
-import { postData } from "@/firebase";
+import { postData, authGoogle, getData } from "@/firebase";
 
 //Image
 import google from "@/assets/7611770.png";
@@ -34,8 +34,19 @@ export default function iscriviti() {
 
 	const onHandleSubmit = (e) => {
 		e.preventDefault();
-		postData(name, email, password);
+		getData()
+			.then((data) => {
+				const post = data.find((user) => user.email === email);
+				return post;
+			})
+			.then((post) => {
+				!post ? postData(name, email, password) : null;
+			});
 		router.push("/");
+	};
+
+	const onHandleGoogle = () => {
+		authGoogle().then((res) => res.emailVerified && router.push("/homepage"));
 	};
 	return (
 		<>
@@ -159,7 +170,13 @@ export default function iscriviti() {
 							</h3>
 						</div>
 						<div className={styles.iscriviti__wrap__link__icons}>
-							<Image src={google} alt="logo google" width={50} height={50} />
+							<Image
+								src={google}
+								alt="logo google"
+								width={50}
+								height={50}
+								onClick={onHandleGoogle}
+							/>
 							<Image src={facebook} alt="logo google" width={50} height={50} />
 						</div>
 					</div>
