@@ -12,7 +12,10 @@ const NavbarTop = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  const onHandleClickBurger = () => setIsBurgerOpen((prev) => !prev);
+  const onHandleClickBurger = () => {
+    if (isSearchOpen) setIsSearchOpen((prev) => !prev);
+    setIsBurgerOpen((prev) => !prev);
+  };
   const onHandleClickSearch = () => setIsSearchOpen((prev) => !prev);
 
   return (
@@ -21,10 +24,10 @@ const NavbarTop = () => {
         <nav>
           <ul className={styles.Navbar}>
             {isBurgerOpen && <Overlay setIsOpen={setIsBurgerOpen} />}
+            {isSearchOpen && <Overlay setIsOpen={setIsSearchOpen} />}
             <div className={`${styles.burgerModal} ${isBurgerOpen && styles.open}`}>
               <Menu setIsBurgerOpen={setIsBurgerOpen} />
             </div>
-
             <li className={styles.container}>
               <Image
                 src={burgerIcon}
@@ -45,7 +48,6 @@ const NavbarTop = () => {
                 height={30}
                 onClick={onHandleClickSearch}
               />
-              {/* {isSearchOpen && <Overlay setIsOpen={setIsSearchOpen} />} */}
               <div className={`${styles.searchModal} ${isSearchOpen && styles.open}`}>
                 <Search setIsSearchOpen={setIsSearchOpen} />
               </div>
