@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import DefaultLayout from "@/layouts/DefaultLayout";
 import styles from "../styles/Profile.module.scss";
 import MyBalance from "@/components/myBalance";
 import UserAssets from "@/components/userAssets";
@@ -13,19 +14,21 @@ const Profile = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.Profile}`}>
-        <MyBalance />
-        <div className={styles.__options}>
-          <button>Negoziazioni</button>
-          <button>Ordini</button>
-          <button>Avvisi</button>
-        </div>
-        <UserAssets />
-        <div className={styles.__functions}>
-          <button>Preleva</button>
-          <button>Deposita</button>
-        </div>
-      </main>
+      <DefaultLayout>
+        <main className={`${styles.Profile}`}>
+          <MyBalance />
+          <div className={styles.__options}>
+            <button>Negoziazioni</button>
+            <button>Ordini</button>
+            <button>Avvisi</button>
+          </div>
+          <UserAssets />
+          <div className={styles.__functions}>
+            <button>Preleva</button>
+            <button>Deposita</button>
+          </div>
+        </main>
+      </DefaultLayout>
     </>
   );
 };

@@ -11,12 +11,15 @@
 }
 
 .wrapper {
-  @extend %neumorphism;
   @include flexboxCenterColumn;
   width: rem(60px);
   height: rem(60px);
   border-radius: $roundedMedium;
   cursor: pointer;
+
+  &.selected {
+    @extend %neumorphism;
+  }
 
   &:active {
     @extend %neumorphismActive;
