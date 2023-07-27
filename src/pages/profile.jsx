@@ -1,9 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useState } from "react";
 import styles from "../styles/Profile.module.scss";
 import MyBalance from "@/components/myBalance";
 import UserAssets from "@/components/userAssets";
 import HistoryTransactions from "@/components/historyTransactions";
+import Search from "@/components/search";
 
 const Profile = () => {
   return (
@@ -15,7 +17,8 @@ const Profile = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.Profile}`}>
-        {/* Searchbar  */}
+        <div>{/* <Search /> */}</div>
+
         <div className={styles.__container}>
           <div className={styles.__desktopLeftWrapper}>
             <MyBalance />
@@ -32,6 +35,10 @@ const Profile = () => {
           </div>
           <div className={styles.__desktopRightWrapper}>
             <HistoryTransactions />
+            <div className={styles.__functionsRight}>
+              <button>Preleva</button>
+              <button>Deposita</button>
+            </div>
           </div>
         </div>
       </main>
