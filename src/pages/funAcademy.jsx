@@ -14,7 +14,6 @@ import { topics as mockTopics } from "@/mock/topics";
 export default function FunAcademy() {
     return (
         <>
-        {/* ... existing code ... */}
             <h2 className={styles.heading2}>CONTINUA A GUARDARE:</h2>
             <div className={styles.videoContainer}>
                 {mockTopics.map(topic => (
