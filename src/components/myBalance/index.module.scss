@@ -34,8 +34,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 320px;
-    width: 90vw;
+    height: 340px;
+    width: 65vw;
     border-radius: 30px;
     background: #ecf0f3;
     box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
@@ -51,6 +51,7 @@
       justify-content: center;
       align-items: center;
       font-weight: bolder;
+      font-size: larger;
     }
   }
 }
