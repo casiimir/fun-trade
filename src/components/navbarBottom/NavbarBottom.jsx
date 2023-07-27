@@ -10,33 +10,19 @@ import settingsIcon from "../../assets/iconsProject/setting.svg";
 import { useState } from "react";
 
 const NavbarBottom = () => {
-  const [isSelected, setIsSelected] = useState([false, false, true, false, false]);
+  const [selected, setSelected] = useState("homepage");
 
-  const onHandleDummy = () => {
-    setIsSelected([true, false, false, false, false]);
-  };
-  const onHandleWallet = () => {
-    setIsSelected([false, true, false, false, false]);
-  };
-  const onHandleHomepage = () => {
-    setIsSelected([false, false, true, false, false]);
-  };
-  const onHandleAcademy = () => {
-    setIsSelected([false, false, false, true, false]);
-  };
-  const onHandleSettings = () => {
-    setIsSelected([false, false, false, false, true]);
-  };
+  const onHandleSelect = (e) => setSelected(e.currentTarget.id);
 
-  console.log(isSelected);
   return (
     <header>
       <nav>
         <ul className={styles.Navbar}>
           <Link href="#">
             <li
-              className={`${styles.wrapper} ${isSelected[0] && styles.selected}`}
-              onClick={onHandleDummy}
+              className={`${styles.wrapper} ${selected === "#" && styles.selected}`}
+              onClick={onHandleSelect}
+              id="#"
             >
               <Image src={arrowIcon} alt="dummy" width={30} height={30} />
               <p className={styles.label}>dummy</p>
@@ -44,8 +30,9 @@ const NavbarBottom = () => {
           </Link>
           <Link href="/profile">
             <li
-              className={`${styles.wrapper} ${isSelected[1] && styles.selected}`}
-              onClick={onHandleWallet}
+              className={`${styles.wrapper} ${selected === "profile" && styles.selected}`}
+              onClick={onHandleSelect}
+              id="profile"
             >
               <Image src={walletIcon} alt="wallet" width={30} height={30} />
               <p className={styles.label}>wallet</p>
@@ -53,8 +40,11 @@ const NavbarBottom = () => {
           </Link>
           <Link href="/homepage">
             <li
-              className={`${styles.wrapper} ${isSelected[2] && styles.selected}`}
-              onClick={onHandleHomepage}
+              className={`${styles.wrapper} ${
+                selected === "homepage" && styles.selected
+              }`}
+              onClick={onHandleSelect}
+              id="homepage"
             >
               <Image src={homeIcon} alt="home" width={30} height={30} />
               <p className={styles.label}>home</p>
@@ -62,8 +52,9 @@ const NavbarBottom = () => {
           </Link>
           <Link href="/funAcademy">
             <li
-              className={`${styles.wrapper} ${isSelected[3] && styles.selected}`}
-              onClick={onHandleAcademy}
+              className={`${styles.wrapper} ${selected === "academy" && styles.selected}`}
+              onClick={onHandleSelect}
+              id="academy"
             >
               <Image src={academyIcon} alt="academy" width={30} height={30} />
               <p className={styles.label}>academy</p>
@@ -71,8 +62,11 @@ const NavbarBottom = () => {
           </Link>
           <Link href="#">
             <li
-              className={`${styles.wrapper} ${isSelected[4] && styles.selected}`}
-              onClick={onHandleSettings}
+              className={`${styles.wrapper} ${
+                selected === "settings" && styles.selected
+              }`}
+              onClick={onHandleSelect}
+              id="settings"
             >
               <Image src={settingsIcon} alt="settings" width={30} height={30} />
               <p className={styles.label}>settings</p>
