@@ -5,6 +5,9 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
+//Firebase
+import { postData } from "@/firebase";
+
 //Image
 import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
@@ -12,36 +15,26 @@ import logo from "@/assets/iconsProject/logo.svg";
 import arrow from "@/assets/iconsProject/arrow.svg";
 
 export default function iscriviti() {
-  const router = useRouter();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+	const router = useRouter();
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
 
-  const onHandleName = (e) => {
-    setName(e.target.value);
-  };
+	const onHandleName = (e) => {
+		setName(e.target.value);
+	};
 
-  const onHandleEmail = (e) => {
-    setEmail(e.target.value);
-  };
+	const onHandleEmail = (e) => {
+		setEmail(e.target.value);
+	};
 
-  const onHandlePassword = (e) => {
-    setPassword(e.target.value);
-  };
-
+	const onHandlePassword = (e) => {
+		setPassword(e.target.value);
+	};
 
 	const onHandleSubmit = (e) => {
 		e.preventDefault();
-		localStorage.setItem(
-			"users",
-			JSON.stringify({
-				username: name,
-				email: email,
-				password: password,
-				balance: Math.floor(Math.random() * 1500),
-				avatar: `https://robohash.org/${name}`,
-			})
-		);
+		postData(name, email, password);
 		router.push("/");
 	};
 	return (
@@ -174,5 +167,4 @@ export default function iscriviti() {
 			</div>
 		</>
 	);
-
 }

@@ -4,24 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "@/styles/Home.module.scss";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
+import { getRedirectResult, signInWithPopup, } from "firebase/auth"
+
+//Firebase
+import { getData, auth, provider, authGoogle } from "@/firebase"
 
 //Image
 import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
 import logo from "@/assets/iconsProject/logo.svg";
 
-//Context
-import { UserContext } from "@/pages/_app";
-
-export default function Home() {
+export default function Home({ data }) {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [users, setUsers] = useState({});
-  useEffect(() => {
-    setUsers(JSON.parse(localStorage.getItem("users")));
-  }, []);
 
   const onHandleEmail = (e) => {
     setEmail(e.target.value);
@@ -34,15 +32,22 @@ export default function Home() {
   const onHandleSubmit = (e) => {
     e.preventDefault();
     if (
-      users?.email.toLowerCase() === email.toLowerCase() &&
-      users?.password.toLowerCase() === password.toLowerCase()
+      users[0]?.email.toLowerCase() === email.toLowerCase() &&
+      users[0]?.password.toLowerCase() === password.toLowerCase()
     ) {
-      localStorage.setItem("login", true)
       router.push("/homepage");
     } else {
       alert("incorrect email or password");
     }
   };
+
+  const onHandleGoogle = () => {
+    authGoogle().then(res => res.emailVerified && router.push("/homepage"))
+  };
+
+  useEffect(() => {
+    setUsers(data)
+  }, []);
 
   return (
     <>
@@ -103,7 +108,9 @@ export default function Home() {
               <h3 className={styles.main__login__link__title__h3}>Oppure accedi con</h3>
             </div>
             <div className={styles.main__login__link__icons}>
-              <Image src={google} alt="logo google" width={50} height={50} />
+              <button onClick={onHandleGoogle}>
+                <Image src={google} alt="logo google" width={50} height={50} />
+              </button>
               <Image src={facebook} alt="logo google" width={50} height={50} />
             </div>
           </div>
@@ -121,4 +128,14 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const data = await getData();
+
+  return {
+    props: {
+      data
+    }
+  }
 }
