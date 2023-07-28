@@ -27,36 +27,85 @@ export default function homepage() {
 	return (
 		<DefaultLayout>
 			<div className={styles.homepage}>
-				<div className={styles.homepage__myBalance}>
-					<div className={styles.homepage__myBalance__info}>
-						<p className={styles.homepage__myBalance__info__title}>
-							My Balance
-						</p>
-						<p className={styles.homepage__myBalance__info__wallet}>99.999 $</p>
-					</div>
-					<div className={styles.homepage__myBalance__chart}>
-						<Chart />
-					</div>
-				</div>
-				<div className={styles.homepage__categories}>
-					<h3 className={styles.homepage__categories__h3}>Sfoglia Categorie</h3>
-					<div className={styles.homepage__categories__crypto_list}>
+				<div className={styles.homepage__container}>
+					<div className={styles.homepage__container__desktopLeftWrapper}>
 						<div
-							className={styles.homepage__categories__crypto_list__card}
-							onClick={onHandelCrypto}
+							className={
+								styles.homepage__container__desktopLeftWrapper__myBalance
+							}
 						>
-							<p
+							<div
 								className={
-									styles.homepage__categories__crypto_list__card__title
+									styles.homepage__container__desktopLeftWrapper__myBalance__info
 								}
 							>
-								Criptovalute
-							</p>
-							<Image src={cryptoIcon} alt="cryptoIcon" width={40} height={40} />
+								<p
+									className={
+										styles.homepage__container__desktopLeftWrapper__myBalance__info__title
+									}
+								>
+									My Balance
+								</p>
+								<p
+									className={
+										styles.homepage__container__desktopLeftWrapper__myBalance__info__wallet
+									}
+								>
+									99.999 $
+								</p>
+							</div>
+							<div
+								className={
+									styles.homepage__container__desktopLeftWrapper__myBalance__chart
+								}
+							>
+								<Chart />
+							</div>
+						</div>
+						<div
+							className={
+								styles.homepage__container__desktopLeftWrapper__categories
+							}
+						>
+							<h3
+								className={
+									styles.homepage__container__desktopLeftWrapper__categories__h3
+								}
+							>
+								Sfoglia Categorie
+							</h3>
+							<div
+								className={
+									styles.homepage__container__desktopLeftWrapper__categories__crypto_list
+								}
+							>
+								<div
+									className={
+										styles.homepage__container__desktopLeftWrapper__categories__crypto_list__card
+									}
+									onClick={onHandelCrypto}
+								>
+									<p
+										className={
+											styles.homepage__container__desktopLeftWrapper__categories__crypto_list__card__title
+										}
+									>
+										Criptovalute
+									</p>
+									<Image
+										src={cryptoIcon}
+										alt="cryptoIcon"
+										width={40}
+										height={40}
+									/>
+								</div>
+							</div>
 						</div>
 					</div>
+					<div className={styles.homepage__container__desktopRightWrapper}>
+						<CardList cryptoDatas={cryptoDatas} />
+					</div>
 				</div>
-				<CardList cryptoDatas={cryptoDatas} />
 			</div>
 		</DefaultLayout>
 	);
