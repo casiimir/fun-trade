@@ -76,7 +76,7 @@ const LessonDetail = () => {
                 <p>{topic.description}</p>
             </div>
             <p className={styles.progress}>Progress: {topic.progress}</p>
-            <div>
+            <div className={styles.ButtonPrevNext}>
                 <button className={styles.buttonLesson} onClick={handlePreviousLesson}>Previous Lesson</button>
                 <button className={styles.buttonLesson} onClick={handleNextLesson}>Next Lesson</button>
             </div>
