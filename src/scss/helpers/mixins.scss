@@ -22,3 +22,27 @@
   width: $width;
   height: $height;
 }
+
+@mixin neumorphism {
+  background-color: #FFFFFF;
+  border-radius: rem(10px);
+  box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+  transition: box-shadow 0.4s ease-in-out;
+  outline: none;
+}
+
+@mixin gradient-animation($time) {
+  animation: gradient $time ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
