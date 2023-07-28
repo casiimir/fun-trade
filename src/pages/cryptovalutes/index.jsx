@@ -18,6 +18,7 @@ export default function cryptovalutes() {
   };
 
   return (
+
     <DefaultLayout>
       <div className={styles.cryptovalutes}>
         <div className={styles.cryptovalutes__header}>
@@ -31,6 +32,7 @@ export default function cryptovalutes() {
         </div>
       </div>
     </DefaultLayout>
+
   );
 }
 
