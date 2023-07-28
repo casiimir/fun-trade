@@ -1,0 +1,90 @@
+.InfoCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+
+    &__topBar{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    &__arrow{
+        margin-left: 20px;
+    }
+
+    &__profile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    &__container{
+        display: flex;
+        align-items: center
+    }
+
+    &__imgContain{
+        @extend %neumorphism;
+        @include flexboxCenter;
+        width: rem(100px);
+        height: rem(100px);
+        padding: rem($paddingExtraLarge);
+        position: relative;
+        border-radius: 100%;
+
+      &::after {
+        @extend %neumorphism;
+        content: "";
+        position: absolute;
+        width: rem(60px);
+        height: rem(60px);
+        border-radius: 100%;
+        background-color: transparent;
+      }
+    }
+
+
+    &__name{
+        color: rgba(231, 193, 105, 1);
+        margin: 20px;
+    }
+
+    &__charts{
+        width: 80%;
+        @extend %neumorphism;
+
+    }
+
+
+    &__preferiti{
+        @extend %neumorphism;
+        padding: 5px;
+        position: relative;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+    }
+
+    &__pName{
+        
+        color: rgba(231, 193, 105, 1);
+        font-weight: bold;
+        margin: 20px;
+
+    }
+
+    &__description{
+        margin-left: 20px;
+        width: 80%;
+    }
+
+
+}

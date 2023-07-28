@@ -18,21 +18,25 @@ export default function cryptovalutes() {
   };
 
   return (
-
     <DefaultLayout>
       <div className={styles.cryptovalutes}>
         <div className={styles.cryptovalutes__header}>
-          <Image src={arrow} alt="back" width={30} height={30} onClick={onHandleBack} />
+          <Image
+            src={arrow}
+            alt="back"
+            width={30}
+            height={30}
+            onClick={onHandleBack}
+          />
           <h1 className={styles.cryptovalutes__header__title}>Cryptovalute</h1>
         </div>
         <div className={styles.cryptovalutes__list}>
           {crypto.map((item) => (
-            <Card data={item} />
+            <Card key={item.id || index} data={item} />
           ))}
         </div>
       </div>
     </DefaultLayout>
-
   );
 }
 
