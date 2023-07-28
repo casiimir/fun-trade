@@ -73,8 +73,18 @@
     font-weight: 600;
 }
 
-.buttonLesson {
-    
+.ButtonPrevNext {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 30%;
+    left: 0;
+    right: 0;
+    padding: 0 30px;
+  }
+  
+  .buttonLesson {
     padding: 15px;  
     border: none;
     margin:30px;
@@ -87,14 +97,15 @@
     transition: all 0.5s ease-in-out;
     outline: none;
     background-size: 200% auto;
-
+  
     &:hover {
-        background: linear-gradient(to right, #E49BE6 0%, #719AE9 100%);
-        color: #ffffff;
+      background: linear-gradient(to right, #E49BE6 0%, #719AE9 100%);
+      color: #ffffff;
     }
-
+  
     &:active {
-        box-shadow: inset -5px -5px 10px #C8D1DA, 
-                    inset 5px 5px 10px #ffffff;
+      box-shadow: inset -5px -5px 10px #C8D1DA, 
+                  inset 5px 5px 10px #ffffff;
     }
-}
+  }
+  

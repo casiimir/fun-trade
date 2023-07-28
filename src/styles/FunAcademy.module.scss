@@ -1,39 +1,29 @@
 .sectionAcademy{
   margin-top: -120px;
 }
-.heading1 {
-  font-size: 1.5em;
-  text-align: center;
-  color:#154162;
-  padding: 5px;
-}
+
 
 .heading2 {
-  font-size: 1em;
-  margin-top: 10px;
-  margin-left: 40px;
-  color:#154162
+  font-size: 1.2em;
+  text-align: center;
+  padding: 5px;
+  margin-top:10px;
+  background: -webkit-linear-gradient(#E49BE6, #719AE9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .videoContainer{
   width: 100%;  
-  margin-top: 10px;
+  margin-top: 0px;
   overflow-x: scroll;
   display: flex;
-  margin-left: 40px;
-  margin-right: 0px;
 }
 .videoNeo{
   border-radius: 10px;
-  
   border:none;
   margin:20px;
   outline: none;
-}
-
-.videoNeo:active {
-  box-shadow: inset -5px -5px 10px #C8D1DA, 
-              inset 5px 5px 10px #ffffff;
 }
 
 
