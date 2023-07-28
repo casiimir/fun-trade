@@ -4,6 +4,10 @@ import styles from "../styles/homepage.module.scss";
 import CardList from "@/components/cardList";
 import { useRouter } from "next/router";
 
+//Firebase
+import { auth } from "@/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+
 //Mocks
 import crypto from "@/mock/cryptoCardMock";
 import Chart from "@/components/chart";
@@ -15,6 +19,10 @@ export default function homepage() {
 	const { userData } = useContext(UserContext);
 	const [cryptoDatas, setCryptoDatas] = useState([]);
 	const router = useRouter();
+
+	useEffect(() => {
+		onAuthStateChanged(auth, (user) => console.log(user));
+	}, []);
 
 	const onHandelCrypto = () => {
 		router.push("/cryptovalutes");
