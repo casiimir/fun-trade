@@ -2,11 +2,13 @@ import Image from "next/image";
 import styles from "./Search.module.scss";
 import closeIcon from "../../assets/iconsProject/close-menu.svg";
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { UserContext } from "@/pages/_app";
 import cryptoList from "@/mock/cryptoCardMock";
+import searchIcon from "../../assets/iconsProject/search.svg";
 
-const Search = ({ props }) => {
-  const { isSearchOpen, setIsSearchOpen } = props;
+const Search = () => {
+  const { isSearchOpen, setIsSearchOpen } = useContext(UserContext);
   const [inputText, setInputText] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const router = useRouter();
@@ -48,6 +50,9 @@ const Search = ({ props }) => {
           required
           className={styles.input}
         />
+        <div className={styles.searchIcon}>
+          <Image src={searchIcon} alt="search" width={30} height={30} />
+        </div>
       </div>
       {searchResults.length > 0 && (
         <div className={styles.searchResults}>

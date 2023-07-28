@@ -9,9 +9,14 @@
 .container {
   width: auto;
   height: 100%;
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+
+  img {
+    display: block;
+  }
 }
 
 .closeBtn {
@@ -90,5 +95,34 @@
   .text {
     @extend %paragraphBold;
     padding-left: $paddingMedium;
+  }
+}
+
+.searchIcon {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .Search {
+    padding-top: $paddingLarge;
+    width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .searchIcon {
+    display: unset;
+    position: absolute;
+    right: rem(10px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .closeBtn {
+    display: none;
   }
 }

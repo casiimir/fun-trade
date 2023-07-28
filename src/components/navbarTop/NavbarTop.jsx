@@ -2,15 +2,17 @@ import Image from "next/image";
 import styles from "./NavbarTop.module.scss";
 import Menu from "../menu";
 import Search from "../search";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Overlay from "../overlay/Overlay";
+import { UserContext } from "@/pages/_app";
+// icons
 import burgerIcon from "../../assets/iconsProject/hamburger.svg";
 import logoIcon from "../../assets/iconsProject/logo.svg";
 import searchIcon from "../../assets/iconsProject/search.svg";
 
 const NavbarTop = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const { isSearchOpen, setIsSearchOpen } = useContext(UserContext);
 
   const onHandleClickBurger = () => {
     if (isSearchOpen) {
@@ -51,7 +53,7 @@ const NavbarTop = () => {
                 onClick={onHandleClickSearch}
               />
               <div className={`${styles.searchModal} ${isSearchOpen && styles.open}`}>
-                <Search props={{ isSearchOpen, setIsSearchOpen }} />
+                <Search />
               </div>
             </li>
           </ul>

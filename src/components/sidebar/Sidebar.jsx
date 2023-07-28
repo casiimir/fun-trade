@@ -5,6 +5,10 @@ import closeIcon from "../../assets/iconsProject/close-menu.svg";
 // icons
 import profileIcon from "../../mock/profile-icon.svg";
 import homeIcon from "../../assets/iconsProject/home.svg";
+import walletIcon from "../../assets/iconsProject/wallet.svg";
+import favoriteIcon from "../../assets/iconsProject/heart.svg";
+import academyIcon from "../../assets/iconsProject/school.svg";
+import settingsIcon from "../../assets/iconsProject/setting.svg";
 import logoIcon from "../../assets/iconsProject/logo.svg";
 
 const Sidebar = () => {
@@ -44,7 +48,7 @@ const Sidebar = () => {
           </li>
           <li className={styles.menuList__wrapper}>
             <div className={styles.icon}>
-              <Image src={homeIcon} alt="wallet" width={30} height={30} />
+              <Image src={walletIcon} alt="wallet" width={30} height={30} />
             </div>
             <div className={styles.fadein}>
               <p className={`${styles.content} ${styles.label}`}>wallet</p>
@@ -52,7 +56,7 @@ const Sidebar = () => {
           </li>
           <li className={styles.menuList__wrapper}>
             <div className={styles.icon}>
-              <Image src={homeIcon} alt="favorites" width={30} height={30} />
+              <Image src={favoriteIcon} alt="favorites" width={30} height={30} />
             </div>
             <div className={styles.fadein}>
               <p className={`${styles.content} ${styles.label}`}>favorites</p>
@@ -60,7 +64,7 @@ const Sidebar = () => {
           </li>
           <li className={styles.menuList__wrapper}>
             <div className={styles.icon}>
-              <Image src={homeIcon} alt="FunAcademy" width={30} height={30} />
+              <Image src={academyIcon} alt="FunAcademy" width={30} height={30} />
             </div>
             <div className={styles.fadein}>
               <p className={`${styles.content} ${styles.label}`}>FunAcademy</p>
@@ -76,7 +80,7 @@ const Sidebar = () => {
           </li>
           <li className={styles.menuList__wrapper}>
             <div className={styles.icon}>
-              <Image src={homeIcon} alt="settings" width={30} height={30} />
+              <Image src={settingsIcon} alt="settings" width={30} height={30} />
             </div>
             <div className={styles.fadein}>
               <p className={`${styles.content} ${styles.label}`}>settings</p>
@@ -84,7 +88,7 @@ const Sidebar = () => {
           </li>
           <li className={styles.menuList__wrapper}>
             <div className={styles.icon}>
-              <Image src={homeIcon} alt="customer service" width={30} height={30} />
+              <Image src={settingsIcon} alt="customer service" width={30} height={30} />
             </div>
             <div className={styles.fadein}>
               <p className={`${styles.content} ${styles.label}`}>customer service</p>
