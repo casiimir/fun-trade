@@ -1,17 +1,23 @@
-.UserAssets {
+.HistoryTransactions {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0.5em;
-  height: 200px;
-  width: 90vw;
-  margin-top: 20px;
+  height: 60vh;
+  width: 22vw;
   border-radius: 30px;
   background: #ecf0f3;
   box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
+  overflow-y: hidden;
 
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .__assets {
     display: flex;
+    margin-top: 20px;
     padding: 18px;
     width: 96%;
     border-radius: 28px;
@@ -31,22 +37,12 @@
           display: flex;
           justify-content: flex-end;
           margin-left: 6rem;
+          color: green;
+          font-weight: bolder;
         }
       }
     }
   }
 }
 
-//media query DESKTOP
-@media screen and (min-width: 1024px) {
-  .UserAssets {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 210px;
-    width: 65vw;
-    border-radius: 30px;
-    background: #ecf0f3;
-    box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
-  }
-}
+//only Desktop

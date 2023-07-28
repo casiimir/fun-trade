@@ -5,24 +5,28 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "@/styles/Home.module.scss";
 import { useEffect, useState, useContext } from "react";
+import { getRedirectResult, signInWithPopup, } from "firebase/auth"
+
+//Firebase
+import { getData, authGoogle, authFaceBook, authGit } from "@/firebase"
+
+//Context
+import { UserContext } from "./_app";
 
 //Image
 import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
+import github from "@/assets/github.png";
 import logo from "@/assets/iconsProject/logo.svg";
 
-//Context
-import { UserContext } from "@/pages/_app";
-
-export default function Home() {
+export default function Home({ data }) {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [users, setUsers] = useState({});
-  const { nav, setNav } = useContext(UserContext);
-  useEffect(() => {
-    setUsers(JSON.parse(localStorage.getItem("users")));
-  }, []);
+  const [users, setUsers] = useState([]);
+
+  const { setUserData } = useContext(UserContext)
+
 
   const onHandleEmail = (e) => {
     setEmail(e.target.value);
@@ -32,19 +36,62 @@ export default function Home() {
     setPassword(e.target.value);
   };
 
+
+  /**
+   * Email Authentication
+   * @date 27/7/2023 - 22:33:48
+   *
+   * @param {*} e
+   */
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    if (
-      users?.email.toLowerCase() === email.toLowerCase() &&
-      users?.password.toLowerCase() === password.toLowerCase()
-    ) {
-      localStorage.setItem("login", true);
-      setNav(true);
+    const userFindDB = users.find(user => user.email.toLowerCase() === email.toLowerCase() && user.password.toLowerCase() === password.toLowerCase())
+    if (userFindDB) {
       router.push("/homepage");
     } else {
       alert("incorrect email or password");
     }
   };
+
+
+  /**
+   * Google Authentication
+   * takes the user data from the authentication call and sets the global variable: userData with the data contained in the user object
+   */
+  const onHandleGoogle = () => {
+    authGoogle().then(res => {
+      const dataSet = data.find(user => user.email === res.email);
+      setUserData(dataSet);
+      router.push("/homepage");
+    })
+  };
+
+
+
+  /**
+   * Facebook Authentication
+   * takes the user data from the authentication call and sets the global variable: userData with the data contained in the user object
+   */
+  const onHandleFaceBook = () => {
+    authFaceBook().then(res => console.log(res))
+  };
+
+
+  /**
+   * GitHub Authentication
+   * takes the user data from the authentication call and sets the global variable: userData with the data contained in the user object
+   */
+  const onHandleGit = () => {
+    authGit().then(res => {
+      const dataSet = data.find(user => user.email === res.email);
+      setUserData(dataSet);
+      router.push("/homepage");
+    })
+  };
+
+  useEffect(() => {
+    setUsers(data)
+  }, []);
 
   return (
     <>
@@ -105,8 +152,9 @@ export default function Home() {
               <h3 className={styles.main__login__link__title__h3}>Oppure accedi con</h3>
             </div>
             <div className={styles.main__login__link__icons}>
-              <Image src={google} alt="logo google" width={50} height={50} />
-              <Image src={facebook} alt="logo google" width={50} height={50} />
+              <Image src={google} alt="logo google" width={50} height={50} onClick={onHandleGoogle} className={styles.main__login__link__icons__google} />
+              <Image src={facebook} alt="logo facebok" width={50} height={50} onClick={onHandleFaceBook} />
+              <Image src={github} alt="logo github" width={40} height={40} onClick={onHandleGit} />
             </div>
           </div>
           <div className={styles.main__login__sing_in}>
@@ -123,4 +171,24 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+
+/**
+ * Server side render
+ * @date 27/7/2023 - 22:34:40
+ * return a list of DB users
+ * @export
+ * @async
+ * @param {*} context
+ * @returns {Array}
+ */
+export async function getServerSideProps(context) {
+  const data = await getData();
+
+  return {
+    props: {
+      data
+    }
+  }
 }

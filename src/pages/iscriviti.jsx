@@ -5,6 +5,9 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
+//Firebase
+import { postData, getData } from "@/firebase";
+
 //Image
 import google from "@/assets/7611770.png";
 import facebook from "@/assets/facebook.png";
@@ -12,37 +15,40 @@ import logo from "@/assets/iconsProject/logo.svg";
 import arrow from "@/assets/iconsProject/arrow.svg";
 
 export default function iscriviti() {
-  const router = useRouter();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+	const router = useRouter();
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
 
-  const onHandleName = (e) => {
-    setName(e.target.value);
-  };
+	const onHandleName = (e) => {
+		setName(e.target.value);
+	};
 
-  const onHandleEmail = (e) => {
-    setEmail(e.target.value);
-  };
+	const onHandleEmail = (e) => {
+		setEmail(e.target.value);
+	};
 
-  const onHandlePassword = (e) => {
-    setPassword(e.target.value);
-  };
+	const onHandlePassword = (e) => {
+		setPassword(e.target.value);
+	};
 
-
+	/**
+	 * Register with email and password
+	 *
+	 * then it checks the user data in the db (getData) and if it doesn't exist it creates it (postData)
+	 * @param {*} e
+	 */
 	const onHandleSubmit = (e) => {
 		e.preventDefault();
-		localStorage.setItem(
-			"users",
-			JSON.stringify({
-				username: name,
-				email: email,
-				password: password,
-				balance: Math.floor(Math.random() * 1500),
-				avatar: `https://robohash.org/${name}`,
+		getData()
+			.then((data) => {
+				const post = data.find((user) => user.email === email);
+				return post;
 			})
-		);
-		router.push("/");
+			.then((post) => {
+				!post ? postData(name, email, password) : null;
+				router.push("/");
+			});
 	};
 	return (
 		<>
@@ -159,20 +165,8 @@ export default function iscriviti() {
 							className={styles.iscriviti__wrap__form__submit}
 						/>
 					</form>
-					<div className={styles.iscriviti__wrap__link}>
-						<div className={styles.iscriviti__wrap__link__title}>
-							<h3 className={styles.iscriviti__wrap__link__title__h3}>
-								Oppure iscriviti con
-							</h3>
-						</div>
-						<div className={styles.iscriviti__wrap__link__icons}>
-							<Image src={google} alt="logo google" width={50} height={50} />
-							<Image src={facebook} alt="logo google" width={50} height={50} />
-						</div>
-					</div>
 				</div>
 			</div>
 		</>
 	);
-
 }

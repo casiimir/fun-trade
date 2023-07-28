@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
+    "firebase": "^10.1.0",
     "moment": "^2.29.4",
     "react-chartjs-2": "^5.2.0",
     "sass": "^1.64.1"

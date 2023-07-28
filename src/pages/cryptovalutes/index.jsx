@@ -1,7 +1,7 @@
 import Image from "next/image";
+import DefaultLayout from "@/layouts/DefaultLayout";
 import Card from "../../components/card";
 import styles from "./index.module.scss";
-
 import { useRouter } from "next/router";
 
 //Mock
@@ -18,23 +18,21 @@ export default function cryptovalutes() {
   };
 
   return (
-    <div className={styles.cryptovalutes}>
-      <div className={styles.cryptovalutes__header}>
-        <Image
-          src={arrow}
-          alt="back"
-          width={30}
-          height={30}
-          onClick={onHandleBack}
-        />
-        <h1 className={styles.cryptovalutes__header__title}>Cryptovalute</h1>
+
+    <DefaultLayout>
+      <div className={styles.cryptovalutes}>
+        <div className={styles.cryptovalutes__header}>
+          <Image src={arrow} alt="back" width={30} height={30} onClick={onHandleBack} />
+          <h1 className={styles.cryptovalutes__header__title}>Cryptovalute</h1>
+        </div>
+        <div className={styles.cryptovalutes__list}>
+          {crypto.map((item) => (
+            <Card data={item} />
+          ))}
+        </div>
       </div>
-      <div className={styles.cryptovalutes__list}>
-        {crypto.map((item) => (
-          <Card data={item} />
-        ))}
-      </div>
-    </div>
+    </DefaultLayout>
+
   );
 }
 

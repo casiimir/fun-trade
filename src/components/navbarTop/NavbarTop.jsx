@@ -13,7 +13,9 @@ const NavbarTop = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const onHandleClickBurger = () => {
-    if (isSearchOpen) setIsSearchOpen((prev) => !prev);
+    if (isSearchOpen) {
+      setIsSearchOpen((prev) => !prev);
+    }
     setIsBurgerOpen((prev) => !prev);
   };
   const onHandleClickSearch = () => setIsSearchOpen((prev) => !prev);
@@ -49,7 +51,7 @@ const NavbarTop = () => {
                 onClick={onHandleClickSearch}
               />
               <div className={`${styles.searchModal} ${isSearchOpen && styles.open}`}>
-                <Search setIsSearchOpen={setIsSearchOpen} />
+                <Search props={{ isSearchOpen, setIsSearchOpen }} />
               </div>
             </li>
           </ul>

@@ -1,16 +1,13 @@
 import React, { useState } from "react";
-import DefaultLayout from "@/layouts/DefaultLayout";
 import "@/styles/globals.scss";
 export const UserContext = React.createContext();
 
 export default function App({ Component, pageProps }) {
-  const [nav, setNav] = useState(false);
+  const [userData, setUserData] = useState({});
 
   return (
-    <UserContext.Provider value={{ nav, setNav }}>
-      <DefaultLayout>
-        <Component {...pageProps} />
-      </DefaultLayout>
+    <UserContext.Provider value={{ userData, setUserData }}>
+      <Component {...pageProps} />
     </UserContext.Provider>
   );
 }

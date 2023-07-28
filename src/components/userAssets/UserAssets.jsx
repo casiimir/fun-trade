@@ -8,7 +8,7 @@ const UserAssets = () => {
         <div className={styles.__singleAsset}>
           <div className={styles.__details}>
             <div className={styles.__left}>
-              <h3>Amazon</h3>
+              <h3>Bitcoin</h3>
             </div>
             <div className={styles.__right}>
               <span>grafico</span>
