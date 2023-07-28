@@ -54,18 +54,22 @@ const LessonDetail = () => {
 
     return (
         <div className={styles.detailContainer}>
+            <div className={styles.lessonContainer}>
             <div className={styles.lessonBackContainer}>
                 <Link href="/funAcademy">
                     <Image className={styles.backArrow} src={arrowBottom} alt="Back to funAcademy" />
                 </Link>
-                <div className={styles.lessonNumberOuterContainer}>
-                    <div className={styles.lessonNumberContainer}>
-                        <h3 className={styles.lessonNumber}>{topic.lessonNumber}</h3>
+                <div className={styles.lessonNumberAndTitleContainer}>
+                    <div className={styles.lessonNumberOuterContainer}>
+                        <div className={styles.lessonNumberContainer}>
+                            <h3 className={styles.lessonNumber}>{topic.lessonNumber}</h3>
                     </div>
+                        </div>
+                    <h2 className={styles.title}>{topic.title}</h2>
                 </div>
-                <div className={styles.spacer}></div>
-            </div>
-            <h2 className={styles.title}>{topic.title}</h2>
+                    <div className={styles.spacer}></div>
+                    </div>
+
             <div className={styles.videoContainer}>
             <iframe 
                 className={styles.videoNeo}
@@ -78,9 +82,19 @@ const LessonDetail = () => {
             </iframe>
             </div>
             <div className={styles.descriptionContainer}>
+                <h3 className={styles.TitleDescription}>Description:</h3>
                 <p>{topic.description}</p>
             </div>
-            <p className={styles.progress}>Progress: {topic.progress}</p>
+           
+                <div className={styles.progressBarContainer}>
+                    <div className={styles.progressBarBackground}>
+                        <div className={styles.progressBar} style={{width: topic.progress}}>
+            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <div className={styles.ButtonPrevNext}>
                 <button className={styles.buttonLesson} onClick={handlePreviousLesson}>Previous Lesson</button>
                 <button className={styles.buttonLesson} onClick={handleNextLesson}>Next Lesson</button>
