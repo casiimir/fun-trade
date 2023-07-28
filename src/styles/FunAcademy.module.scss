@@ -1,34 +1,30 @@
-.sectionAcademy{
+.sectionAcademy {
   margin-top: -120px;
 }
-
 
 .heading2 {
   font-size: 1.2em;
   text-align: center;
   padding: 5px;
-  margin-top:10px;
-  background: -webkit-linear-gradient(#E49BE6, #719AE9);
+  margin-top: 10px;
+  background: -webkit-linear-gradient(#e49be6, #719ae9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.videoContainer{
-  width: 100%;  
+.videoContainer {
+  width: 100%;
   margin-top: 0px;
   overflow-x: scroll;
   display: flex;
 }
-.videoNeo{
+.videoNeo {
   border-radius: 10px;
-  border:none;
-  margin:20px;
+  border: none;
+  margin: 20px;
   outline: none;
 }
 
-
-
 // Media Query per visualizzazione mobile
 @media (max-width: 768px) {
-
 }

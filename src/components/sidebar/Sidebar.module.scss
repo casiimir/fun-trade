@@ -1,0 +1,128 @@
+.Sidebar {
+  display: none;
+  padding: $paddingSmall;
+  box-shadow: 2px 0px 10px 5px rgb(202, 202, 202);
+}
+
+.label {
+  display: none;
+  width: auto;
+  transition: all 0.25s ease;
+}
+
+.fadein {
+  transition: all 0.4s ease 0.15s;
+  opacity: 0;
+}
+
+.container {
+  width: auto;
+  height: 100%;
+  margin-top: rem(30px);
+}
+
+.wrapper {
+  @include flexboxCenter();
+  width: auto;
+  justify-content: flex-start;
+}
+
+.icon {
+  @include flexboxCenter();
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.profileText {
+  @include flexboxCenterColumn();
+  align-items: flex-start;
+  width: auto;
+  height: 100%;
+  gap: rem(14px);
+
+  &__name {
+    @extend %heading;
+    height: 50%;
+  }
+
+  &__accountType {
+    @extend %paragraphBold;
+    height: 50%;
+    font-size: $paragraphExtraSmall;
+    text-transform: uppercase;
+  }
+}
+
+.menuList {
+  width: 100%;
+  height: auto;
+  margin-top: rem(30px);
+
+  li {
+    cursor: pointer;
+  }
+}
+
+.menuList__wrapper {
+  @include flexboxCenter();
+  @extend %paragraphBold;
+  width: 100%;
+  height: rem(60px);
+  justify-content: flex-start;
+  padding: $paddingExtraSmall 0;
+  font-size: $paddingSmall;
+
+  .content {
+    @extend %paragraphBold;
+    height: 100%;
+    font-size: $paragraphSmall;
+    color: $text;
+  }
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (min-width: 768px) {
+  .Sidebar {
+    display: unset;
+    width: rem(85px);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $background-main;
+    transition: all 0.5s ease-in-out;
+    z-index: 99;
+
+    &:hover {
+      width: rem(260px);
+
+      .label {
+        display: unset;
+        padding-left: $paddingSmall;
+      }
+
+      .wrapper {
+        width: rem(230px);
+      }
+
+      .container {
+        width: rem(230px);
+      }
+
+      .content {
+        @include flexboxCenter();
+      }
+
+      .fadein {
+        opacity: 1;
+      }
+    }
+  }
+
+  /*  .menuList__wrapper__label {
+    display: none;
+  } */
+}
