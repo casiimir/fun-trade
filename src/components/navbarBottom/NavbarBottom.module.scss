@@ -1,23 +1,9 @@
 .Navbar {
   @include flexboxCenter();
-  padding: 0 rem($paddingSmall);
-  width: 100%;
-  min-width: 370px;
-  height: rem(80px);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  border-top-left-radius: rem(10px);
-  border-top-right-radius: rem(10px);
-  background-color: $background-main;
 }
 
 .wrapper {
   @include flexboxCenterColumn;
-  width: rem(60px);
-  height: rem(60px);
-  border-radius: $roundedMedium;
-  cursor: pointer;
 
   &.selected {
     @extend %neumorphism;
@@ -29,26 +15,39 @@
 
   p {
     @extend %paragraphBold;
-    font-size: rem($paragraphExtraSmall);
   }
 }
 
 @media screen and (max-width: 767px) {
   .Navbar {
     justify-content: space-around;
+    padding: 0 rem($paddingSmall);
+    width: 100%;
+    min-width: 370px;
+    height: rem(80px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top-left-radius: rem(10px);
+    border-top-right-radius: rem(10px);
+    background-color: $background-main;
+    z-index: 1;
+  }
+
+  .wrapper {
+    width: rem(60px);
+    height: rem(60px);
+    border-radius: $roundedMedium;
+    cursor: pointer;
+
+    p {
+      font-size: rem($paragraphExtraSmall);
+    }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .Navbar {
-    justify-content: center;
-    gap: rem(60px);
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .Navbar {
-    justify-content: center;
-    gap: rem(60px);
+    display: none;
   }
 }
