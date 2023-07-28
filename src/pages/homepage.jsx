@@ -20,6 +20,10 @@ export default function homepage() {
 		router.push("/cryptovalutes");
 	};
 
+	useEffect(() => {
+		setCryptoDatas(crypto);
+	}, []);
+
 	return (
 		<DefaultLayout>
 			<div className={styles.homepage}>
