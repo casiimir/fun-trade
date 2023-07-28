@@ -72,8 +72,6 @@
       height: 60px;
       overflow: hidden;
     }
-
-    <<<<<<< HEAD=======
   }
 }
 
@@ -229,4 +227,8 @@
   }
 }
 
->>>>>>>fix/general-styles
+&__chart {
+  width: 200px;
+  height: 60px;
+  overflow: hidden;
+}
