@@ -49,7 +49,7 @@
           margin-top: 20px;
           @extend %neumorphism;
           border: none;
-          z-index: 9;
+
 
           &:active {
             @extend %neumorphismActive;
