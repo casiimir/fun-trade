@@ -1,24 +1,10 @@
 .Navbar {
-  width: 100%;
-  min-width: 370px;
-  height: rem(140px);
   @include flexboxCenter();
-  padding: rem($paddingSmall);
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: $background-main;
-  z-index: 1;
 }
 
 .container {
   @extend %neumorphism;
   @include flexboxCenter;
-  width: rem(65px);
-  height: rem(55px);
-  padding: rem($paddingSmall);
-  border-radius: $roundedMedium;
-  cursor: pointer;
 
   &:active {
     @extend %neumorphismActive;
@@ -28,94 +14,120 @@
 .logo {
   @extend %neumorphism;
   @include flexboxCenter;
-  width: rem(100px);
-  height: rem(100px);
-  padding: rem($paddingExtraLarge);
-  position: relative;
-  border-radius: 100%;
 
   &::after {
     @extend %neumorphism;
-    content: "";
-    position: absolute;
-    width: rem(60px);
-    height: rem(60px);
-    border-radius: 100%;
-    background-color: transparent;
   }
 }
 
 .burgerModal {
   @extend %neumorphism;
-  width: 300px;
-  height: auto;
-  max-height: calc(100vh - rem(50px));
-  position: absolute;
-  top: 30px;
-  left: 0;
-  padding: $paddingSmall;
-  border-radius: $roundedMedium;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 99;
-  transform: translateX(-50%);
-  transition: all 0.25s ease-in-out;
-  cursor: default;
-
-  &.open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-  }
-}
-
-.search {
-  position: relative;
-}
-
-.searchModal {
-  @extend %neumorphism;
-  width: 300px;
-  height: rem(55px);
-  max-height: calc(100vh - rem(50px));
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: $paddingSmall;
-  border-radius: $roundedMedium;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 99;
-  transform: translateX(50%);
-  transition: all 0.25s ease-in-out;
-  cursor: default;
-
-  &.open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-  }
-}
-
-.desktop {
-  background-color: beige;
-  width: 300px;
-  height: 100vh;
 }
 
 @media screen and (max-width: 767px) {
   .Navbar {
     justify-content: space-between;
+    width: 100%;
+    min-width: 370px;
+    height: rem(140px);
+    padding: rem($paddingSmall);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $background-main;
+    z-index: 1;
+  }
+
+  .container {
+    width: rem(65px);
+    height: rem(55px);
+    padding: rem($paddingSmall);
+    border-radius: $roundedMedium;
+    cursor: pointer;
+  }
+
+  .logo {
+    width: rem(100px);
+    height: rem(100px);
+    padding: rem($paddingExtraLarge);
+    position: relative;
+    border-radius: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: rem(60px);
+      height: rem(60px);
+      border-radius: 100%;
+      background-color: transparent;
+    }
+  }
+
+  .burgerModal {
+    width: 300px;
+    height: auto;
+    max-height: calc(100vh - rem(50px));
+    position: absolute;
+    top: 30px;
+    left: 0;
+    padding: $paddingSmall;
+    border-radius: $roundedMedium;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    transform: translateX(-50%);
+    transition: all 0.25s ease-in-out;
+    cursor: default;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  .search {
+    position: relative;
+  }
+
+  .searchModal {
+    width: 300px;
+    height: rem(55px);
+    max-height: calc(100vh - rem(50px));
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: $paddingSmall;
+    border-radius: $roundedMedium;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    transform: translateX(50%);
+    transition: all 0.25s ease-in-out;
+    cursor: default;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  .desktop {
+    background-color: beige;
+    width: 300px;
+    height: 100vh;
   }
 }
 
-// @media screen and (min-width: 768px) and (max-width: 1023px) {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .Navbar {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .Navbar {
-    visibility: hidden;
-    opacity: 0;
+    display: none;
   }
 }

@@ -1,8 +1,27 @@
 .content {
-  width: 100%;
-  height: 100%;
-  min-width: 370px;
-  margin-top: rem(160px);
-  margin-bottom: rem(80px);
-  padding: $paddingMedium 0;
+  height: calc(100vh - 100px);
+  margin-top: rem(100px);
+  margin-bottom: 0;
+  margin-left: rem(100px);
+  padding-bottom: $paddingLarge;
+}
+
+@media screen and (max-width: 767px) {
+  .Search {
+    display: none;
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    min-width: 370px;
+    margin-top: rem(140px);
+    margin-bottom: rem(80px);
+    margin-left: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
 }

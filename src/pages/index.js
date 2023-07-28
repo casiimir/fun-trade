@@ -5,10 +5,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "@/styles/Home.module.scss";
 import { useEffect, useState, useContext } from "react";
-import { getRedirectResult, signInWithPopup, } from "firebase/auth"
+import { onAuthStateChanged } from "firebase/auth";
 
 //Firebase
-import { getData, authGoogle, authFaceBook, authGit } from "@/firebase"
+import { getData, authGoogle, authGit, auth } from "@/firebase"
 
 //Context
 import { UserContext } from "./_app";
@@ -59,34 +59,35 @@ export default function Home({ data }) {
    * takes the user data from the authentication call and sets the global variable: userData with the data contained in the user object
    */
   const onHandleGoogle = () => {
-    authGoogle().then(res => {
-      const dataSet = data.find(user => user.email === res.email);
-      setUserData(dataSet);
-      router.push("/homepage");
-    })
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        authGoogle().then(res => {
+          const dataSet = data.find(user => user.email === res.email);
+          setUserData(dataSet);
+          router.push("/homepage");
+        })
+      } else {
+        router.push("/homepage");
+      }
+    });
   };
-
-
-
-  /**
-   * Facebook Authentication
-   * takes the user data from the authentication call and sets the global variable: userData with the data contained in the user object
-   */
-  const onHandleFaceBook = () => {
-    authFaceBook().then(res => console.log(res))
-  };
-
 
   /**
    * GitHub Authentication
    * takes the user data from the authentication call and sets the global variable: userData with the data contained in the user object
    */
   const onHandleGit = () => {
-    authGit().then(res => {
-      const dataSet = data.find(user => user.email === res.email);
-      setUserData(dataSet);
-      router.push("/homepage");
-    })
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        authGit().then(res => {
+          const dataSet = data.find(user => user.email === res.email);
+          setUserData(dataSet);
+          router.push("/homepage");
+        })
+      } else {
+        router.push("/homepage");
+      }
+    });
   };
 
   useEffect(() => {
@@ -153,7 +154,6 @@ export default function Home({ data }) {
             </div>
             <div className={styles.main__login__link__icons}>
               <Image src={google} alt="logo google" width={50} height={50} onClick={onHandleGoogle} className={styles.main__login__link__icons__google} />
-              <Image src={facebook} alt="logo facebok" width={50} height={50} onClick={onHandleFaceBook} />
               <Image src={github} alt="logo github" width={40} height={40} onClick={onHandleGit} />
             </div>
           </div>

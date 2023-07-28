@@ -8,7 +8,7 @@ const CardList = ({ cryptoDatas }) => {
 		<div className={styles.CardList}>
 			<h1 className={styles.CardList__title}>Mover Principali</h1>
 			<div className={styles.CardList__wrap}>
-				{cryptoDatas?.map((item) => (
+				{cryptoDatas.map((item) => (
 					<Card data={item} key={item.id} />
 				))}
 			</div>

@@ -1,34 +1,202 @@
-.sectionAcademy{
-  margin-top: -120px;
-}
-
-
-.heading2 {
-  font-size: 1.2em;
-  text-align: center;
-  padding: 5px;
-  margin-top:10px;
-  background: -webkit-linear-gradient(#E49BE6, #719AE9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.videoContainer{
-  width: 100%;  
-  margin-top: 0px;
-  overflow-x: scroll;
-  display: flex;
-}
-.videoNeo{
-  border-radius: 10px;
-  border:none;
-  margin:20px;
-  outline: none;
-}
-
-
-
 // Media Query per visualizzazione mobile
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .FunAcademy {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    gap: 15px;
 
+
+    &__topbar {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+      border-radius: 15px;
+      padding: 15px;
+      gap: 15px;
+      background-color: rgba(250, 250, 250, 0.784);
+
+      &__heading2 {}
+
+      &__p {
+        font-weight: 600;
+      }
+
+      &__videoContainer {
+        width: 100%;
+        display: flex;
+        overflow-x: scroll;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px;
+        padding: 5px 0;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        &__card {
+
+          &__video {
+            width: 300px;
+            aspect-ratio: 16/9;
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.55);
+            opacity: 0.5;
+            transition: all 0.35s ease-in-out;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    &__lesson {
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+      border-radius: 15px;
+      padding: 15px;
+      width: 100%;
+      background-color: rgba(250, 250, 250, 0.784);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .FunAcademy {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    gap: 15px;
+
+
+    &__topbar {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+      border-radius: 15px;
+      padding: 15px;
+      gap: 15px;
+      background-color: rgba(250, 250, 250, 0.784);
+
+      &__heading2 {}
+
+      &__p {
+        font-weight: 600;
+      }
+
+      &__videoContainer {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px;
+        padding: 5px 0;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        &__card {
+
+          &__video {
+            width: 300px;
+            aspect-ratio: 1;
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.55);
+            opacity: 0.5;
+            transition: all 0.35s ease-in-out;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    &__lesson {
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+      border-radius: 15px;
+      padding: 15px;
+      width: 100%;
+      background-color: rgba(250, 250, 250, 0.784);
+    }
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .FunAcademy {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    gap: 15px;
+
+
+    &__topbar {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+      border-radius: 15px;
+      padding: 15px;
+      gap: 15px;
+      background-color: rgba(250, 250, 250, 0.784);
+
+      &__heading2 {}
+
+      &__p {
+        font-weight: 600;
+      }
+
+      &__videoContainer {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px;
+        padding: 5px 0;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        &__card {
+
+          &__video {
+            width: 300px;
+            aspect-ratio: 1;
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.55);
+            opacity: 0.5;
+            transition: all 0.35s ease-in-out;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    &__lesson {
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+      border-radius: 15px;
+      padding: 15px;
+      width: 100%;
+      background-color: rgba(250, 250, 250, 0.784);
+    }
+  }
 }
