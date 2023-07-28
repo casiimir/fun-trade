@@ -1,4 +1,88 @@
-@media screen and (max-width: 767px) {
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 15px;
+  gap: 25px;
+
+  &__myBalance {
+    @extend %neumorphism;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 100%;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      &__title {
+        font-weight: 600;
+        @extend %neumorphism;
+        padding: 5px 10px;
+        margin-bottom: 5px;
+      }
+
+      &__wallet {
+        font-weight: 600;
+      }
+    }
+
+    &__chart {
+      width: 200px;
+    }
+  }
+
+  &__categories {
+    @extend %neumorphism;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+
+    h3 {
+      padding: 5px;
+      margin-left: 10px;
+    }
+
+    &__crypto_list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      width: 100%;
+      overflow-x: auto;
+      padding: 5px;
+
+      &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        @extend %neumorphism;
+        gap: 10px;
+
+        &:active {
+          @extend %neumorphismActive;
+        }
+
+        &__title {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+//media query TABLETS & LAPTOPS
+@media screen and (min-width: 481px) and (max-width: 1023px) {
   .homepage {
     display: flex;
     flex-direction: column;
@@ -8,8 +92,7 @@
     gap: 25px;
 
     &__myBalance {
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
-      border-radius: 30px;
+      @extend %neumorphism;
       padding: 12px;
       display: flex;
       justify-content: space-between;
@@ -24,9 +107,9 @@
 
         &__title {
           font-weight: 600;
-          box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
-          border-radius: 12px;
-          padding: 5px 10px
+          @extend %neumorphism;
+          padding: 5px 10px;
+          margin-bottom: 5px;
         }
 
         &__wallet {
@@ -40,12 +123,18 @@
     }
 
     &__categories {
+      @extend %neumorphism;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      gap: 15px;
+      gap: 5px;
+
+      h3 {
+        padding: 5px;
+        margin-left: 10px;
+      }
 
       &__crypto_list {
         display: flex;
@@ -62,9 +151,12 @@
           justify-content: center;
           align-items: center;
           padding: 10px;
-          box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
-          border-radius: 10px;
+          @extend %neumorphism;
           gap: 10px;
+
+          &:active {
+            @extend %neumorphismActive;
+          }
 
           &__title {
             font-weight: 600;
