@@ -3,27 +3,58 @@
     flex-direction: column;
     align-items: center;
 }
+
 .lessonBackContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center; 
     width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.backArrow {   
-    margin-left: 40px;
+.backArrow {
+    margin-left: 20px;
+    width: 70px;
 }
+.lessonNumberOuterContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgba(228, 155, 230, 1), rgba(113, 154, 233, 1));
+    border-radius: 6px; 
+    padding: 1px; 
+    @extend %neumorphism;
+}
+
+.lessonNumberContainer {
+    background-color:#FFFFFF;
+    border-radius: 5px;  
+}
+
+
 
 .lessonNumber {
     text-align: center;
-    margin-right:43%;
-    margin-top: 10px;
+    padding: 10px; 
+    border-radius: 5px;  
+    background: -webkit-linear-gradient(#E49BE6, #719AE9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+
+.spacer {
+   width: 70px;
+}
+
 
 .title {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    background: -webkit-linear-gradient(#E49BE6, #719AE9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .videoContainer {
@@ -35,20 +66,13 @@
     width: 100%;
     height: 100%;
     border: none;
+    background-color: #FFFFFF;
     
 }
 .videoNeo {
     border-radius: 10px;
     padding: 10px;
-    box-shadow:  -10px -10px 20px #C8D1DA, 
-                10px 10px 20px #ffffff;
-    transition: all 0.5s ease-in-out;
-    outline: none;
-}
-
-.videoNeo:active {
-    box-shadow: inset -5px -5px 10px #C8D1DA, 
-                inset 5px 5px 10px #ffffff;
+    @extend %neumorphism;
 }
 
 .descriptionContainer {
@@ -58,8 +82,8 @@
     margin-left: 40px;
     margin-right: 35px;
     padding: 20px;
-    background: #ECF0F3;
-    box-shadow:  -10px -10px 20px #C8D1DA, 10px 10px 20px #ffffff;
+    background: #FFFFFF;
+    @extend %neumorphism;
 }
 
 .description {
@@ -89,15 +113,11 @@
     border: none;
     margin:30px;
     color: #154162;
+    background-color: #FFFFFF;
     font-size: 10px;  
     font-weight: 600;
     border-radius: 10px;
-    box-shadow: -10px -10px 20px #C8D1DA, 
-                10px 10px 20px #ffffff;
-    transition: all 0.5s ease-in-out;
-    outline: none;
-    background-size: 200% auto;
-  
+    @extend %neumorphism;
     &:hover {
       background: linear-gradient(to right, #E49BE6 0%, #719AE9 100%);
       color: #ffffff;

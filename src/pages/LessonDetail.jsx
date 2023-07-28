@@ -6,7 +6,7 @@ import styles from '@/styles/LessonDetail.module.scss';
 import Link from 'next/link';
 
 // import icon
-import arrow from  "@/assets/iconsProject/arrow.svg"
+import arrowBottom from  "@/assets/iconsProject/arrowBottom.svg"
 
 const LessonDetail = () => {
     const [topic, setTopic] = useState(null);
@@ -56,11 +56,16 @@ const LessonDetail = () => {
         <div className={styles.detailContainer}>
             <div className={styles.lessonBackContainer}>
                 <Link href="/funAcademy">
-                    <Image className={styles.backArrow} src={arrow} alt="Back to funAcademy" />
+                    <Image className={styles.backArrow} src={arrowBottom} alt="Back to funAcademy" />
                 </Link>
-                <h3 className={styles.lessonNumber}>{topic.lessonNumber}</h3>
+                <div className={styles.lessonNumberOuterContainer}>
+                    <div className={styles.lessonNumberContainer}>
+                        <h3 className={styles.lessonNumber}>{topic.lessonNumber}</h3>
+                    </div>
+                </div>
+                <div className={styles.spacer}></div>
             </div>
-            <h1 className={styles.title}>{topic.title}</h1>
+            <h2 className={styles.title}>{topic.title}</h2>
             <div className={styles.videoContainer}>
             <iframe 
                 className={styles.videoNeo}
