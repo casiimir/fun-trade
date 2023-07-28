@@ -16,8 +16,6 @@ export default function homepage() {
 	const [cryptoDatas, setCryptoDatas] = useState([]);
 	const router = useRouter();
 
-	console.log(userData);
-
 	const onHandelCrypto = () => {
 		router.push("/cryptovalutes");
 	};
