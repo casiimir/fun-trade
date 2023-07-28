@@ -1,11 +1,16 @@
 .content {
-  margin-top: rem(80px);
+  height: calc(100vh - 100px);
+  margin-top: rem(100px);
   margin-bottom: 0;
   margin-left: rem(100px);
   padding-bottom: $paddingLarge;
 }
 
 @media screen and (max-width: 767px) {
+  .Search {
+    display: none;
+  }
+
   .content {
     width: 100%;
     height: 100%;
@@ -18,6 +23,5 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {}
-
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 768px) {
+}
