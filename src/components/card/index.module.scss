@@ -1,5 +1,21 @@
 @media screen and (max-width: 767px) {
+  .Negative{width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+    padding: 5px;
+    background: rgb(255,255,255);
+    box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 48%, rgba(255,141,141,0.4023984593837535) 100%, rgb(250 178 178 / 58%) 100%);
+    border-radius: rem(10px);
+    outline: none;
+    transition: box-shadow 0.4s ease-in-out;
+
+  }
   .Card {
+    
     width: 100%;
     display: flex;
     align-items: center;
@@ -8,6 +24,11 @@
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
     border-radius: 15px;
     padding: 5px;
+    background: rgb(255,255,255);
+    box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 48%, rgba(181,255,141,0.4023984593837535) 100%, rgba(255,255,255,1) 100%);border-radius: rem(10px);
+    outline: none;
+    transition: box-shadow 0.4s ease-in-out;
 
 
     &__image {
@@ -31,6 +52,7 @@
 
         &__positive {
           color: rgb(35, 209, 35);
+          
         }
 
         &__p {
