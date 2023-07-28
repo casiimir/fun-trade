@@ -6,7 +6,7 @@ import styles from "./DefaultLayout.module.scss";
 const DefaultLayout = ({ children }) => {
   return (
     <>
-      <NavbarTop items={navbarItems[0].items} />
+      <NavbarTop />
       <section className={`${true && styles.content}`}>{children}</section>
       <NavbarBottom />
     </>
