@@ -185,13 +185,20 @@
 
     &__container {
       display: flex;
+
+      width: 100%;
+      border: 2px solid violet;
+
       &__desktopLeftWrapper {
         display: flex;
+        width: 50%;
+        height: 400px;
         border: 2px solid red;
 
         &__myBalance {
           padding: 12px;
           display: flex;
+          flex-direction: column;
           justify-content: space-between;
           align-self: center;
           width: 100%;
@@ -252,9 +259,10 @@
           }
         }
       }
-      .__desktopRightWrapper {
+      &__desktopRightWrapper {
         display: flex;
-        border: 2px solid red;
+        width: 40%;
+        border: 2px solid rgb(0, 17, 255);
       }
     }
   }
