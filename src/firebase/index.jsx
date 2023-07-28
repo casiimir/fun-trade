@@ -26,7 +26,6 @@ const db = getFirestore(app);
 
 //PROVIDERS
 export const provider = new GoogleAuthProvider();
-export const FBprovider = new FacebookAuthProvider();
 export const Gitprovider = new GithubAuthProvider();
 
 export const auth = getAuth();
@@ -125,19 +124,6 @@ export const authGoogle = async () => {
 				  )
 				: null;
 		});
-	return res.user;
-};
-
-/**
- * then it checks the user data in the db (getData) and if it doesn't exist it creates it (postData)
- * @date 27/7/2023 - 22:47:34
- *
- * @async
- * @returns {unknown}
- */
-export const authFaceBook = async () => {
-	const res = await signInWithRedirect(auth, FBprovider);
-	console.log(res);
 	return res.user;
 };
 
