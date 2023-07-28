@@ -5,10 +5,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "@/styles/Home.module.scss";
 import { useEffect, useState, useContext } from "react";
-import { signOut } from "firebase/auth"
+import { onAuthStateChanged } from "firebase/auth";
 
 //Firebase
-import { getData, authGoogle, authFaceBook, authGit, auth } from "@/firebase"
+import { getData, authGoogle, authGit, auth } from "@/firebase"
 
 //Context
 import { UserContext } from "./_app";
@@ -59,12 +59,17 @@ export default function Home({ data }) {
    * takes the user data from the authentication call and sets the global variable: userData with the data contained in the user object
    */
   const onHandleGoogle = () => {
-    signOut(auth);
-    authGoogle().then(res => {
-      const dataSet = data.find(user => user.email === res.email);
-      setUserData(dataSet);
-      router.push("/homepage");
-    })
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        authGoogle().then(res => {
+          const dataSet = data.find(user => user.email === res.email);
+          setUserData(dataSet);
+          router.push("/homepage");
+        })
+      } else {
+        router.push("/homepage");
+      }
+    });
   };
 
   /**
@@ -72,12 +77,17 @@ export default function Home({ data }) {
    * takes the user data from the authentication call and sets the global variable: userData with the data contained in the user object
    */
   const onHandleGit = () => {
-    signOut(auth);
-    authGit().then(res => {
-      const dataSet = data.find(user => user.email === res.email);
-      setUserData(dataSet);
-      router.push("/homepage");
-    })
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        authGit().then(res => {
+          const dataSet = data.find(user => user.email === res.email);
+          setUserData(dataSet);
+          router.push("/homepage");
+        })
+      } else {
+        router.push("/homepage");
+      }
+    });
   };
 
   useEffect(() => {
