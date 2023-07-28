@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { UserContext } from "@/pages/_app";
 import styles from "./NavbarBottom.module.scss";
 // icone
 import arrowIcon from "../../assets/iconsProject/arrow.svg";
@@ -7,12 +9,11 @@ import walletIcon from "../../assets/iconsProject/wallet.svg";
 import homeIcon from "../../assets/iconsProject/home.svg";
 import academyIcon from "../../assets/iconsProject/school.svg";
 import settingsIcon from "../../assets/iconsProject/setting.svg";
-import { useState } from "react";
 
 const NavbarBottom = () => {
-  const [selected, setSelected] = useState("homepage");
+  const { selectedPage, setSelectedPage } = useContext(UserContext);
 
-  const onHandleSelect = (e) => setSelected(e.currentTarget.id);
+  const onHandleSelect = (e) => setSelectedPage(e.currentTarget.id);
 
   return (
     <header>
@@ -20,7 +21,7 @@ const NavbarBottom = () => {
         <ul className={styles.Navbar}>
           <Link href="#">
             <li
-              className={`${styles.wrapper} ${selected === "#" && styles.selected}`}
+              className={`${styles.wrapper} ${selectedPage === "#" && styles.selected}`}
               onClick={onHandleSelect}
               id="#"
             >
@@ -30,7 +31,9 @@ const NavbarBottom = () => {
           </Link>
           <Link href="/profile">
             <li
-              className={`${styles.wrapper} ${selected === "profile" && styles.selected}`}
+              className={`${styles.wrapper} ${
+                selectedPage === "profile" && styles.selected
+              }`}
               onClick={onHandleSelect}
               id="profile"
             >
@@ -41,7 +44,7 @@ const NavbarBottom = () => {
           <Link href="/homepage">
             <li
               className={`${styles.wrapper} ${
-                selected === "homepage" && styles.selected
+                selectedPage === "homepage" && styles.selected
               }`}
               onClick={onHandleSelect}
               id="homepage"
@@ -52,7 +55,9 @@ const NavbarBottom = () => {
           </Link>
           <Link href="/funAcademy">
             <li
-              className={`${styles.wrapper} ${selected === "academy" && styles.selected}`}
+              className={`${styles.wrapper} ${
+                selectedPage === "academy" && styles.selected
+              }`}
               onClick={onHandleSelect}
               id="academy"
             >
@@ -63,7 +68,7 @@ const NavbarBottom = () => {
           <Link href="#">
             <li
               className={`${styles.wrapper} ${
-                selected === "settings" && styles.selected
+                selectedPage === "settings" && styles.selected
               }`}
               onClick={onHandleSelect}
               id="settings"
