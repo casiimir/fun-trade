@@ -75,6 +75,24 @@ export const postData = async (
 			balance: Math.floor(Math.random() * 1500),
 			avatar,
 			preference: [],
+			transition: [
+				{
+					name: "Bitcoin",
+					badget: Math.floor(Math.random() * 1500),
+				},
+				{
+					name: "Ethereum",
+					badget: Math.floor(Math.random() * 1500),
+				},
+				{
+					name: "Tether",
+					badget: Math.floor(Math.random() * 1500),
+				},
+				{
+					name: "Dogecoin",
+					badget: Math.floor(Math.random() * 1500),
+				},
+			],
 			id,
 		});
 	} catch (e) {
