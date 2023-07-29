@@ -7,7 +7,9 @@ import Search from "@/components/search";
 const DefaultLayout = ({ children }) => {
   return (
     <>
-      <Sidebar />
+      <aside className={styles.Sidebar}>
+        <Sidebar />
+      </aside>
       <header className={styles.Search}>
         <Search />
       </header>

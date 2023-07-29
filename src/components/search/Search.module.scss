@@ -1,9 +1,6 @@
 .Search {
   width: 100%;
   height: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .container {
@@ -29,6 +26,10 @@
 
   &:active {
     @extend %neumorphismActive;
+  }
+
+  img {
+    margin: 0 auto;
   }
 }
 
@@ -102,12 +103,19 @@
   display: none;
 }
 
+@media screen and (max-width: 767px) {
+  .Search {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+// tablet and desktop
 @media screen and (min-width: 768px) {
   .Search {
-    padding-top: $paddingLarge;
     width: 350px;
-    left: 50%;
-    transform: translateX(-50%);
+    // transform: translateX(-85px);
   }
 
   .input {
@@ -124,5 +132,11 @@
 
   .closeBtn {
     display: none;
+  }
+
+  .searchResults {
+    position: absolute;
+    width: 350px;
+    margin-top: rem(10px);
   }
 }

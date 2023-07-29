@@ -1,7 +1,39 @@
 .Sidebar {
-  display: none;
-  padding: $paddingSmall;
+  width: rem(85px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: $paddingLarge $paddingSmall;
   box-shadow: 2px 0px 10px 5px rgb(202, 202, 202);
+  background-color: $background-main;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+
+  &:hover {
+    width: rem(260px);
+
+    .label {
+      display: unset;
+      padding-left: $paddingSmall;
+    }
+
+    .wrapper {
+      width: rem(230px);
+    }
+
+    .container {
+      width: rem(230px);
+    }
+
+    .content {
+      @include flexboxCenter();
+    }
+
+    .fadein {
+      opacity: 1;
+    }
+  }
 }
 
 .label {
@@ -81,48 +113,19 @@
   }
 }
 
+// mobile
 @media screen and (max-width: 767px) {
+  .Sidebar {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 768px) {
+// tablet
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+//desktop
+@media screen and (min-width: 1024px) {
   .Sidebar {
-    display: unset;
-    width: rem(85px);
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: $background-main;
-    transition: all 0.5s ease-in-out;
-    z-index: 99;
-
-    &:hover {
-      width: rem(260px);
-
-      .label {
-        display: unset;
-        padding-left: $paddingSmall;
-      }
-
-      .wrapper {
-        width: rem(230px);
-      }
-
-      .container {
-        width: rem(230px);
-      }
-
-      .content {
-        @include flexboxCenter();
-      }
-
-      .fadein {
-        opacity: 1;
-      }
-    }
   }
-
-  /*  .menuList__wrapper__label {
-    display: none;
-  } */
 }

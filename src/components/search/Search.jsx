@@ -18,7 +18,9 @@ const Search = () => {
     setInputText("");
     setSearchResults([]);
   };
-  const onHandleChange = (e) => setInputText(e.target.value);
+  const onHandleChange = (e) => {
+    setInputText(e.target.value);
+  };
   const onHandleClickCrypto = (id) => {
     // router.push(`/cryptovalutes/${id}`);
   };
@@ -29,10 +31,12 @@ const Search = () => {
   }, [isSearchOpen]);
 
   useEffect(() => {
-    if (inputText)
+    console.log(inputText);
+    if (inputText && inputText != " ")
       setSearchResults(
         cryptoList.filter((crypto) => crypto.name.toLowerCase().includes(inputText))
       );
+    else setSearchResults([]);
   }, [inputText]);
 
   return (
