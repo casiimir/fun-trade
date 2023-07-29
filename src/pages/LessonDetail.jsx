@@ -53,23 +53,23 @@ const LessonDetail = () => {
     }
 
     return (
+
         <div className={styles.detailContainer}>
             <div className={styles.lessonContainer}>
-            <div className={styles.lessonBackContainer}>
+                <div className={styles.lessonBackContainer}>
                 <Link href="/funAcademy">
                     <Image className={styles.backArrow} src={arrowBottom} alt="Back to funAcademy" />
                 </Link>
-                <div className={styles.lessonNumberAndTitleContainer}>
-                    <div className={styles.lessonNumberOuterContainer}>
-                        <div className={styles.lessonNumberContainer}>
+                    <div className={styles.lessonNumberAndTitleContainer}>
+                        <div className={styles.lessonNumberOuterContainer}>
+                            <div className={styles.lessonNumberContainer}>
                             <h3 className={styles.lessonNumber}>{topic.lessonNumber}</h3>
-                    </div>
                         </div>
+                    </div>
                     <h2 className={styles.title}>{topic.title}</h2>
                 </div>
                     <div className={styles.spacer}></div>
-                    </div>
-
+            </div>
             <div className={styles.videoContainer}>
             <iframe 
                 className={styles.videoNeo}
@@ -78,14 +78,13 @@ const LessonDetail = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
                 sandbox="allow-scripts allow-same-origin"
-            >
+                >
             </iframe>
             </div>
             <div className={styles.descriptionContainer}>
                 <h3 className={styles.TitleDescription}>Description:</h3>
                 <p>{topic.description}</p>
             </div>
-           
                 <div className={styles.progressBarContainer}>
                     <div className={styles.progressBarBackground}>
                         <div className={styles.progressBar} style={{width: topic.progress}}>
@@ -93,14 +92,34 @@ const LessonDetail = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
             <div className={styles.ButtonPrevNext}>
-                <button className={styles.buttonLesson} onClick={handlePreviousLesson}>Previous Lesson</button>
-                <button className={styles.buttonLesson} onClick={handleNextLesson}>Next Lesson</button>
-            </div>
+            <button className={styles.buttonLesson} onClick={handlePreviousLesson}>Previous Lesson</button>
+            <button className={styles.buttonLesson} onClick={handleNextLesson}>Next Lesson</button>
         </div>
-    );
+        <div className={styles.desktopPreview}>
+            {mockTopics.map((previewTopic) => (
+                <div key={previewTopic.id} className={styles.previewVideoContainer} onClick={() => setTopic(previewTopic)}>
+                    <iframe 
+                        className={styles.videoPreview}
+                        src={previewTopic.videoURL} 
+                        title={previewTopic.title} 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowFullScreen
+                        sandbox="allow-scripts allow-same-origin"
+                    />
+                        <div className={styles.flexContainer}>
+                            <h3 className={styles.numberLesson}>{previewTopic.numberLesson}</h3>
+                            <div className={styles.centeredTitle}>
+                            <h3 className={styles.previewTitle}>{previewTopic.title}</h3>
+                        </div>
+                    </div>
+                    <p className={styles.descriptionStyle}>{previewTopic.description}</p>
+                </div>
+            ))}
+        </div>
+        </div>
+);
 };
 
 export default LessonDetail;

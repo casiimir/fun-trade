@@ -1,9 +1,10 @@
 .lessonContainer {
     background-color: #FFFFFF;
-    margin-top: 50px;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-top: 0px;
     border-radius: 30px;
+    width: 1232px;
+    margin-left: 20%;
+    margin-top: 20px;
   }
 
 .lessonNumberOuterContainer {
@@ -121,14 +122,69 @@
     @include gradient-animation(2s);
 }
 
+// anteprime video
+.desktopPreview {
+    display: flex;
+    overflow-x: scroll;
+    
+    margin-left: 20%;
+    margin-top: 40px;
+    width: 1232px;
+    margin-bottom: 50px;
+}
+.previewVideoContainer{
+    margin-right: 40px;
+    margin-left: 20px;
+    @include neumorphism;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    margin-bottom: 20px;
 
+}
+.videoPreview{
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+}
+.flexContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.centeredTitle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.numberLesson {
+    @extend %backgroundTitleGradientColor;
+    padding: 10px;
+    @include neumorphism;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.previewTitle{
+    @extend %backgroundTitleGradientColor;
+}
 
 // mobile 
 @media (max-width: 767px) {
+ 
+   
     .detailContainer {
       display: flex;
       flex-direction: column;
       align-items: center;
+      
     }
     .lessonNumberAndTitleContainer {
         flex-direction: column;
@@ -137,11 +193,16 @@
     .lessonContainer {
         background-color: #ECF0F3;
         margin: 0;
+        margin-top: -60px;
         border-radius: 0px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100vw; 
+        height: auto;
+        overflow: hidden;
     }
+    
     .lessonNumberAndTitleContainer {
         margin-top: 50px;
     }
@@ -155,11 +216,12 @@
       margin-bottom: 30px;
     }
     .spacer {
-      width: 70px;
+      width: 90px;
     }
     
     .videoContainer iframe {
         border-radius: 20px;
+        margin-top: -30px;
         width: 100%;
         height: 100%;
     }
@@ -188,7 +250,7 @@
     
     .progressBarContainer {
         position: fixed;
-        top:15%;
+        top:30%;
     } 
 
     .ButtonPrevNext {
@@ -196,7 +258,7 @@
       justify-content: space-between;
       align-items: center;
       position: fixed;
-      bottom:20%;
+      bottom:0%;
       left: 0;
       right: 0;
       padding: 0 30px;
@@ -222,6 +284,9 @@
         box-shadow: inset -5px -5px 10px #C8D1DA, 
                     inset 5px 5px 10px #ffffff;
       }
+    }
+    .desktopPreview{
+        display: none;
     }
   }
 
