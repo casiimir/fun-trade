@@ -26,10 +26,10 @@
 
 @media screen and (max-width: 767px) {
   .Navbar {
-    justify-content: space-between;
     width: 100%;
     min-width: 370px;
     height: rem(140px);
+    gap: rem(60px);
     padding: rem($paddingSmall);
     position: fixed;
     top: 0;
@@ -91,7 +91,7 @@
   }
 
   .searchModal {
-    width: 300px;
+    width: 270px;
     height: rem(55px);
     max-height: calc(100vh - rem(50px));
     position: absolute;

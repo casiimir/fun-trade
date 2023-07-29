@@ -5,6 +5,7 @@ import { UserContext } from "@/pages/_app";
 import styles from "./NavbarBottom.module.scss";
 // icone
 import arrowIcon from "../../assets/iconsProject/arrow.svg";
+import heartIcon from "../../assets/iconsProject/heart.svg";
 import walletIcon from "../../assets/iconsProject/wallet.svg";
 import homeIcon from "../../assets/iconsProject/home.svg";
 import academyIcon from "../../assets/iconsProject/school.svg";
@@ -25,8 +26,8 @@ const NavbarBottom = () => {
               onClick={onHandleSelect}
               id="#"
             >
-              <Image src={arrowIcon} alt="dummy" width={30} height={30} />
-              <p className={styles.label}>dummy</p>
+              <Image src={heartIcon} alt="favorite" width={30} height={30} />
+              <p className={styles.label}>favorite</p>
             </li>
           </Link>
           <Link href="/profile">
