@@ -8,7 +8,7 @@ import { useEffect, useState, useContext } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 
 //Firebase
-import { getData, authGoogle, authGit, auth } from "@/firebase"
+import { getData, authGoogle, authGit, auth } from "@/firebase";
 
 //Context
 import { UserContext } from "./_app";
@@ -25,8 +25,7 @@ export default function Home({ data }) {
   const [password, setPassword] = useState("");
   const [users, setUsers] = useState([]);
 
-  const { setUserData } = useContext(UserContext)
-
+  const { setUserData } = useContext(UserContext);
 
   const onHandleEmail = (e) => {
     setEmail(e.target.value);
@@ -36,7 +35,6 @@ export default function Home({ data }) {
     setPassword(e.target.value);
   };
 
-
   /**
    * Email Authentication
    * @date 27/7/2023 - 22:33:48
@@ -45,14 +43,17 @@ export default function Home({ data }) {
    */
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    const userFindDB = users.find(user => user.email.toLowerCase() === email.toLowerCase() && user.password.toLowerCase() === password.toLowerCase())
+    const userFindDB = users.find(
+      (user) =>
+        user.email.toLowerCase() === email.toLowerCase() &&
+        user.password.toLowerCase() === password.toLowerCase()
+    );
     if (userFindDB) {
       router.push("/homepage");
     } else {
       alert("incorrect email or password");
     }
   };
-
 
   /**
    * Google Authentication
@@ -61,13 +62,17 @@ export default function Home({ data }) {
   const onHandleGoogle = () => {
     onAuthStateChanged(auth, (user) => {
       if (!user) {
-        authGoogle().then(res => {
-          const dataSet = data.find(user => user.email === res.email);
+        authGoogle().then((res) => {
+          const dataSet = data.find((user) => user.email === res.email);
           setUserData(dataSet);
           router.push("/homepage");
-        })
+        });
       } else {
-        router.push("/homepage");
+        onAuthStateChanged(auth, (user) => {
+          const logUser = data.find((dbUser) => dbUser.email === user.email);
+          setUserData(logUser);
+          router.push("/homepage");
+        });
       }
     });
   };
@@ -79,19 +84,23 @@ export default function Home({ data }) {
   const onHandleGit = () => {
     onAuthStateChanged(auth, (user) => {
       if (!user) {
-        authGit().then(res => {
-          const dataSet = data.find(user => user.email === res.email);
+        authGit().then((res) => {
+          const dataSet = data.find((user) => user.email === res.email);
           setUserData(dataSet);
           router.push("/homepage");
-        })
+        });
       } else {
-        router.push("/homepage");
+        onAuthStateChanged(auth, (user) => {
+          const logUser = data.find((dbUser) => dbUser.email === user.email);
+          setUserData(logUser);
+          router.push("/homepage");
+        });
       }
     });
   };
 
   useEffect(() => {
-    setUsers(data)
+    setUsers(data);
   }, []);
 
   return (
@@ -111,7 +120,10 @@ export default function Home({ data }) {
           <h2 className={styles.main__login__title}>Accedi</h2>
           <form className={styles.main__login__form} onSubmit={onHandleSubmit}>
             <div className={styles.main__login__form__email}>
-              <label htmlFor="email" className={styles.main__login__form__email__label}>
+              <label
+                htmlFor="email"
+                className={styles.main__login__form__email__label}
+              >
                 Email
               </label>
               <input
@@ -150,11 +162,26 @@ export default function Home({ data }) {
           </form>
           <div className={styles.main__login__link}>
             <div className={styles.main__login__link__title}>
-              <h3 className={styles.main__login__link__title__h3}>Oppure accedi con</h3>
+              <h3 className={styles.main__login__link__title__h3}>
+                Oppure accedi con
+              </h3>
             </div>
             <div className={styles.main__login__link__icons}>
-              <Image src={google} alt="logo google" width={50} height={50} onClick={onHandleGoogle} className={styles.main__login__link__icons__google} />
-              <Image src={github} alt="logo github" width={40} height={40} onClick={onHandleGit} />
+              <Image
+                src={google}
+                alt="logo google"
+                width={50}
+                height={50}
+                onClick={onHandleGoogle}
+                className={styles.main__login__link__icons__google}
+              />
+              <Image
+                src={github}
+                alt="logo github"
+                width={40}
+                height={40}
+                onClick={onHandleGit}
+              />
             </div>
           </div>
           <div className={styles.main__login__sing_in}>
@@ -173,7 +200,6 @@ export default function Home({ data }) {
   );
 }
 
-
 /**
  * Server side render
  * @date 27/7/2023 - 22:34:40
@@ -188,7 +214,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      data
-    }
-  }
+      data,
+    },
+  };
 }
