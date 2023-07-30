@@ -46,3 +46,9 @@
       background-position: 0% 50%;
   }
 }
+
+@mixin backgroundTitleGradientColor {
+  background: -webkit-linear-gradient(#E49BE6, #719AE9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
