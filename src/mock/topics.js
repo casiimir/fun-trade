@@ -40,7 +40,7 @@ export const topics = [
         title: 'Cryptocurrency Mining Explained',
         lessonNumber: 'Lesson 5',
         numberLesson: '5',
-        progress: '40%',
+        progress: '95%',
         videoURL: 'https://www.youtube.com/embed/GmOzih6I1zs?modestbranding=1',
         description: 'Cryptocurrency mining is a complex process. This lesson will explain it in an easy to understand manner.',
     },
