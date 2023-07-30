@@ -96,7 +96,8 @@
       }
 
       &__p {
-        font-weight: 600;
+        font-weight: 500;
+        color: #C3C3C3;
       }
 
       &__videoContainer {
@@ -161,10 +162,13 @@
       gap: 15px;
       background-color: rgba(250, 250, 250, 0.784);
 
-      &__heading2 {}
+      &__heading2 {
+        @include backgroundTitleGradientColor;
+      }
 
       &__p {
-        font-weight: 600;
+        font-weight: 500;
+        color: #C3C3C3;
       }
 
       &__videoContainer {

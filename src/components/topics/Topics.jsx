@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './topics.module.scss';
 import Image from 'next/image';
-import fast_video from "@/assets/iconsProject/fast_video.svg";
+import arrowVideo from "@/assets/iconsProject/arrowVideo.svg";
 import { useRouter } from 'next/router';
 
 import { topics as mockTopics } from "@/mock/topics" ;
@@ -26,7 +26,7 @@ const Topics = () => {
                     <div className={styles.progressArgoment}>
                         <p className={styles.progressPercent}>{topic.progress}</p>
                         <div onClick={() => router.push('/LessonDetail?id=' + topic.id)}>
-                            <Image src={fast_video} alt="Show Argoment" />
+                            <Image src={arrowVideo} alt="Show Argoment" />
                         </div>
                     </div>
                 </div>
