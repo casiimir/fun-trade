@@ -11,6 +11,10 @@ import favoriteIcon from "../../assets/iconsProject/heart.svg";
 import academyIcon from "../../assets/iconsProject/school.svg";
 import settingsIcon from "../../assets/iconsProject/setting.svg";
 import logoIcon from "../../assets/iconsProject/logo.svg";
+import logout from "../../assets/iconsProject/logout.svg";
+import costumerService from "../../assets/iconsProject/costumerService.svg";
+import wallet from "../../assets/iconsProject/wallet.svg";
+import deposit from "../../assets/iconsProject/WalletDep&Prel.svg";
 
 const Sidebar = () => {
   const value = useContext(UserContext);
@@ -54,7 +58,7 @@ const Sidebar = () => {
           <Link href="/profile">
             <li className={styles.menuList__wrapper}>
               <div className={styles.icon}>
-                <Image src={walletIcon} alt="wallet" width={30} height={30} />
+                <Image src={wallet} alt="wallet" width={30} height={30} />
               </div>
               <div className={styles.fadein}>
                 <p className={`${styles.content} ${styles.label}`}>wallet</p>
@@ -84,7 +88,7 @@ const Sidebar = () => {
           <Link href="#">
             <li className={styles.menuList__wrapper}>
               <div className={styles.icon}>
-                <Image src={homeIcon} alt="deposit" width={30} height={30} />
+                <Image src={deposit} alt="deposit" width={30} height={30} />
               </div>
               <div className={styles.fadein}>
                 <p className={`${styles.content} ${styles.label}`}>deposit</p>
@@ -104,7 +108,7 @@ const Sidebar = () => {
           <Link href="#">
             <li className={styles.menuList__wrapper}>
               <div className={styles.icon}>
-                <Image src={settingsIcon} alt="customer service" width={30} height={30} />
+                <Image src={costumerService} alt="customer service" width={30} height={30} />
               </div>
               <div className={styles.fadein}>
                 <p className={`${styles.content} ${styles.label}`}>customer service</p>
@@ -114,7 +118,7 @@ const Sidebar = () => {
           <Link href="#">
             <li className={styles.menuList__wrapper}>
               <div className={styles.icon}>
-                <Image src={homeIcon} alt="logout" width={30} height={30} />
+                <Image src={logout} alt="logout" width={30} height={30} />
               </div>
               <div className={styles.fadein}>
                 <p className={`${styles.content} ${styles.label}`}>logout</p>
