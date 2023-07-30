@@ -5,10 +5,17 @@
   background: #ecf0f3;
   box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
 
-  h1 {
+  .__h1MyBalance {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .__h2Bentornato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
   }
 
   p {
@@ -25,6 +32,13 @@
     height: 440px;
     width: 90vw;
     margin-bottom: 7px;
+
+    .__h2Bentornato {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
   }
 }
 
@@ -40,7 +54,14 @@
     background: #ecf0f3;
     box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
 
-    h1 {
+    .__h1MyBalance {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+
+    .__h2Bentornato {
       display: flex;
       justify-content: center;
       align-items: center;

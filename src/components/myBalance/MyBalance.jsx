@@ -19,7 +19,8 @@ const MyBalance = () => {
 
   return (
     <div className={styles.MyBalance}>
-      <h1>My Balance</h1>
+      <h1 className={styles.__h1MyBalance}>My Balance</h1>
+      <h2 className={styles.__h2Bentornato}>Bentornato!</h2>
       <p>{balance}$</p>
       <Chart />
     </div>
