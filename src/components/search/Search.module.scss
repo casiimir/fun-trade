@@ -4,6 +4,7 @@
 }
 
 .container {
+  z-index: 4;
   width: auto;
   height: 100%;
   position: relative;
@@ -22,7 +23,6 @@
   height: rem(55px);
   border: none;
   cursor: pointer;
-  z-index: 99;
 
   &:active {
     @extend %neumorphismActive;
@@ -71,6 +71,7 @@
   height: auto;
   padding: $paddingExtraSmall $paddingSmall;
   background-color: $background-main;
+  z-index: 3;
 }
 
 .card {
@@ -115,7 +116,6 @@
 @media screen and (min-width: 768px) {
   .Search {
     width: 350px;
-    // transform: translateX(-85px);
   }
 
   .input {

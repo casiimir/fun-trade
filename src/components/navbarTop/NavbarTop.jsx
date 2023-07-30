@@ -12,23 +12,33 @@ import searchIcon from "../../assets/iconsProject/search.svg";
 
 const NavbarTop = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { isSearchOpen, setIsSearchOpen } = useContext(UserContext);
 
   const onHandleClickBurger = () => {
-    if (isSearchOpen) {
+    if (isModalOpen) {
       setIsSearchOpen((prev) => !prev);
+      setIsModalOpen((prev) => !prev);
     }
     setIsBurgerOpen((prev) => !prev);
   };
-  const onHandleClickSearch = () => setIsSearchOpen((prev) => !prev);
+  const onHandleClickSearch = () => setIsModalOpen((prev) => !prev);
 
   return (
     <>
       <header>
         <nav>
           <ul className={styles.Navbar}>
-            {isBurgerOpen && <Overlay setIsOpen={setIsBurgerOpen} />}
-            {isSearchOpen && <Overlay setIsOpen={setIsSearchOpen} />}
+            {isBurgerOpen && (
+              <Overlay
+                props={{ isModalOpen, setIsModalOpen, isBurgerOpen, setIsBurgerOpen }}
+              />
+            )}
+            {isSearchOpen && (
+              <Overlay
+                props={{ isModalOpen, setIsModalOpen, isBurgerOpen, setIsBurgerOpen }}
+              />
+            )}
             <div className={`${styles.burgerModal} ${isBurgerOpen && styles.open}`}>
               <Menu setIsBurgerOpen={setIsBurgerOpen} />
             </div>
@@ -52,8 +62,8 @@ const NavbarTop = () => {
                 height={30}
                 onClick={onHandleClickSearch}
               />
-              <div className={`${styles.searchModal} ${isSearchOpen && styles.open}`}>
-                <Search />
+              <div className={`${styles.searchModal} ${isModalOpen && styles.open}`}>
+                <Search setIsModalOpen={setIsModalOpen} />
               </div>
             </li>
           </ul>
