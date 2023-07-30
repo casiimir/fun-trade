@@ -20,7 +20,7 @@ export default function homepage() {
     router.push("/cryptovalutes");
   };
 
-  console.log(userData);
+  // console.log(userData);
 
   useEffect(() => {
     setCryptoDatas(crypto);
