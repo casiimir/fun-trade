@@ -19,7 +19,9 @@ const HistoryTransactions = () => {
               <div className={styles.__left}>
                 <ul>
                   {userData.transition?.map((item, index) => (
-                    <li key={index}>{`${item.name}: ${item.budget}$`}</li>
+                    <li key={index}>
+                      {`${item.name}:`} <span> {`${item.budget}$`}</span>
+                    </li>
                   ))}
                 </ul>
               </div>

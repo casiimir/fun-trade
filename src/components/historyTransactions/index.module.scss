@@ -37,6 +37,11 @@
             li {
               font-weight: bolder;
               word-spacing: 10px;
+
+              span {
+                color: green;
+                margin-left: 27px;
+              }
             }
           }
         }
@@ -45,7 +50,6 @@
           display: flex;
           justify-content: flex-end;
           margin-left: 6rem;
-          color: green;
           font-weight: bolder;
         }
       }
