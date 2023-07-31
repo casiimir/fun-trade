@@ -12,7 +12,7 @@ const DefaultLayout = ({ children }) => {
 
   return (
     <>
-      <header className={styles.Search}>
+      <header className={styles.header}>
         {isSearchOpen && <Overlay />}
         <Search />
       </header>
