@@ -41,8 +41,8 @@ const Menu = ({ setIsBurgerOpen }) => {
             <Image
               src={userData ? userData.avatar : profileIcon}
               alt="profile"
-              width={50}
-              height={50}
+              width={70}
+              height={70}
             />
           </div>
           <div className={styles.text}>

@@ -57,8 +57,8 @@ const Sidebar = () => {
             <Image
               src={userData ? userData.avatar : profileIcon}
               alt="profile"
-              width={50}
-              height={50}
+              width={60}
+              height={60}
             />
           </div>
           <div className={`${styles.profileText} ${styles.fadein}`}>

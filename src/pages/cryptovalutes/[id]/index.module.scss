@@ -1,561 +1,450 @@
-// smartphone
-@media screen and (max-width: 767px) {
-    .InfoCard{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        
-    
-        &__topBar{
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            width: 100%;
-        }
-    
-        &__arrowContain{
-            padding: 5px;
-            border-radius: 100px;
-            background-color: $background-main;
-            border-radius: rem(10px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-            margin-left: 20px;
-        }
-    
-        
-    
-        &__profile{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-        }
-    
-        &__container{
-            display: flex;
-            align-items: center;
-            margin-left: 50px;
-        }
-    
-        &__imgContain{
-            background-color: $background-main;
-            border-radius: rem(10px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-            @include flexboxCenter;
-            width: rem(100px);
-            height: rem(100px);
-            padding: rem($paddingExtraLarge);
-            position: relative;
-            border-radius: 100%;
-    
-          &::after {
-            background-color: $background-main;
-            border-radius: rem(10px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-            content: "";
-            position: absolute;
-            width: rem(60px);
-            height: rem(60px);
-            border-radius: 100%;
-            background-color: transparent;
-          }
-        }
-    
-        &__imgBorder{
-            fill: linear-gradient(135deg, #FFF 0%, #F2EFEF 100%), linear-gradient(135deg, #FFF 0%, #F2EFEF 100%), linear-gradient(135deg, #FFF 0%, #F2EFEF 100%);
-            box-shadow: -1px -1px 2px 0px rgba(195, 195, 195, 0.50) inset, 1px 1px 2px 0px rgba(239, 239, 239, 0.30) inset;
-            filter: drop-shadow(5px 5px 13px rgba(195, 195, 195, 0.90)) drop-shadow(-5px -5px 10px rgba(239, 239, 239, 0.90)) drop-shadow(5px -5px 10px rgba(195, 195, 195, 0.20)) drop-shadow(-5px 5px 10px rgba(195, 195, 195, 0.20)); 
-        }
-    
-        &__log{
-            border-radius: 100px;
-        }
-    
-        &__preferiti{
-            background-color: $background-main;
-            border-radius: rem(10px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-            padding: 5px;
-            position: relative;
-            gap: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            padding: 10px;
-        }
-        
-        &__preferitiTitle{
-            background: linear-gradient(242deg, #E49BE6 0%, #A6C4FF 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        &__containCard{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            justify-content: center;
-        }
-        
-        &__charts{
-            width: 400px;
-            height: 350px;
-            background-color: $background-main;
-            border-radius: rem(20px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-            
-        }
-        &__name{
-            color: #F7931A;
-            font-family: Inter;
-            font-size: 25px;
-            font-style: normal;
-            font-weight: 800;
-            line-height: normal;
-            text-align: center;
-        }
-        
-        &__info{
-            padding: 10px;
-            padding: 10px;
-            height: 250px;
-            width: 400px;
-            background-color: $background-main;
-            border-radius: rem(10px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-        }
-    
-        &__pName{ 
-            background: linear-gradient(242deg, #E49BE6 0%, #A6C4FF 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin: 20px;
-    
-        }
-    
-        &__description{
-            margin-left: 20px;
-            width: 80%;
-        }
-    
-        &__cardContain{
-            display: none;
-            width: 100%;
-            display: flex;
-            align-items: end;
-            justify-content: end;
-        
-        }
-    
-        &__cryptoList{
-            width: 400px;
-            height: 200px;
-            padding: 20px;
-            background-color: $background-main;
-            border-radius: rem(10px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-            overflow-x: auto;
-            margin-right: 20px;
-            display: flex;
-            gap: 20px;
-        }
-    
+.InfoCard {
+  max-width: 1400px;
+
+  &__topBar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1400px;
+    height: 140px;
+    padding: $paddingSmall $paddingExtraLarge;
+  }
+
+  &__arrowContain {
+    @extend %neumorphism;
+    @include flexboxCenter();
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+
+    &:active {
+      @extend %neumorphismActive;
     }
+  }
+
+  &__name {
+    padding: $paddingSmall 0;
+  }
 }
 
-// Ipad 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .InfoCard{
+.content {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 140px);
+  justify-content: space-around;
+  padding: $paddingMedium;
+  margin-top: 140px;
+  gap: 20px;
+}
+
+.InfoCard__name {
+  @extend %heading;
+  color: #f7931a;
+  text-align: center;
+}
+
+.InfoCard__container {
+  @extend %neumorphism;
+  position: relative;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+
+  &::after {
+    @extend %neumorphism;
+    content: "";
+    background-color: transparent;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.InfoCard__imgContain {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 100%;
+  background-color: red;
+  z-index: 2;
+
+  img {
+    display: block;
+  }
+}
+// smartphone
+@media screen and (max-width: 767px) {
+  .InfoCard {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    
 
-    &__topBar{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    &__arrowContain{
-        padding: 5px;
-        border-radius: 100px;
-        background-color: $background-main;
-        border-radius: rem(10px);
-        box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-        transition: box-shadow 0.4s ease-in-out;
-        outline: none;
-        margin-left: 20px;
+    &__topBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
     }
 
-    
-
-    &__profile{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
+    &__profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
     }
 
-    &__container{
-        display: flex;
-        align-items: center;
-        margin-left: 50px;
+    &__container {
+      display: flex;
+      align-items: center;
     }
 
-    &__imgContain{
-        background-color: $background-main;
-        border-radius: rem(10px);
-        box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-        transition: box-shadow 0.4s ease-in-out;
-        outline: none;
-        @include flexboxCenter;
-        width: rem(100px);
-        height: rem(100px);
-        padding: rem($paddingExtraLarge);
-        position: relative;
-        border-radius: 100%;
-
-      &::after {
-        background-color: $background-main;
-        border-radius: rem(10px);
-        box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-        transition: box-shadow 0.4s ease-in-out;
-        outline: none;
-        content: "";
-        position: absolute;
-        width: rem(60px);
-        height: rem(60px);
-        border-radius: 100%;
-        background-color: transparent;
-      }
+    &__preferiti {
+      background-color: $background-main;
+      border-radius: rem(10px);
+      box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+      transition: box-shadow 0.4s ease-in-out;
+      outline: none;
+      padding: 5px;
+      position: relative;
+      gap: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      padding: 10px;
     }
 
-    &__imgBorder{
-        fill: linear-gradient(135deg, #FFF 0%, #F2EFEF 100%), linear-gradient(135deg, #FFF 0%, #F2EFEF 100%), linear-gradient(135deg, #FFF 0%, #F2EFEF 100%);
-        box-shadow: -1px -1px 2px 0px rgba(195, 195, 195, 0.50) inset, 1px 1px 2px 0px rgba(239, 239, 239, 0.30) inset;
-        filter: drop-shadow(5px 5px 13px rgba(195, 195, 195, 0.90)) drop-shadow(-5px -5px 10px rgba(239, 239, 239, 0.90)) drop-shadow(5px -5px 10px rgba(195, 195, 195, 0.20)) drop-shadow(-5px 5px 10px rgba(195, 195, 195, 0.20)); 
+    &__preferitiTitle {
+      background: linear-gradient(242deg, #e49be6 0%, #a6c4ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    &__log{
-        border-radius: 100px;
+    &__containCard {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
     }
 
-    &__preferiti{
-        background-color: $background-main;
-        border-radius: rem(10px);
-        box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-        transition: box-shadow 0.4s ease-in-out;
-        outline: none;
-        padding: 5px;
-        position: relative;
-        gap: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 20px;
-        padding: 10px;
-    }
-    
-    &__preferitiTitle{
-        background: linear-gradient(242deg, #E49BE6 0%, #A6C4FF 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    
-    &__containCard{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        justify-content: center;
-    }
-    
-    &__charts{
-        margin-left: 20px;
-        width: 650px;
-        height: 350px;
-        background-color: $background-main;
-        border-radius: rem(20px);
-        box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-        transition: box-shadow 0.4s ease-in-out;
-        outline: none;
-        
-    }
-    &__name{
-        color: #F7931A;
-        font-family: Inter;
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: normal;
-        text-align: center;
-    }
-    
-    &__info{
-        padding: 10px;
-        padding: 10px;
-        height: 200px;
-        width: 600px;
-        background-color: $background-main;
-        border-radius: rem(10px);
-        box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-        transition: box-shadow 0.4s ease-in-out;
-        outline: none;
+    &__charts {
+      width: 400px;
+      height: 350px;
+      background-color: $background-main;
+      border-radius: rem(20px);
+      box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+      transition: box-shadow 0.4s ease-in-out;
+      outline: none;
     }
 
-    &__pName{ 
-        background: linear-gradient(242deg, #E49BE6 0%, #A6C4FF 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-        margin: 20px;
-
+    &__info {
+      padding: 10px;
+      padding: 10px;
+      height: 250px;
+      width: 400px;
+      background-color: $background-main;
+      border-radius: rem(10px);
+      box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+      transition: box-shadow 0.4s ease-in-out;
+      outline: none;
     }
 
-    &__description{
-        margin-left: 20px;
-        width: 80%;
+    &__pName {
+      background: linear-gradient(242deg, #e49be6 0%, #a6c4ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      margin: 20px;
     }
 
-    &__cardContain{
-        width: 100%;
-        display: flex;
-        align-items: end;
-        justify-content: end;
-    
+    &__description {
+      margin-left: 20px;
+      width: 80%;
     }
 
-    &__cryptoList{
-        width: 700px;
-        height: 200px;
-        padding: 20px;
-        background-color: $background-main;
-        border-radius: rem(10px);
-        box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-        transition: box-shadow 0.4s ease-in-out;
-        outline: none;
-        overflow-x: auto;
-        margin-right: 20px;
-        display: flex;
-        gap: 30px;
+    &__cardContain {
+      display: none;
+      width: 100%;
+      display: flex;
+      align-items: end;
+      justify-content: end;
     }
 
+    &__cryptoList {
+      width: 400px;
+      height: 200px;
+      padding: 20px;
+      background-color: $background-main;
+      border-radius: rem(10px);
+      box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+      transition: box-shadow 0.4s ease-in-out;
+      outline: none;
+      overflow-x: auto;
+      margin-right: 20px;
+      display: flex;
+      gap: 20px;
+    }
+  }
 }
+
+// Ipad
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .InfoCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &__topBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    &__profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    &__container {
+      display: flex;
+      align-items: center;
+    }
+
+    &__preferiti {
+      background-color: $background-main;
+      border-radius: rem(10px);
+      box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+      transition: box-shadow 0.4s ease-in-out;
+      outline: none;
+      padding: 5px;
+      position: relative;
+      gap: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      padding: 10px;
+    }
+
+    &__preferitiTitle {
+      background: linear-gradient(242deg, #e49be6 0%, #a6c4ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &__containCard {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    &__charts {
+      margin-left: 20px;
+      width: 650px;
+      height: 350px;
+      background-color: $background-main;
+      border-radius: rem(20px);
+      box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+      transition: box-shadow 0.4s ease-in-out;
+      outline: none;
+    }
+
+    &__info {
+      padding: 10px;
+      padding: 10px;
+      height: 200px;
+      width: 600px;
+      background-color: $background-main;
+      border-radius: rem(10px);
+      box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+      transition: box-shadow 0.4s ease-in-out;
+      outline: none;
+    }
+
+    &__pName {
+      background: linear-gradient(242deg, #e49be6 0%, #a6c4ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      margin: 20px;
+    }
+
+    &__description {
+      margin-left: 20px;
+      width: 80%;
+    }
+
+    &__cardContain {
+      width: 100%;
+      display: flex;
+      align-items: end;
+      justify-content: end;
+    }
+
+    &__cryptoList {
+      width: 700px;
+      height: 200px;
+      padding: 20px;
+      background-color: $background-main;
+      border-radius: rem(10px);
+      box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+      transition: box-shadow 0.4s ease-in-out;
+      outline: none;
+      overflow-x: auto;
+      margin-right: 20px;
+      display: flex;
+      gap: 30px;
+    }
+  }
 }
 
 // Desktop
-@media screen and (min-width: 1024px){
-    .InfoCard{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        
-    
-        &__topBar{
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            width: 100%;
-        }
-    
-        &__arrowContain{
-            padding: 5px;
-            border-radius: 100px;
-            background-color: $background-main;
-            border-radius: rem(10px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-            margin-left: 20px;
-        }
-    
-        
-    
-        &__profile{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-        }
-    
-        &__container{
-            display: flex;
-            align-items: center
-        }
-    
-        &__imgContain{
-            background-color: $background-main;
-            border-radius: rem(10px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-            @include flexboxCenter;
-            width: rem(100px);
-            height: rem(100px);
-            padding: rem($paddingExtraLarge);
-            position: relative;
-            border-radius: 100%;
-    
-          &::after {
-            background-color: $background-main;
-            border-radius: rem(10px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-            content: "";
-            position: absolute;
-            width: rem(60px);
-            height: rem(60px);
-            border-radius: 100%;
-            background-color: transparent;
-          }
-        }
-    
-        &__imgBorder{
-            fill: linear-gradient(135deg, #FFF 0%, #F2EFEF 100%), linear-gradient(135deg, #FFF 0%, #F2EFEF 100%), linear-gradient(135deg, #FFF 0%, #F2EFEF 100%);
-            box-shadow: -1px -1px 2px 0px rgba(195, 195, 195, 0.50) inset, 1px 1px 2px 0px rgba(239, 239, 239, 0.30) inset;
-            filter: drop-shadow(5px 5px 13px rgba(195, 195, 195, 0.90)) drop-shadow(-5px -5px 10px rgba(239, 239, 239, 0.90)) drop-shadow(5px -5px 10px rgba(195, 195, 195, 0.20)) drop-shadow(-5px 5px 10px rgba(195, 195, 195, 0.20)); 
-        }
-    
-        &__log{
-            border-radius: 100px;
-        }
-    
-        &__preferiti{
-            background-color: $background-main;
-            border-radius: rem(10px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-            padding: 5px;
-            position: relative;
-            gap: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            padding: 10px;
-        }
-        
-        &__preferitiTitle{
-            background: linear-gradient(242deg, #E49BE6 0%, #A6C4FF 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        &__containCard{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        &__charts{
-            margin-left: 20px;
-            width: 650px;
-            height: 450px;
-            background-color: $background-main;
-            border-radius: rem(20px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-            
-        }
-        &__name{
-            color: #F7931A;
-            font-family: Inter;
-            font-size: 25px;
-            font-style: normal;
-            font-weight: 800;
-            line-height: normal;
-            text-align: center;
-        }
-        
-        &__info{
-            margin-right: 20px;
-            padding: 10px;
-            height: 300px;
-            width: 300px;
-            background-color: $background-main;
-            border-radius: rem(10px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-        }
-    
-        &__pName{ 
-            background: linear-gradient(242deg, #E49BE6 0%, #A6C4FF 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin: 20px;
-    
-        }
-    
-        &__description{
-            margin-left: 20px;
-            width: 80%;
-        }
-    
-        &__cardContain{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-            justify-content: end;
-        
-        }
-    
-        &__cryptoList{
-            width: 500px;
-            height: 300px;
-            padding: 10px;
-            background-color: $background-main;
-            border-radius: rem(10px);
-            box-shadow: 8px 8px 14px #c6cacc, -8px -8px       14px #ffffff;
-            transition: box-shadow 0.4s ease-in-out;
-            outline: none;
-            overflow-y: auto;
-            margin-right: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+@media screen and (min-width: 1024px) {
+  .InfoCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: $paddingMedium;
 
-        &__otherCrypto{
-            width: 500px;
-            margin-bottom: 10px;
-        }
-    
+    &__topBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
     }
+
+    &__profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    &__container {
+      display: flex;
+      align-items: center;
+    }
+
+    &__preferiti {
+      background-color: $background-main;
+      border-radius: rem(10px);
+      box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+      transition: box-shadow 0.4s ease-in-out;
+      outline: none;
+      padding: 5px;
+      position: relative;
+      gap: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      padding: 10px;
+    }
+
+    &__preferitiTitle {
+      background: linear-gradient(242deg, #e49be6 0%, #a6c4ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &__containCard {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__charts {
+      width: 700px;
+      height: 450px;
+      background-color: $background-main;
+      border-radius: rem(20px);
+      box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+      transition: box-shadow 0.4s ease-in-out;
+      outline: none;
+    }
+
+    &__info {
+      width: 300px;
+      height: 450px;
+      padding: $paddingMedium;
+      background-color: $background-main;
+      border-radius: rem(10px);
+      box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+      transition: box-shadow 0.4s ease-in-out;
+      outline: none;
+    }
+
+    &__pName {
+      background: linear-gradient(242deg, #e49be6 0%, #a6c4ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__description {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+
+    &__cardContain {
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: end;
+    }
+
+    &__cryptoList {
+      width: 500px;
+      height: 300px;
+      padding: 10px;
+      background-color: $background-main;
+      border-radius: rem(10px);
+      box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+      transition: box-shadow 0.4s ease-in-out;
+      outline: none;
+      overflow-y: auto;
+      margin-right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__otherCrypto {
+      width: 500px;
+      margin-bottom: 10px;
+    }
+  }
 }

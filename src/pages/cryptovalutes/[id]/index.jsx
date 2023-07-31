@@ -46,30 +46,31 @@ export default function InfoCard({ data }) {
           <Image src={heart} alt="back" width={20} height={20} />
         </div>
       </div>
-
-      <div className={styles.InfoCard__containCard}>
-        <div className={styles.InfoCard__charts}>
-          <div className={styles.InfoCard__infoPrice}>
-            <h1 className={styles.InfoCard__name}>{data.name}</h1>
-            <p>{data.last}</p>
+      <div className={styles.content}>
+        <div className={styles.InfoCard__containCard}>
+          <div className={styles.InfoCard__charts}>
+            <div className={styles.InfoCard__infoPrice}>
+              <h1 className={styles.InfoCard__name}>{data.name}</h1>
+              <p>{data.last}</p>
+            </div>
+            <Chart />
           </div>
-          <Chart />
+          <div className={styles.InfoCard__cardContain}>
+            <div>
+              <h2 className={styles.InfoCard__otherCrypto}>Vedi anche</h2>
+              <div className={styles.InfoCard__cryptoList}>
+                {CryptoDatas.map((data) => (
+                  <Card data={data} />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
         <div className={styles.InfoCard__info}>
           <h3 className={styles.InfoCard__pName}>Carta d'identità</h3>
           <p className={styles.InfoCard__description}>
-            {data.description.en.slice(0, 300) + "..."}
+            {data?.description?.en?.slice(0, 500) + "..."}
           </p>
-        </div>
-      </div>
-      <div className={styles.InfoCard__cardContain}>
-        <div>
-          <h2 className={styles.InfoCard__otherCrypto}>Vedi anche</h2>
-          <div className={styles.InfoCard__cryptoList}>
-            {CryptoDatas.map((data) => (
-              <Card data={data} />
-            ))}
-          </div>
         </div>
       </div>
     </div>
@@ -77,9 +78,7 @@ export default function InfoCard({ data }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch(
-    `https://api.coingecko.com/api/v3/coins/${context.query.id}`
-  );
+  const res = await fetch(`https://api.coingecko.com/api/v3/coins/${context.query.id}`);
   const data = await res.json();
   return {
     props: {
