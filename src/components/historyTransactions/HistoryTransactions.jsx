@@ -1,24 +1,14 @@
 import { useEffect, useState } from "react";
-import { useContext } from "react";
-import { UserContext } from "@/pages/_app";
 import styles from "./index.module.scss";
 
 const HistoryTransactions = () => {
-  /* const { userData } = useContext(UserContext);
-  console.log(userData);
- */
-  const [hTrans, sethTrans] = useState(null);
-  useEffect(() => {
-    const getUserData = () => {
-      const userDataString = localStorage.getItem(transition);
-      if (userDataString) {
-        const userDataObject = JSON.parse(userDataString);
-        sethTrans(userDataObject.htrans);
-      }
-    };
-    getUserData();
-  }, []);
+  const [userData, setuserData] = useState({});
 
+  useEffect(() => {
+    const userDataString = JSON.parse(localStorage.getItem("UserData"));
+    setuserData(userDataString);
+  }, []);
+  console.log(userData);
   return (
     <>
       <div className={styles.HistoryTransactions}>
@@ -28,10 +18,9 @@ const HistoryTransactions = () => {
             <div className={styles.__details}>
               <div className={styles.__left}>
                 <ul>
-                  {/* {userData.transition.map((item, index) => (
+                  {userData.transition?.map((item, index) => (
                     <li key={index}>{`${item.name}: ${item.budget}$`}</li>
-                  ))} */}
-                  <li></li>
+                  ))}
                 </ul>
               </div>
             </div>
