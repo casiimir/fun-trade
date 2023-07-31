@@ -9,7 +9,7 @@ import heartIcon from "../../assets/iconsProject/heart.svg";
 import walletIcon from "../../assets/iconsProject/wallet.svg";
 import homeIcon from "../../assets/iconsProject/home.svg";
 import academyIcon from "../../assets/iconsProject/school.svg";
-
+import TeamIcon from "../../assets/iconsProject/teamImg/TeamIcon.svg"
 const NavbarBottom = () => {
   const { selectedPage, setSelectedPage } = useContext(UserContext);
 
@@ -73,7 +73,7 @@ const NavbarBottom = () => {
               onClick={onHandleSelect}
               id="settings"
             >
-              <Image src={arrowIcon} alt="about us" width={30} height={30} />
+              <Image src={TeamIcon} alt="about us" width={30} height={30} />
               <p className={styles.label}>about us</p>
             </li>
           </Link>

@@ -13,7 +13,7 @@ import logoIcon from "../../assets/iconsProject/logo.svg";
 import logoutIcon from "../../assets/iconsProject/logout.svg";
 import costumerServiceIcon from "../../assets/iconsProject/costumerService.svg";
 import walletIcon from "../../assets/iconsProject/wallet.svg";
-
+import TeamIcon from "../../assets/iconsProject/teamImg/TeamIcon.svg"
 //Firebase
 import { signOut } from "firebase/auth";
 import { auth } from "@/firebase";
@@ -144,7 +144,7 @@ const Sidebar = () => {
               onClick={onHandleSelect}
             >
               <div className={styles.icon}>
-                <Image src={costumerServiceIcon} alt="about us" width={35} height={35} />
+                <Image src={TeamIcon} alt="about us" width={35} height={35} />
               </div>
               <div className={styles.fadein}>
                 <p className={`${styles.content} ${styles.label}`}>about us</p>
