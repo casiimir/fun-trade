@@ -78,19 +78,19 @@ export const postData = async (
 			transition: [
 				{
 					name: "Bitcoin",
-					badget: Math.floor(Math.random() * 1500),
+					budget: Math.floor(Math.random() * 1500),
 				},
 				{
 					name: "Ethereum",
-					badget: Math.floor(Math.random() * 1500),
+					budget: Math.floor(Math.random() * 1500),
 				},
 				{
 					name: "Tether",
-					badget: Math.floor(Math.random() * 1500),
+					budget: Math.floor(Math.random() * 1500),
 				},
 				{
 					name: "Dogecoin",
-					badget: Math.floor(Math.random() * 1500),
+					budget: Math.floor(Math.random() * 1500),
 				},
 			],
 			id,
