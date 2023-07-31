@@ -14,6 +14,7 @@ import cryptoIcon from "../assets/iconsProject/bitcoin.svg";
 export default function homepage() {
   const { userData } = useContext(UserContext);
   const [cryptoDatas, setCryptoDatas] = useState(crypto);
+  const [balance, setBalance] = useState(null);
   const router = useRouter();
 
   const onHandelCrypto = () => {
@@ -26,12 +27,28 @@ export default function homepage() {
     setCryptoDatas(crypto);
   }, []);
 
+  useEffect(() => {
+    const getUserData = () => {
+      const userDataString = localStorage.getItem("users");
+      if (userDataString) {
+        const userDataObject = JSON.parse(userDataString);
+        setBalance(userDataObject.balance);
+      }
+    };
+
+    getUserData();
+  }, []);
+
   return (
     <DefaultLayout>
       <div className={styles.homepage}>
         <div className={styles.homepage__container}>
           <div className={styles.homepage__container__desktopLeftWrapper}>
-            <div className={styles.homepage__container__desktopLeftWrapper__myBalance}>
+            <div
+              className={
+                styles.homepage__container__desktopLeftWrapper__myBalance
+              }
+            >
               <div
                 className={
                   styles.homepage__container__desktopLeftWrapper__myBalance__info
@@ -49,7 +66,7 @@ export default function homepage() {
                     styles.homepage__container__desktopLeftWrapper__myBalance__info__wallet
                   }
                 >
-                  99.999 $
+                  {balance}$
                 </p>
               </div>
               <div
@@ -60,9 +77,15 @@ export default function homepage() {
                 <Chart />
               </div>
             </div>
-            <div className={styles.homepage__container__desktopLeftWrapper__categories}>
+            <div
+              className={
+                styles.homepage__container__desktopLeftWrapper__categories
+              }
+            >
               <h3
-                className={styles.homepage__container__desktopLeftWrapper__categories__h3}
+                className={
+                  styles.homepage__container__desktopLeftWrapper__categories__h3
+                }
               >
                 Sfoglia Categorie
               </h3>
@@ -84,7 +107,12 @@ export default function homepage() {
                   >
                     Criptovalute
                   </p>
-                  <Image src={cryptoIcon} alt="cryptoIcon" width={40} height={40} />
+                  <Image
+                    src={cryptoIcon}
+                    alt="cryptoIcon"
+                    width={40}
+                    height={40}
+                  />
                 </div>
               </div>
             </div>
