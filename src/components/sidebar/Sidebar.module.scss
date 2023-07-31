@@ -1,6 +1,6 @@
 .Sidebar {
   width: rem(85px);
-  height: 100%;
+  height: auto;
   position: absolute;
   top: 0;
   left: 0;
@@ -8,32 +8,7 @@
   box-shadow: 2px 0px 10px 5px rgb(202, 202, 202);
   background-color: $background-main;
   transition: all 0.5s ease-in-out;
-
-  &:hover {
-    width: rem(300px);
-    max-width: rem(400px);
-
-    .label {
-      display: unset;
-      padding-left: $paddingSmall;
-    }
-
-    .wrapper {
-      width: rem(230px);
-    }
-
-    .container {
-      width: rem(230px);
-    }
-
-    .content {
-      @include flexboxCenter();
-    }
-
-    .fadein {
-      opacity: 1;
-    }
-  }
+  border-radius: rem(10px);
 }
 
 .label {
@@ -100,7 +75,8 @@
   @include flexboxCenter();
   @extend %paragraphBold;
   width: 100%;
-  height: rem(60px);
+  height: rem(45px);
+  margin-bottom: rem(20px);
   justify-content: flex-start;
   padding: $paddingExtraSmall 0;
   font-size: $paddingSmall;
@@ -110,6 +86,23 @@
     height: 100%;
     font-size: $paragraphSmall;
     color: $text;
+  }
+}
+
+.selected {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(58px);
+    height: rem(45px);
+    border: 2px solid $icon-primary;
+    border-radius: rem(10px);
+    box-shadow: 2px 2px 8px 4px rgba(202, 202, 202);
+    transition: all 0.4s ease-in-out;
   }
 }
 
@@ -127,5 +120,38 @@
 //desktop
 @media screen and (min-width: 1024px) {
   .Sidebar {
+    &:hover {
+      width: rem(300px);
+      max-width: rem(400px);
+
+      .label {
+        display: unset;
+        padding-left: $paddingSmall;
+      }
+
+      .wrapper {
+        width: rem(230px);
+      }
+
+      .container {
+        width: rem(230px);
+      }
+
+      .content {
+        @include flexboxCenter();
+      }
+
+      .fadein {
+        opacity: 1;
+      }
+
+      .selected {
+        width: 100%;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
   }
 }
