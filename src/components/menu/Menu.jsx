@@ -1,19 +1,35 @@
 import Image from "next/image";
+import Link from "next/link";
+import Router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from "./Menu.module.scss";
 import { menuList } from "@/mock/menuList";
+
+//firebasae
+import { signOut } from "firebase/auth";
+import { auth } from "@/firebase";
+
+//icons
 import closeIcon from "../../assets/iconsProject/close-menu.svg";
 import profileIcon from "../../mock/profile-icon.svg";
 
 const Menu = ({ setIsBurgerOpen }) => {
   const [userData, setUserData] = useState({});
+  const router = useRouter();
 
   useEffect(() => {
     let userData = JSON.parse(localStorage.getItem("UserData")) || {};
     setUserData(userData);
   }, []);
 
+  const onHandleLogout = () => {
+    signOut(auth).then(() => {
+      router.push("/");
+    });
+  };
+
   const onHandleClick = () => setIsBurgerOpen((prev) => !prev);
+
   return (
     <section className={styles.Menu}>
       <button onClick={onHandleClick} className={styles.closeBtn}>
@@ -35,11 +51,36 @@ const Menu = ({ setIsBurgerOpen }) => {
           </div>
         </div>
         <ul className={styles.menuList}>
-          {menuList.map((item) => (
-            <li className={styles.menuList__content} key={item.id}>
-              {item.content}
+          <Link href="/homepage">
+            <li id="homepage" className={styles.menuList__content}>
+              home
             </li>
-          ))}
+          </Link>
+          <Link href="/profile">
+            <li id="profile" className={styles.menuList__content}>
+              wallet
+            </li>
+          </Link>
+          <Link href="/funAcademy">
+            <li id="funAcademy" className={styles.menuList__content}>
+              fun academy
+            </li>
+          </Link>
+          <Link href="#">
+            <li id="favorites" className={styles.menuList__content}>
+              favorites
+            </li>
+          </Link>
+          <Link href="#">
+            <li id="aboutus" className={styles.menuList__content}>
+              about us
+            </li>
+          </Link>
+          <Link href="#">
+            <li id="logout" className={styles.menuList__content} onClick={onHandleLogout}>
+              log out
+            </li>
+          </Link>
         </ul>
       </div>
     </section>
