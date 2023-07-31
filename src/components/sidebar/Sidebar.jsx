@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import styles from "./Sidebar.module.scss";
 import { UserContext } from "@/pages/_app";
+import { useRouter } from "next/router";
 // icons
 import profileIcon from "../../mock/profile-icon.svg";
 import homeIcon from "../../assets/iconsProject/home.svg";
@@ -12,6 +13,10 @@ import logoIcon from "../../assets/iconsProject/logo.svg";
 import logoutIcon from "../../assets/iconsProject/logout.svg";
 import costumerServiceIcon from "../../assets/iconsProject/costumerService.svg";
 import walletIcon from "../../assets/iconsProject/wallet.svg";
+
+//Firebase
+import { signOut } from "firebase/auth";
+import { auth } from "@/firebase";
 
 const Sidebar = () => {
   const { isSearchOpen, setIsSearchOpen, selectedPage, setSelectedPage } =
@@ -143,6 +148,3 @@ const Sidebar = () => {
       </div>
     </section>
   );
-};
-
-export default Sidebar;
