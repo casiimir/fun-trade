@@ -1,0 +1,94 @@
+.outerContainer {
+    display: flex;
+    margin: 20px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 15px;
+    gap: 15px;
+    background-color: rgba(250, 250, 250, 0.784);
+    @include neumorphism;
+    margin-right: 50px;
+}
+
+.title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 1em;
+    @include backgroundTitleGradientColor;
+}
+
+.info, .process {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+.subtitle {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 0.5em;
+    @include backgroundTitleGradientColor;
+}
+.subtitle2 {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 0.5em;
+    @include backgroundTitleGradientColor;
+}
+
+.iconContainer {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    margin-top: 20px;
+    padding: 20px;
+    @include neumorphism;
+
+}
+
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.pIcon {
+    margin-top: 10px;
+    padding: 10px;
+    @include neumorphism;
+    @include backgroundTitleGradientColor;
+}
+
+.iconContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+
+    .imageContainer {
+        flex: 0 0 calc(25% - 10px); 
+
+        @media (max-width: 600px) { 
+            flex: 0 0 calc(20% - 10px)
+        }
+    }
+}
+
+// team container
+.teamContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
