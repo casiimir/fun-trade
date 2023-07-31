@@ -31,6 +31,14 @@
         display: flex;
 
         .__left {
+          ul {
+            line-height: 2em;
+
+            li {
+              font-weight: bolder;
+              word-spacing: 10px;
+            }
+          }
         }
 
         .__right {
