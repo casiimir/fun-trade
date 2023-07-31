@@ -9,7 +9,6 @@ import heartIcon from "../../assets/iconsProject/heart.svg";
 import walletIcon from "../../assets/iconsProject/wallet.svg";
 import homeIcon from "../../assets/iconsProject/home.svg";
 import academyIcon from "../../assets/iconsProject/school.svg";
-import settingsIcon from "../../assets/iconsProject/setting.svg";
 
 const NavbarBottom = () => {
   const { selectedPage, setSelectedPage } = useContext(UserContext);

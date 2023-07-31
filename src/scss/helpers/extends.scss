@@ -11,6 +11,7 @@
 
 %paragraphBold {
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 %neumorphism {
@@ -25,8 +26,8 @@
   box-shadow: inset -5px -5px 10px #c8d1da, inset 5px 5px 10px #ffffff;
 }
 
-%backgroundTitleGradientColor{
-  background: -webkit-linear-gradient(#E49BE6, #719AE9);
+%backgroundTitleGradientColor {
+  background: -webkit-linear-gradient(#e49be6, #719ae9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
