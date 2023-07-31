@@ -1,3 +1,8 @@
+.Card,
+.Negative {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 767px) {
   .Negative {
     width: 100%;
@@ -9,10 +14,12 @@
     padding: 5px;
     background: rgb(255, 255, 255);
     box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
-    background: linear-gradient(90deg,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(255, 141, 141, 0.4023984593837535) 100%,
-        rgb(250 178 178 / 58%) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 48%,
+      rgba(255, 141, 141, 0.4023984593837535) 100%,
+      rgb(250 178 178 / 58%) 100%
+    );
     border-radius: rem(10px);
     outline: none;
     transition: box-shadow 0.4s ease-in-out;
@@ -29,10 +36,12 @@
     padding: 5px;
     background: rgb(255, 255, 255);
     box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
-    background: linear-gradient(90deg,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(181, 255, 141, 0.4023984593837535) 100%,
-        rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 48%,
+      rgba(181, 255, 141, 0.4023984593837535) 100%,
+      rgba(255, 255, 255, 1) 100%
+    );
     border-radius: rem(10px);
     outline: none;
     transition: box-shadow 0.4s ease-in-out;
@@ -88,10 +97,12 @@
     padding: 5px;
     background: rgb(255, 255, 255);
     box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
-    background: linear-gradient(90deg,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(255, 141, 141, 0.4023984593837535) 100%,
-        rgb(250 178 178 / 58%) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 48%,
+      rgba(255, 141, 141, 0.4023984593837535) 100%,
+      rgb(250 178 178 / 58%) 100%
+    );
     border-radius: rem(10px);
     outline: none;
     transition: box-shadow 0.4s ease-in-out;
@@ -108,10 +119,12 @@
     padding: 5px;
     background: rgb(255, 255, 255);
     box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
-    background: linear-gradient(90deg,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(181, 255, 141, 0.4023984593837535) 100%,
-        rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 48%,
+      rgba(181, 255, 141, 0.4023984593837535) 100%,
+      rgba(255, 255, 255, 1) 100%
+    );
     border-radius: rem(10px);
     outline: none;
     transition: box-shadow 0.4s ease-in-out;
@@ -167,10 +180,12 @@
     padding: 5px;
     background: rgb(255, 255, 255);
     box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
-    background: linear-gradient(90deg,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(255, 141, 141, 0.4023984593837535) 100%,
-        rgb(250 178 178 / 58%) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 48%,
+      rgba(255, 141, 141, 0.4023984593837535) 100%,
+      rgb(250 178 178 / 58%) 100%
+    );
     border-radius: rem(10px);
     outline: none;
     transition: box-shadow 0.4s ease-in-out;
@@ -187,10 +202,12 @@
     padding: 5px;
     background: rgb(255, 255, 255);
     box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
-    background: linear-gradient(90deg,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(181, 255, 141, 0.4023984593837535) 100%,
-        rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 48%,
+      rgba(181, 255, 141, 0.4023984593837535) 100%,
+      rgba(255, 255, 255, 1) 100%
+    );
     border-radius: rem(10px);
     outline: none;
     transition: box-shadow 0.4s ease-in-out;

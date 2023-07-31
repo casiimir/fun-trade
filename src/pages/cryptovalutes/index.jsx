@@ -21,13 +21,9 @@ export default function cryptovalutes() {
     <DefaultLayout>
       <div className={styles.cryptovalutes}>
         <div className={styles.cryptovalutes__header}>
-          <Image
-            src={arrow}
-            alt="back"
-            width={30}
-            height={30}
-            onClick={onHandleBack}
-          />
+          <div className={styles.cryptovalutes__arrowIcon}>
+            <Image src={arrow} alt="back" width={30} height={30} onClick={onHandleBack} />
+          </div>
           <h1 className={styles.cryptovalutes__header__title}>Cryptovalute</h1>
         </div>
         <div className={styles.cryptovalutes__list}>

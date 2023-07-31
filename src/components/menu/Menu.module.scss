@@ -34,6 +34,10 @@
   height: rem(70px);
   border-radius: 100%;
   overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
 }
 
 .text {

@@ -74,6 +74,7 @@
           padding: 5px;
 
           &__card {
+            cursor: pointer;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -81,6 +82,7 @@
             padding: 10px;
             @extend %neumorphism;
             gap: 10px;
+            transition: all 0.25s ease-in-out;
 
             &:active {
               @extend %neumorphismActive;
