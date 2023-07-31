@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import styles from "./Sidebar.module.scss";
 import { UserContext } from "@/pages/_app";
+import { useRouter } from "next/router";
 // icons
 import profileIcon from "../../mock/profile-icon.svg";
 import homeIcon from "../../assets/iconsProject/home.svg";
@@ -15,10 +16,21 @@ import costumerServiceIcon from "../../assets/iconsProject/costumerService.svg";
 import walletIcon from "../../assets/iconsProject/wallet.svg";
 import depositIcon from "../../assets/iconsProject/WalletDep&Prel.svg";
 
+//Firebase
+import { signOut } from "firebase/auth";
+import { auth } from "@/firebase";
+
 const Sidebar = () => {
+	const router = useRouter();
 	const { userData, setIsSearchOpen } = useContext(UserContext);
 	const onHandleClick = () => {
 		setIsSearchOpen((prev) => !prev);
+
+		const onHandleLogout = () => {
+			signOut(auth).then(() => {
+				router.push("/");
+			});
+		};
 	};
 
 	return (
@@ -149,7 +161,7 @@ const Sidebar = () => {
 						</li>
 					</Link>
 					<Link href="#">
-						<li className={styles.menuList__wrapper}>
+						<li className={styles.menuList__wrapper} onClick={onHandleLogout}>
 							<div className={styles.icon}>
 								<Image src={logoutIcon} alt="logout" width={30} height={30} />
 							</div>
