@@ -1,7 +1,6 @@
 @media screen and (max-width: 767px) {
   .Negative {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,6 +70,9 @@
       width: 200px;
       height: 60px;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
@@ -147,6 +149,9 @@
       width: 400px;
       height: 140px;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
@@ -223,6 +228,9 @@
       width: 200px;
       height: 140px;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
