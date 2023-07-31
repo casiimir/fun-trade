@@ -1,9 +1,9 @@
+import { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext, useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import styles from "./Sidebar.module.scss";
 import { UserContext } from "@/pages/_app";
-import { useRouter } from "next/router";
 // icons
 import profileIcon from "../../mock/profile-icon.svg";
 import homeIcon from "../../assets/iconsProject/home.svg";
@@ -43,9 +43,6 @@ const Sidebar = () => {
 
   return (
     <section className={styles.Sidebar} onClick={onHandleClickSidebar}>
-      {/* <button onClick={onHandleClick} className={styles.closeBtn}>
-        <Image src={closeIcon} alt="close" width={40} height={40} />
-      </button> */}
       <div className={styles.wrapper}>
         <div className={styles.icon}>
           <Image src={logoIcon} alt="logo" width={60} height={60} />
@@ -57,11 +54,16 @@ const Sidebar = () => {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.icon}>
-            <Image src={userData.avatar} alt="profile" width={50} height={50} />
+            <Image
+              src={userData ? userData.avatar : profileIcon}
+              alt="profile"
+              width={50}
+              height={50}
+            />
           </div>
           <div className={`${styles.profileText} ${styles.fadein}`}>
             <p className={`${styles.profileText__name} ${styles.label}`}>
-              {userData?.username}
+              {userData ? userData.username : "user"}
             </p>
             <p className={`${styles.profileText__accountType} ${styles.label}`}>
               Premium account
