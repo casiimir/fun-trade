@@ -16,10 +16,13 @@ import walletIcon from "../../assets/iconsProject/wallet.svg";
 import depositIcon from "../../assets/iconsProject/WalletDep&Prel.svg";
 
 const Sidebar = () => {
-  const { userData } = useContext(UserContext);
+  const { userData, setIsSearchOpen } = useContext(UserContext);
+  const onHandleClick = () => {
+    setIsSearchOpen((prev) => !prev);
+  };
 
   return (
-    <section className={styles.Sidebar}>
+    <section className={styles.Sidebar} onClick={onHandleClick}>
       {/* <button onClick={onHandleClick} className={styles.closeBtn}>
         <Image src={closeIcon} alt="close" width={40} height={40} />
       </button> */}

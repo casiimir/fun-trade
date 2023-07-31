@@ -10,7 +10,8 @@
   transition: all 0.5s ease-in-out;
 
   &:hover {
-    width: rem(260px);
+    width: rem(300px);
+    max-width: rem(400px);
 
     .label {
       display: unset;
