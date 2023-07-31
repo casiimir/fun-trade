@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import styles from "./Sidebar.module.scss";
 import { UserContext } from "@/pages/_app";
 import { useRouter } from "next/router";
@@ -21,12 +21,25 @@ import { auth } from "@/firebase";
 const Sidebar = () => {
   const { isSearchOpen, setIsSearchOpen, selectedPage, setSelectedPage } =
     useContext(UserContext);
+  const router = useRouter();
+  const [userData, setUserData] = useState({});
+
+  const onHandleLogout = () => {
+    signOut(auth).then(() => {
+      router.push("/");
+    });
+  };
 
   const onHandleClickSidebar = () => {
     if (isSearchOpen) setIsSearchOpen((prev) => !prev);
   };
 
   const onHandleSelect = (e) => setSelectedPage(e.currentTarget.id);
+
+  useEffect(() => {
+    let userData = JSON.parse(localStorage.getItem("UserData")) || {};
+    setUserData(userData);
+  }, []);
 
   return (
     <section className={styles.Sidebar} onClick={onHandleClickSidebar}>
@@ -44,10 +57,12 @@ const Sidebar = () => {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.icon}>
-            <Image src={profileIcon} alt="profile" width={50} height={50} />
+            <Image src={userData.avatar} alt="profile" width={50} height={50} />
           </div>
           <div className={`${styles.profileText} ${styles.fadein}`}>
-            <p className={`${styles.profileText__name} ${styles.label}`}>pippo</p>
+            <p className={`${styles.profileText__name} ${styles.label}`}>
+              {userData?.username}
+            </p>
             <p className={`${styles.profileText__accountType} ${styles.label}`}>
               Premium account
             </p>
@@ -135,7 +150,7 @@ const Sidebar = () => {
             </li>
           </Link>
           <Link href="#">
-            <li className={styles.menuList__wrapper}>
+            <li className={styles.menuList__wrapper} onClick={onHandleLogout}>
               <div className={styles.icon}>
                 <Image src={logoutIcon} alt="logout" width={35} height={35} />
               </div>
@@ -148,3 +163,5 @@ const Sidebar = () => {
       </div>
     </section>
   );
+};
+export default Sidebar;

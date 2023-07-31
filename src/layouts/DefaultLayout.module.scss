@@ -16,7 +16,7 @@
   padding: $paddingLarge;
 }
 
-.Search {
+.header {
   @include flexboxCenter();
 }
 
@@ -26,7 +26,7 @@
     display: none;
   }
 
-  .Search {
+  .header {
     display: none;
   }
 
@@ -42,7 +42,7 @@
 
 //tablet and desktop
 @media screen and (min-width: 768px) {
-  .Search {
+  .header {
     position: fixed;
     top: 0;
     left: 0;
