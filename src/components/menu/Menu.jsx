@@ -1,11 +1,18 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import styles from "./Menu.module.scss";
-import closeBtn from "../../assets/iconsProject/Eye-Off.svg";
 import { menuList } from "@/mock/menuList";
 import closeIcon from "../../assets/iconsProject/close-menu.svg";
 import profileIcon from "../../mock/profile-icon.svg";
 
 const Menu = ({ setIsBurgerOpen }) => {
+  const [userData, setUserData] = useState({});
+
+  useEffect(() => {
+    let userData = JSON.parse(localStorage.getItem("UserData")) || {};
+    setUserData(userData);
+  }, []);
+
   const onHandleClick = () => setIsBurgerOpen((prev) => !prev);
   return (
     <section className={styles.Menu}>
@@ -15,10 +22,15 @@ const Menu = ({ setIsBurgerOpen }) => {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.image}>
-            <Image src={profileIcon} alt="profile" width={50} height={50} />
+            <Image
+              src={userData ? userData.avatar : profileIcon}
+              alt="profile"
+              width={50}
+              height={50}
+            />
           </div>
           <div className={styles.text}>
-            <p className={styles.text__name}>Totò Termini</p>
+            <p className={styles.text__name}>{userData ? userData.username : "user"}</p>
             <p className={styles.text__accountType}>Premium account</p>
           </div>
         </div>

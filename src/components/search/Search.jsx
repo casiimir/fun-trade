@@ -26,7 +26,7 @@ const Search = ({ setIsModalOpen }) => {
     setInputText(e.target.value);
   };
   const onHandleClickCrypto = (id) => {
-    // router.push(`/cryptovalutes/${id}`);
+    router.push(`/cryptovalutes/${id}`);
   };
 
   useEffect(() => {
