@@ -27,7 +27,7 @@ const NavbarBottom = () => {
               id="#"
             >
               <Image src={heartIcon} alt="favorite" width={30} height={30} />
-              <p className={styles.label}>favorite</p>
+              <p className={styles.label}>favorites</p>
             </li>
           </Link>
           <Link href="/profile">
@@ -69,13 +69,13 @@ const NavbarBottom = () => {
           <Link href="#">
             <li
               className={`${styles.wrapper} ${
-                selectedPage === "settings" && styles.selected
+                selectedPage === "aboutus" && styles.selected
               }`}
               onClick={onHandleSelect}
               id="settings"
             >
-              <Image src={settingsIcon} alt="settings" width={30} height={30} />
-              <p className={styles.label}>settings</p>
+              <Image src={arrowIcon} alt="about us" width={30} height={30} />
+              <p className={styles.label}>about us</p>
             </li>
           </Link>
         </ul>

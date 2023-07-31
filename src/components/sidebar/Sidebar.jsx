@@ -8,21 +8,23 @@ import profileIcon from "../../mock/profile-icon.svg";
 import homeIcon from "../../assets/iconsProject/home.svg";
 import favoriteIcon from "../../assets/iconsProject/heart.svg";
 import academyIcon from "../../assets/iconsProject/school.svg";
-import settingsIcon from "../../assets/iconsProject/setting.svg";
 import logoIcon from "../../assets/iconsProject/logo.svg";
 import logoutIcon from "../../assets/iconsProject/logout.svg";
 import costumerServiceIcon from "../../assets/iconsProject/costumerService.svg";
 import walletIcon from "../../assets/iconsProject/wallet.svg";
-import depositIcon from "../../assets/iconsProject/WalletDep&Prel.svg";
 
 const Sidebar = () => {
-  const { userData, setIsSearchOpen } = useContext(UserContext);
-  const onHandleClick = () => {
-    setIsSearchOpen((prev) => !prev);
+  const { isSearchOpen, setIsSearchOpen, selectedPage, setSelectedPage } =
+    useContext(UserContext);
+
+  const onHandleClickSidebar = () => {
+    if (isSearchOpen) setIsSearchOpen((prev) => !prev);
   };
 
+  const onHandleSelect = (e) => setSelectedPage(e.currentTarget.id);
+
   return (
-    <section className={styles.Sidebar} onClick={onHandleClick}>
+    <section className={styles.Sidebar} onClick={onHandleClickSidebar}>
       {/* <button onClick={onHandleClick} className={styles.closeBtn}>
         <Image src={closeIcon} alt="close" width={40} height={40} />
       </button> */}
@@ -37,12 +39,10 @@ const Sidebar = () => {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.icon}>
-            <Image src={userData.avatar} alt="profile" width={50} height={50} />
+            <Image src={profileIcon} alt="profile" width={50} height={50} />
           </div>
           <div className={`${styles.profileText} ${styles.fadein}`}>
-            <p className={`${styles.profileText__name} ${styles.label}`}>
-              {userData.username}
-            </p>
+            <p className={`${styles.profileText__name} ${styles.label}`}>pippo</p>
             <p className={`${styles.profileText__accountType} ${styles.label}`}>
               Premium account
             </p>
@@ -50,9 +50,15 @@ const Sidebar = () => {
         </div>
         <ul className={styles.menuList}>
           <Link href="/homepage">
-            <li className={styles.menuList__wrapper}>
+            <li
+              id="homepage"
+              className={`${styles.menuList__wrapper} ${
+                selectedPage === "homepage" && styles.selected
+              }`}
+              onClick={onHandleSelect}
+            >
               <div className={styles.icon}>
-                <Image src={homeIcon} alt="home" width={30} height={30} />
+                <Image src={homeIcon} alt="home" width={35} height={35} />
               </div>
               <div className={styles.fadein}>
                 <p className={`${styles.content} ${styles.label}`}>Home</p>
@@ -60,74 +66,73 @@ const Sidebar = () => {
             </li>
           </Link>
           <Link href="/profile">
-            <li className={styles.menuList__wrapper}>
+            <li
+              id="profile"
+              className={`${styles.menuList__wrapper} ${
+                selectedPage === "profile" && styles.selected
+              }`}
+              onClick={onHandleSelect}
+            >
               <div className={styles.icon}>
-                <Image src={walletIcon} alt="wallet" width={30} height={30} />
+                <Image src={walletIcon} alt="wallet" width={35} height={35} />
               </div>
               <div className={styles.fadein}>
                 <p className={`${styles.content} ${styles.label}`}>wallet</p>
               </div>
             </li>
           </Link>
-          <Link href="#">
-            <li className={styles.menuList__wrapper}>
+          <Link href="/funAcademy">
+            <li
+              id="funAcademy"
+              className={`${styles.menuList__wrapper} ${
+                selectedPage === "funAcademy" && styles.selected
+              }`}
+              onClick={onHandleSelect}
+            >
               <div className={styles.icon}>
-                <Image src={favoriteIcon} alt="favorites" width={30} height={30} />
+                <Image src={academyIcon} alt="FunAcademy" width={35} height={35} />
+              </div>
+              <div className={styles.fadein}>
+                <p className={`${styles.content} ${styles.label}`}>Fun Academy</p>
+              </div>
+            </li>
+          </Link>
+          <Link href="#">
+            <li
+              id="favorites"
+              className={`${styles.menuList__wrapper} ${
+                selectedPage === "#" && styles.selected
+              }`}
+              onClick={onHandleSelect}
+            >
+              <div className={styles.icon}>
+                <Image src={favoriteIcon} alt="favorites" width={35} height={35} />
               </div>
               <div className={styles.fadein}>
                 <p className={`${styles.content} ${styles.label}`}>favorites</p>
               </div>
             </li>
           </Link>
-          <Link href="/funAcademy">
-            <li className={styles.menuList__wrapper}>
+          <Link href="#">
+            <li
+              id="aboutus"
+              className={`${styles.menuList__wrapper} ${
+                selectedPage === "aboutus" && styles.selected
+              }`}
+              onClick={onHandleSelect}
+            >
               <div className={styles.icon}>
-                <Image src={academyIcon} alt="FunAcademy" width={30} height={30} />
+                <Image src={costumerServiceIcon} alt="about us" width={35} height={35} />
               </div>
               <div className={styles.fadein}>
-                <p className={`${styles.content} ${styles.label}`}>FunAcademy</p>
+                <p className={`${styles.content} ${styles.label}`}>about us</p>
               </div>
             </li>
           </Link>
           <Link href="#">
             <li className={styles.menuList__wrapper}>
               <div className={styles.icon}>
-                <Image src={depositIcon} alt="deposit" width={30} height={30} />
-              </div>
-              <div className={styles.fadein}>
-                <p className={`${styles.content} ${styles.label}`}>deposit</p>
-              </div>
-            </li>
-          </Link>
-          <Link href="#">
-            <li className={styles.menuList__wrapper}>
-              <div className={styles.icon}>
-                <Image src={settingsIcon} alt="settings" width={30} height={30} />
-              </div>
-              <div className={styles.fadein}>
-                <p className={`${styles.content} ${styles.label}`}>settings</p>
-              </div>
-            </li>
-          </Link>
-          <Link href="#">
-            <li className={styles.menuList__wrapper}>
-              <div className={styles.icon}>
-                <Image
-                  src={costumerServiceIcon}
-                  alt="customer service"
-                  width={30}
-                  height={30}
-                />
-              </div>
-              <div className={styles.fadein}>
-                <p className={`${styles.content} ${styles.label}`}>customer service</p>
-              </div>
-            </li>
-          </Link>
-          <Link href="#">
-            <li className={styles.menuList__wrapper}>
-              <div className={styles.icon}>
-                <Image src={logoutIcon} alt="logout" width={30} height={30} />
+                <Image src={logoutIcon} alt="logout" width={35} height={35} />
               </div>
               <div className={styles.fadein}>
                 <p className={`${styles.content} ${styles.label}`}>logout</p>
