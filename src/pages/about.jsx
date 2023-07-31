@@ -13,7 +13,7 @@ import SASS from  "@/assets/iconsProject/iconAbout/sass.svg"
 import github from  "@/assets/iconsProject/iconAbout/icons8-github.svg"
 import firebase from  "@/assets/iconsProject/iconAbout/firebase.svg"
 import TeamProva from "@/assets/iconsProject/teamImg/teamprova.svg"
-
+import arrow from "@/assets/iconsProject/arrowVideo.svg";
 export default function About() {
   return (
     <DefaultLayout>
@@ -65,37 +65,38 @@ export default function About() {
             </div>
         </div>
         <div className={styles.teamContainer}>
-            <TeamMember 
-                imageUrl={TeamProva} 
-                name="Giuseppe" 
-                description="Giuseppe è il nostro fantastico sviluppatore front-end." 
-                details="Ulteriori informazioni su Giuseppe..." 
-                />
-            <TeamMember 
-                imageUrl={TeamProva} 
-                name="Andy" 
-                description="Andy è il nostro fantastico sviluppatore front-end." 
-                details="Ulteriori informazioni su Andy..." 
-                />
-            <TeamMember 
-                imageUrl={TeamProva} 
-                name="Stefano" 
-                description="Stefano è il nostro fantastico sviluppatore front-end." 
-                details="Ulteriori informazioni su Stefano..." 
-                />
-            <TeamMember 
-                imageUrl={TeamProva} 
-                name="Mirko" 
-                description="Mirko è il nostro fantastico sviluppatore front-end." 
-                details="Ulteriori informazioni su Mirko..." 
-                />
-            <TeamMember 
-                imageUrl={TeamProva} 
-                name="Davide" 
-                description="Davide è il nostro fantastico sviluppatore front-end." 
-                details="Ulteriori informazioni su Davide..." 
-                />
-        </div>
+
+                    <TeamMember 
+                        imageUrl={TeamProva} 
+                        name="Giuseppe" 
+                        description="Giuseppe è il nostro fantastico sviluppatore front-end." 
+                        details="Ulteriori informazioni su Giuseppe..." 
+                        />
+                    <TeamMember 
+                        imageUrl={TeamProva} 
+                        name="Andy" 
+                        description="Andy è il nostro fantastico sviluppatore front-end." 
+                        details="Ulteriori informazioni su Andy..." 
+                        />
+                    <TeamMember 
+                        imageUrl={TeamProva} 
+                        name="Stefano" 
+                        description="Stefano è il nostro fantastico sviluppatore front-end." 
+                        details="Ulteriori informazioni su Stefano..." 
+                        />
+                    <TeamMember 
+                        imageUrl={TeamProva} 
+                        name="Mirko" 
+                        description="Mirko è il nostro fantastico sviluppatore front-end." 
+                        details="Ulteriori informazioni su Mirko..." 
+                        />
+                    <TeamMember 
+                        imageUrl={TeamProva} 
+                        name="Davide" 
+                        description="Davide è il nostro fantastico sviluppatore front-end." 
+                        details="Ulteriori informazioni su Davide..." 
+                        />
+            </div>
     </div>
     </DefaultLayout>
   );

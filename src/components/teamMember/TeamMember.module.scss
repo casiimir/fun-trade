@@ -1,0 +1,54 @@
+.teamMemberContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imageContainer {
+  width: 150px;
+  height: 150px;
+  position: relative; 
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-size: 1.2em;
+  text-align: center;
+  @include backgroundTitleGradientColor;
+
+}
+
+.description {
+  font-size: 1em;
+  text-align: center;
+}
+
+
+@media (max-width: 600px) {
+  .imageContainer {
+    width: 100px;
+    height: 100px;
+  }
+
+  .name, .description {
+    font-size: 0.8em;
+  }
+}
+
+// @media (min-width: 1300px) {
+//     .image{
+//         margin-left:65px ;
+//     }
+
+// }

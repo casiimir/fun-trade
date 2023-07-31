@@ -1,0 +1,25 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    border: 2px solid red;
+  }
+  
+  .modalWindow {
+    background: white;
+    padding: 200px 300px 200px 350px;
+    margin-bottom: 100px ;
+    margin-right:250px ;
+    border-radius: 10px;
+    @include neumorphism;
+
+  }
+  
