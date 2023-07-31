@@ -4,18 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "@/styles/Home.module.scss";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 
 //Firebase
 import { getData, authGoogle, authGit, auth } from "@/firebase";
 
-//Context
-import { UserContext } from "./_app";
-
 //Image
 import google from "@/assets/7611770.png";
-import facebook from "@/assets/facebook.png";
 import github from "@/assets/github.png";
 import logo from "@/assets/iconsProject/logo.svg";
 
@@ -24,8 +20,6 @@ export default function Home({ data }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [users, setUsers] = useState([]);
-
-  const { setUserData } = useContext(UserContext);
 
   const onHandleEmail = (e) => {
     setEmail(e.target.value);
@@ -63,14 +57,14 @@ export default function Home({ data }) {
     onAuthStateChanged(auth, (user) => {
       if (!user) {
         authGoogle().then((res) => {
-          const dataSet = data.find((user) => user.email === res.email);
-          setUserData(dataSet);
+          const userData = data.find((user) => user.email === res.email);
+          localStorage.setItem("UserData", JSON.stringify(userData));
           router.push("/homepage");
         });
       } else {
         onAuthStateChanged(auth, (user) => {
-          const logUser = data.find((dbUser) => dbUser.email === user.email);
-          setUserData(logUser);
+          const userData = data.find((dbUser) => dbUser.email === user.email);
+          localStorage.setItem("UserData", JSON.stringify(userData));
           router.push("/homepage");
         });
       }
@@ -85,14 +79,14 @@ export default function Home({ data }) {
     onAuthStateChanged(auth, (user) => {
       if (!user) {
         authGit().then((res) => {
-          const dataSet = data.find((user) => user.email === res.email);
-          setUserData(dataSet);
+          const userData = data.find((user) => user.email === res.email);
+          localStorage.setItem("UserData", JSON.stringify(userData));
           router.push("/homepage");
         });
       } else {
         onAuthStateChanged(auth, (user) => {
-          const logUser = data.find((dbUser) => dbUser.email === user.email);
-          setUserData(logUser);
+          const userData = data.find((dbUser) => dbUser.email === user.email);
+          localStorage.setItem("UserData", JSON.stringify(userData));
           router.push("/homepage");
         });
       }
