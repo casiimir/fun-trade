@@ -68,7 +68,7 @@ export default function About() {
             <TeamMember 
                 imageUrl={TeamProva} 
                 name="Giuseppe" 
-                description="Giuseppe è il nostro fantastico sviluppatore front-end." 
+                description="Giuseppe è il nostro fantastico sviluppatore junior full-stack." 
                 details="Ulteriori informazioni su Giuseppe..." 
                 />
             <TeamMember 
