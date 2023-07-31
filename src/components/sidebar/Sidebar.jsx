@@ -25,12 +25,12 @@ const Sidebar = () => {
 	const { userData, setIsSearchOpen } = useContext(UserContext);
 	const onHandleClick = () => {
 		setIsSearchOpen((prev) => !prev);
+	};
 
-		const onHandleLogout = () => {
-			signOut(auth).then(() => {
-				router.push("/");
-			});
-		};
+	const onHandleLogout = () => {
+		signOut(auth).then(() => {
+			router.push("/");
+		});
 	};
 
 	return (
