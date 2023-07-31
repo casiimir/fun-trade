@@ -135,7 +135,7 @@ const Sidebar = () => {
               </div>
             </li>
           </Link>
-          <Link href="#">
+          <Link href="/about">
             <li
               id="aboutus"
               className={`${styles.menuList__wrapper} ${

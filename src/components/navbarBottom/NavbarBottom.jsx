@@ -65,7 +65,7 @@ const NavbarBottom = () => {
               <p className={styles.label}>academy</p>
             </li>
           </Link>
-          <Link href="#">
+          <Link href="/about">
             <li
               className={`${styles.wrapper} ${
                 selectedPage === "aboutus" && styles.selected
