@@ -6,6 +6,12 @@
   justify-content: center;
   align-items: center;
 
+  h1 {
+    background: -webkit-linear-gradient(#e49be6, #719ae9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   &__wrap {
     display: flex;
     flex-direction: column;
@@ -19,7 +25,6 @@
     gap: 10px;
   }
 }
-
 
 @media screen and (min-width: 481px) and (max-width: 1023px) {
   .CardList {
