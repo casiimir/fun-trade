@@ -1,42 +1,48 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import styles from './TeamMember.module.scss';
-import peppe from "@/assets/iconsProject/teamImg/peppe.svg";
-import andy from "@/assets/iconsProject/teamImg/andy.svg";
-import stefano from "@/assets/iconsProject/teamImg/stefano.svg";
-import mirko from "@/assets/iconsProject/teamImg/mirko.svg";
-import davide from "@/assets/iconsProject/teamImg/davide.svg";
+import React from "react";
+import Image from "next/image";
+import DefaultLayout from "@/layouts/DefaultLayout";
+import styles from "@/styles/FunAcademy.module.scss";
+import Link from "next/link";
 
-const imageMap = {
-  "Giuseppe": peppe,
-  "Andy": andy,
-  "Stefano": stefano,
-  "Mirko": mirko,
-  "Davide": davide
-};
+// import icon
 
-export default function TeamMember({ member }) {
-  const memberImage = imageMap[member.name];
-  
-  return (
-    <div className={styles.teamMemberContainer}>
-      <div className={styles.imageContainer}>
-        <Link href={`/team/${member.name}`}>
-          <Image 
-            src={memberImage}
-            alt={member.name}
-            layout="fill" 
-            objectFit="cover"
-            className={styles.image} 
-          />
-        </Link>
-      </div>
+import Topics from "@/components/topics";
+import { topics as mockTopics } from "@/mock/topics";
 
-      <div className={styles.textContainer}>
-        <h2 className={styles.name}>{member.name}</h2>
-        <p className={styles.description}>{member.description}</p>
-      </div>
-    </div>
-  );
+export default function FunAcademy() {
+	return (
+		<>
+			<DefaultLayout>
+				<div className={styles.FunAcademy}>
+					<div className={styles.FunAcademy__topbar}>
+						<h2 className={styles.FunAcademy__topbar__heading2}>FunAcademy</h2>
+						<p className={styles.FunAcademy__topbar__p}>continua a guardare</p>
+						<div className={styles.FunAcademy__topbar__videoContainer}>
+							{mockTopics.map((topic) => (
+								<div
+									key={topic.id}
+									className={styles.FunAcademy__topbar__videoContainer__card}
+								>
+									<iframe
+										className={
+											styles.FunAcademy__topbar__videoContainer__card__video
+										}
+										src={topic.videoURL}
+										title={topic.title}
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowFullScreen
+										sandbox="allow-scripts allow-same-origin"
+									></iframe>
+								</div>
+							))}
+						</div>
+					</div>
+					<div className={styles.FunAcademy__lesson}>
+						<h2 className={styles.heading2}>LISTA ARGOMENTI:</h2>
+						<Topics />
+					</div>
+				</div>
+			</DefaultLayout>
+		</>
+	);
 }

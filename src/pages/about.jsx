@@ -24,6 +24,15 @@ export default function About() {
   return (
     <DefaultLayout>
     <div className={styles.outerContainer}>
+    <h2 className={styles.title}>Chi siamo</h2>  {/* Aggiunto il titolo del team */}
+        <div className={styles.teamContainer}>
+          {teamData.map((member, index) => (
+              <TeamMember 
+                  key={index}
+                  member={member} 
+              />
+          ))}
+        </div>
         <div className={styles.container}>
             <h2 className={styles.title}>About Us</h2>
             <p className={styles.info}>
@@ -69,14 +78,6 @@ export default function About() {
                     <p className={styles.pIcon}>Github</p>
                 </div>
             </div>
-        </div>
-        <div className={styles.teamContainer}>
-        {teamData.map((member, index) => (
-            <TeamMember 
-                key={index}
-                member={member} 
-            />
-        ))}
         </div>
     </div>
     </DefaultLayout>
