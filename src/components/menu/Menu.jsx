@@ -75,7 +75,7 @@ const Menu = ({ setIsBurgerOpen }) => {
           </Link>
           <Link href="/funAcademy">
             <li
-              id="funAcademy"
+              id="academy"
               className={styles.menuList__content}
               onClick={onHandleSelect}
             >

@@ -37,14 +37,14 @@ const TeamPage = () => {
   return (
     <DefaultLayout>
       <div className={styles.teamPage}>
-        <div className={styles.backArrow}>
-          <Link href="/about">
-            <Image src={arrowBottom} alt="Back to funAcademy" width="70" height="70" />
-          </Link>
-        </div>
         <div className={styles.container}>
+          <div className={styles.backArrow}>
+            <Link href="/about">
+              <Image src={arrowBottom} alt="Back to funAcademy" width="70" height="70" />
+            </Link>
+          </div>
           <div className={styles.topContainer}>
-            <div className={styles.image}>
+            <div className={styles.imageProfile}>
               <Image src={imageUrl} alt="Member image" width={300} height={300} />
             </div>
             <div className={styles.textContainer}>
