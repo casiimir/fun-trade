@@ -1,0 +1,58 @@
+.teamPage{
+    background-color: rgba(250, 250, 250, 0.784);
+    @include neumorphism;
+    margin: 20px;
+}
+
+.backArrow{
+    margin-left: 20px;
+    width: 70px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (max-width: 600px) {
+        align-items: center;
+    }
+}
+
+.topContainer, .bottomContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+    @media (max-width: 600px) {
+        align-items: center;
+    }
+}
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (max-width: 600px) {
+        align-items: center;
+    }
+}
+
+.title {
+    @extend %backgroundTitleGradientColor;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    @media (max-width: 600px) {
+        align-items: center;
+    }
+}

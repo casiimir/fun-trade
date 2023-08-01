@@ -72,11 +72,11 @@ export default function About() {
         </div>
         <div className={styles.teamContainer}>
         {teamData.map((member, index) => (
-    <TeamMember 
-        key={index}
-        member={member} 
-    />
-))}
+            <TeamMember 
+                key={index}
+                member={member} 
+            />
+        ))}
         </div>
     </div>
     </DefaultLayout>
