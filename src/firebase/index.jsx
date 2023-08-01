@@ -95,6 +95,36 @@ export const postData = async (
 			],
 			id,
 		});
+		localStorage.setItem(
+			"UserData",
+			JSON.stringify({
+				username,
+				email,
+				password,
+				balance: Math.floor(Math.random() * 1500),
+				avatar,
+				preference: ["bitcoin", "Dogecoin", "Tether", "Ethereum"],
+				transition: [
+					{
+						name: "Bitcoin",
+						budget: Math.floor(Math.random() * 1500),
+					},
+					{
+						name: "Ethereum",
+						budget: Math.floor(Math.random() * 1500),
+					},
+					{
+						name: "Tether",
+						budget: Math.floor(Math.random() * 1500),
+					},
+					{
+						name: "Dogecoin",
+						budget: Math.floor(Math.random() * 1500),
+					},
+				],
+				id,
+			})
+		);
 	} catch (e) {
 		console.error(`Message : ${e.message}`);
 	}
@@ -109,13 +139,13 @@ export const postData = async (
  * @param {*} crypto
  * @returns {*}
  */
-export const updateData = async (id, crypto) => {
-	const washingtonRef = doc(db, "users", id);
-	await updateDoc(washingtonRef),
-		{
-			preference: [...data.preference, crypto],
-		};
-};
+// export const updateData = async (id, crypto) => {
+// 	const washingtonRef = doc(db, "users", id);
+// 	await updateDoc(washingtonRef),
+// 		{
+// 			preference: [...data.preference, crypto],
+// 		};
+// };
 
 /**
  * then it checks the user data in the db (getData) and if it doesn't exist it creates it (postData)
@@ -162,7 +192,7 @@ export const authGit = async () => {
 		.then((post) => {
 			!post
 				? postData(
-						res.user.reloadUserInfo.screenName,
+						res.user.displayName,
 						res.user.email,
 						res.user.uid,
 						res.user.uid,
@@ -170,7 +200,5 @@ export const authGit = async () => {
 				  )
 				: null;
 		});
-
-	console.log(res.user);
 	return res.user;
 };
