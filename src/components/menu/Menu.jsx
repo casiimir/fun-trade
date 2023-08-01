@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { UserContext } from "@/pages/_app";
 import styles from "./Menu.module.scss";
 
 //firebasae
@@ -13,6 +15,7 @@ import closeIcon from "../../assets/iconsProject/close-menu.svg";
 import profileIcon from "../../mock/profile-icon.svg";
 
 const Menu = ({ setIsBurgerOpen }) => {
+  const { selectedPage, setSelectedPage } = useContext(UserContext);
   const [userData, setUserData] = useState({});
   const router = useRouter();
 
@@ -28,6 +31,8 @@ const Menu = ({ setIsBurgerOpen }) => {
   };
 
   const onHandleClick = () => setIsBurgerOpen((prev) => !prev);
+
+  const onHandleSelect = (e) => setSelectedPage(e.currentTarget.id);
 
   return (
     <section className={styles.Menu}>
@@ -51,27 +56,47 @@ const Menu = ({ setIsBurgerOpen }) => {
         </div>
         <ul className={styles.menuList}>
           <Link href="/homepage">
-            <li id="homepage" className={styles.menuList__content}>
+            <li
+              id="homepage"
+              className={styles.menuList__content}
+              onClick={onHandleSelect}
+            >
               Home
             </li>
           </Link>
           <Link href="/profile">
-            <li id="profile" className={styles.menuList__content}>
+            <li
+              id="profile"
+              className={styles.menuList__content}
+              onClick={onHandleSelect}
+            >
               Wallet
             </li>
           </Link>
           <Link href="/funAcademy">
-            <li id="funAcademy" className={styles.menuList__content}>
+            <li
+              id="funAcademy"
+              className={styles.menuList__content}
+              onClick={onHandleSelect}
+            >
               Academy
             </li>
           </Link>
           <Link href="cryptovalutes">
-            <li id="cryptovalutes" className={styles.menuList__content}>
+            <li
+              id="cryptovalutes"
+              className={styles.menuList__content}
+              onClick={onHandleSelect}
+            >
               Cryptovalutes
             </li>
           </Link>
           <Link href="about">
-            <li id="aboutus" className={styles.menuList__content}>
+            <li
+              id="aboutus"
+              className={styles.menuList__content}
+              onClick={onHandleSelect}
+            >
               About us
             </li>
           </Link>
