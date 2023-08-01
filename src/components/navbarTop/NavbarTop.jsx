@@ -22,7 +22,9 @@ const NavbarTop = () => {
     }
     setIsBurgerOpen((prev) => !prev);
   };
-  const onHandleClickSearch = () => setIsModalOpen((prev) => !prev);
+  const onHandleClickSearch = () => {
+    setIsModalOpen((prev) => !prev);
+  };
 
   return (
     <>
