@@ -44,11 +44,7 @@ export default function homepage() {
       <div className={styles.homepage}>
         <div className={styles.homepage__container}>
           <div className={styles.homepage__container__desktopLeftWrapper}>
-            <div
-              className={
-                styles.homepage__container__desktopLeftWrapper__myBalance
-              }
-            >
+            <div className={styles.homepage__container__desktopLeftWrapper__myBalance}>
               <div
                 className={
                   styles.homepage__container__desktopLeftWrapper__myBalance__info
@@ -77,15 +73,9 @@ export default function homepage() {
                 <Chart />
               </div>
             </div>
-            <div
-              className={
-                styles.homepage__container__desktopLeftWrapper__categories
-              }
-            >
+            <div className={styles.homepage__container__desktopLeftWrapper__categories}>
               <h3
-                className={
-                  styles.homepage__container__desktopLeftWrapper__categories__h3
-                }
+                className={styles.homepage__container__desktopLeftWrapper__categories__h3}
               >
                 Sfoglia Categorie
               </h3>
@@ -107,12 +97,7 @@ export default function homepage() {
                   >
                     Criptovalute
                   </p>
-                  <Image
-                    src={cryptoIcon}
-                    alt="cryptoIcon"
-                    width={40}
-                    height={40}
-                  />
+                  <Image src={cryptoIcon} alt="cryptoIcon" width={40} height={40} />
                 </div>
               </div>
             </div>

@@ -16,11 +16,13 @@ const DefaultLayout = ({ children }) => {
         {isSearchOpen && <Overlay />}
         <Search />
       </header>
-      <aside className={styles.Sidebar}>
-        <Sidebar />
-      </aside>
       <NavbarTop />
-      <section className={`${true && styles.content}`}>{children}</section>
+      <div className={styles.container}>
+        <aside className={styles.Sidebar}>
+          <Sidebar />
+        </aside>
+        <section className={`${true && styles.content}`}>{children}</section>
+      </div>
       <NavbarBottom />
     </>
   );

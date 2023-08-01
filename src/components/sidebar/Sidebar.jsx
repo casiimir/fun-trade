@@ -11,9 +11,8 @@ import favoriteIcon from "../../assets/iconsProject/heart.svg";
 import academyIcon from "../../assets/iconsProject/school.svg";
 import logoIcon from "../../assets/iconsProject/logo.svg";
 import logoutIcon from "../../assets/iconsProject/logout.svg";
-import costumerServiceIcon from "../../assets/iconsProject/costumerService.svg";
 import walletIcon from "../../assets/iconsProject/wallet.svg";
-import TeamIcon from "../../assets/iconsProject/teamImg/TeamIcon.svg"
+import TeamIcon from "../../assets/iconsProject/teamImg/TeamIcon.svg";
 //Firebase
 import { signOut } from "firebase/auth";
 import { auth } from "@/firebase";
@@ -36,10 +35,10 @@ const Sidebar = () => {
 
   const onHandleSelect = (e) => setSelectedPage(e.currentTarget.id);
 
-  useEffect(() => {
-    let userData = JSON.parse(localStorage.getItem("UserData")) || {};
-    setUserData(userData);
-  }, []);
+  // useEffect(() => {
+  //   let userData = JSON.parse(localStorage.getItem("UserData")) || {};
+  //   setUserData(userData);
+  // }, []);
 
   return (
     <section className={styles.Sidebar} onClick={onHandleClickSidebar}>

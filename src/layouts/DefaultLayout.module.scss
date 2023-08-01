@@ -1,7 +1,16 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-bottom: $paddingSmall;
+}
+
 .Sidebar {
   width: 85px;
-  height: auto;
-  position: sticky;
+  height: calc(100% - $paddingSmall);
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 3;
@@ -10,10 +19,7 @@
 
 .content {
   width: 100%;
-  height: calc(100% - 100px);
-  margin-top: rem(100px);
-  margin-bottom: 0;
-  padding: $paddingLarge;
+  padding: 0 $paddingExtraSmall;
 }
 
 .header {
@@ -53,7 +59,10 @@
   }
 
   .content {
-    max-width: calc(1400px - 85px);
     width: calc(100% - 100px);
+    max-width: calc(1400px - 85px);
+    height: auto;
+    max-height: calc(100% - 120px);
+    margin-top: rem(120px);
   }
 }

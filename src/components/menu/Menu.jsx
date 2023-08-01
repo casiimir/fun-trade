@@ -62,7 +62,7 @@ const Menu = ({ setIsBurgerOpen }) => {
           </Link>
           <Link href="/funAcademy">
             <li id="funAcademy" className={styles.menuList__content}>
-              fun academy
+              academy
             </li>
           </Link>
           <Link href="#">
