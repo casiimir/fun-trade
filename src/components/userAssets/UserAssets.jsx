@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./index.module.scss";
+import Card from "../card";
+//mock
+import crypto from "../../mock/peppe.js";
 
 const UserAssets = () => {
   const [userData, setuserData] = useState({});
@@ -14,11 +17,9 @@ const UserAssets = () => {
       <h2> Favorite assets</h2>
       <div className={styles.__assets}>
         <div className={styles.__favoriteAsset}>
-          <ul>
-            {userData.preference?.map((item, index) => (
-              <li key={index}>{item} ❤️</li>
-            ))}
-          </ul>
+          {crypto.map((item) => (
+            <Card key={item.id || index} data={item} />
+          ))}
         </div>
       </div>
     </div>
