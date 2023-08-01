@@ -1,15 +1,14 @@
 .Sidebar {
   width: rem(85px);
-  height: auto;
   position: sticky;
   top: 0;
   left: 0;
+  height: 100%;
   padding: $paddingLarge $paddingSmall;
   box-shadow: 2px 0px 10px 5px rgb(202, 202, 202);
   background-color: $background-main;
   transition: all 0.5s ease-in-out;
   border-radius: rem(10px);
-  z-index: 3;
 }
 
 .label {
