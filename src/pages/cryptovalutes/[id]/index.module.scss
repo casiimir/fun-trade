@@ -47,6 +47,10 @@
     padding: $paddingSmall 0;
   }
 
+  &__priceData{
+    text-align: center;
+  }
+
   &__charts {
     width: 100%;
     height: auto;
@@ -146,7 +150,6 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     border-radius: 100%;
-    background-color: red;
     z-index: 2;
 
     img {

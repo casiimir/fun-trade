@@ -48,7 +48,9 @@ export default function InfoCard({ data }) {
           <div className={styles.InfoCard__charts}>
             <div className={styles.InfoCard__infoPrice}>
               <h1 className={styles.InfoCard__name}>{data.name}</h1>
-              <p>{data.last}</p>
+              <p className={styles.InfoCard__priceData}>
+                {data.tickers[0].last}$
+              </p>
             </div>
             <Chart />
           </div>
@@ -63,7 +65,9 @@ export default function InfoCard({ data }) {
         </div>
         <div className={styles.InfoCard__info}>
           <h3 className={styles.InfoCard__pName}>Carta d'identità</h3>
-          <p className={styles.InfoCard__description}>{data?.description?.en}</p>
+          <p className={styles.InfoCard__description}>
+            {data?.description?.en}
+          </p>
         </div>
       </div>
     </div>
@@ -71,7 +75,9 @@ export default function InfoCard({ data }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`https://api.coingecko.com/api/v3/coins/${context.query.id}`);
+  const res = await fetch(
+    `https://api.coingecko.com/api/v3/coins/${context.query.id}`
+  );
   const data = await res.json();
   return {
     props: {
