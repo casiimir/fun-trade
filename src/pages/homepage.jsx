@@ -65,7 +65,7 @@ export default function homepage() {
 										styles.homepage__container__desktopLeftWrapper__myBalance__info__wallet
 									}
 								>
-									{balance}$
+									{balance} $
 								</p>
 							</div>
 							<div
