@@ -14,17 +14,13 @@ import Next from  "@/assets/iconsProject/iconAbout/nextjs-icon-svgrepo-com.svg"
 import SASS from  "@/assets/iconsProject/iconAbout/sass.svg"
 import github from  "@/assets/iconsProject/iconAbout/icons8-github.svg"
 import firebase from  "@/assets/iconsProject/iconAbout/firebase.svg"
-import peppe from "@/assets/iconsProject/teamImg/peppe.svg"
-import andy from "@/assets/iconsProject/teamImg/andy.svg"
-import stefano from "@/assets/iconsProject/teamImg/stefano.svg"
-import mirko from "@/assets/iconsProject/teamImg/mirko.svg"
-import davide from "@/assets/iconsProject/teamImg/davide.svg"
+
 
 export default function About() {
   return (
     <DefaultLayout>
+    <h2 className={styles.title1}>Chi siamo</h2>  
     <div className={styles.outerContainer}>
-    <h2 className={styles.title}>Chi siamo</h2>  {/* Aggiunto il titolo del team */}
         <div className={styles.teamContainer}>
           {teamData.map((member, index) => (
               <TeamMember 

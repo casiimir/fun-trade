@@ -34,12 +34,17 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    p{
+     margin-top: 20px;
+     
+    }
 
     @media (max-width: 600px) {
         align-items: center;
+        text-align: center;
+        margin-left: -20px;
     }
 }
-
 .title {
     @extend %backgroundTitleGradientColor;
     margin-top: 20px;
@@ -55,4 +60,17 @@
     @media (max-width: 600px) {
         align-items: center;
     }
+}
+.button {
+    display: inline-block;
+    @extend %backgroundTitleGradientColor;
+    font-weight: 600;
+    padding: 14px 20px;
+    margin: 20px 2px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    @include neumorphism;
+
 }

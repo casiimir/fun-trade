@@ -1,7 +1,8 @@
 .outerContainer {
     display: flex;
+    flex-direction: column; 
     margin: 20px;
-    margin: 20px;
+    gap: 20px; 
 
     @media (max-width: 600px) {
         flex-direction: column;
@@ -20,13 +21,19 @@
     margin-right: 50px;
 }
 
-.title {
+.title1 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 1em;
+    @include backgroundTitleGradientColor;
+    margin-left: 30px;
+}
+.title{
     font-size: 1.5em;
     color: #333;
     margin-bottom: 1em;
     @include backgroundTitleGradientColor;
 }
-
 .info, .process {
     font-size: 1em;
     color: #666;
@@ -93,20 +100,27 @@
 // team container
 .teamContainer {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    overflow-y: scroll;
-    position: relative;
-    max-height: 600px;
-    margin-bottom: 100px;
-    margin-top: 30px;
-
+    flex-direction: row; 
+    align-items: flex-start;
+    overflow-y: auto;
+    
     @media (max-width: 600px) {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         overflow-x: scroll;
-        max-width: 500px;
        
     }
 }
+
+.teamContainer {
+    margin-top: -20px;
+    margin-bottom: 20px;
+
+    @media (max-width: 600px) {
+        margin-bottom: 20px; 
+    }
+}
+.teamMemberContainer {
+    margin-right: 500px; 
+  }
