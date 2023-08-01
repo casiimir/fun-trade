@@ -12,7 +12,6 @@ import Image from "next/image";
 import cryptoIcon from "../assets/iconsProject/bitcoin.svg";
 
 export default function homepage() {
-	const { userData } = useContext(UserContext);
 	const [cryptoDatas, setCryptoDatas] = useState(crypto);
 	const [balance, setBalance] = useState(null);
 	const router = useRouter();
