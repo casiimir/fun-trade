@@ -35,10 +35,10 @@ const Sidebar = () => {
 
   const onHandleSelect = (e) => setSelectedPage(e.currentTarget.id);
 
-  // useEffect(() => {
-  //   let userData = JSON.parse(localStorage.getItem("UserData")) || {};
-  //   setUserData(userData);
-  // }, []);
+  useEffect(() => {
+    let userData = JSON.parse(localStorage.getItem("UserData")) || {};
+    setUserData(userData);
+  }, []);
 
   return (
     <section className={styles.Sidebar} onClick={onHandleClickSidebar}>
