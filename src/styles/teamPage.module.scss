@@ -1,5 +1,4 @@
 .teamPage {
-  @include neumorphism;
   @include flexboxCenter();
   flex-direction: column;
   width: 100%;
@@ -12,27 +11,32 @@
   }
 }
 
-.backArrow {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .container {
-  width: 100%;
+  @include neumorphism;
+  width: 90%;
   height: auto;
   padding: $paddingSmall;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  position: relative;
 
   @media (max-width: 600px) {
-    img {
-      width: 200px;
-      height: 200px;
+    width: 96%;
+    .imageProfile {
+      img {
+        width: 200px;
+        height: 200px;
+      }
     }
     align-items: center;
+  }
+
+  .backArrow {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
