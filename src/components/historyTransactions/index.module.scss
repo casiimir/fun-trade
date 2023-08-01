@@ -14,6 +14,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: -webkit-linear-gradient(#e49be6, #719ae9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .__assets {
     display: flex;
