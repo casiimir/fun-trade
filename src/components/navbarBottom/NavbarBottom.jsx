@@ -4,7 +4,7 @@ import Image from "next/image";
 import { UserContext } from "@/pages/_app";
 import styles from "./NavbarBottom.module.scss";
 // icone
-import arrowIcon from "../../assets/iconsProject/arrow.svg";
+import cryptoIcon from "../../assets/iconsProject/bitcoin.svg";
 import heartIcon from "../../assets/iconsProject/heart.svg";
 import walletIcon from "../../assets/iconsProject/wallet.svg";
 import homeIcon from "../../assets/iconsProject/home.svg";
@@ -19,14 +19,16 @@ const NavbarBottom = () => {
     <header>
       <nav>
         <ul className={styles.Navbar}>
-          <Link href="#">
+          <Link href="cryptovalutes">
             <li
-              className={`${styles.wrapper} ${selectedPage === "#" && styles.selected}`}
+              className={`${styles.wrapper} ${
+                selectedPage === "cryptovalutes" && styles.selected
+              }`}
               onClick={onHandleSelect}
-              id="#"
+              id="cryptovalutes"
             >
-              <Image src={heartIcon} alt="favorite" width={30} height={30} />
-              <p className={styles.label}>favorites</p>
+              <Image src={cryptoIcon} alt="favorite" width={30} height={30} />
+              <p className={styles.label}>cryptovalutes</p>
             </li>
           </Link>
           <Link href="/profile">

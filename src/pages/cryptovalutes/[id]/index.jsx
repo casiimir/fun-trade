@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 
 import arrow from "@/assets/iconsProject/arrow.svg";
-import heart from "@/assets/iconsProject/heart.svg";
+
 import Chart from "@/components/chart";
 import CryptoDatas from "@/mock/cryptoCardMock";
 import Card from "@/components/card";
@@ -41,9 +41,7 @@ export default function InfoCard({ data }) {
             </div>
           </div>
         </div>
-        <div className={styles.InfoCard__preferiti}>
-          <Image src={heart} alt="back" width={20} height={20} />
-        </div>
+        <div className={styles.InfoCard__preferiti}></div>
       </div>
       <div className={styles.InfoCard__content}>
         <div className={styles.InfoCard__containCard}>
