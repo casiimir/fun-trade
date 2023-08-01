@@ -98,6 +98,8 @@
     overflow-y: scroll;
     position: relative;
     max-height: 600px;
+    margin-bottom: 100px;
+    margin-top: 30px;
 
     @media (max-width: 600px) {
         flex-direction: row;

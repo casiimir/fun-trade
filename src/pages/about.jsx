@@ -2,6 +2,8 @@ import DefaultLayout from "@/layouts/DefaultLayout";
 import styles from "@/styles/About.module.scss";
 import Image from "next/image";
 import TeamMember from "@/components/teamMember/TeamMember";
+import { teamData } from "@/mock/teamData";
+
 
 // import icon 
 import figma from  "@/assets/iconsProject/iconAbout/figma.svg"
@@ -12,7 +14,6 @@ import Next from  "@/assets/iconsProject/iconAbout/nextjs-icon-svgrepo-com.svg"
 import SASS from  "@/assets/iconsProject/iconAbout/sass.svg"
 import github from  "@/assets/iconsProject/iconAbout/icons8-github.svg"
 import firebase from  "@/assets/iconsProject/iconAbout/firebase.svg"
-import TeamProva from "@/assets/iconsProject/teamImg/teamprova.svg"
 import peppe from "@/assets/iconsProject/teamImg/peppe.svg"
 import andy from "@/assets/iconsProject/teamImg/andy.svg"
 import stefano from "@/assets/iconsProject/teamImg/stefano.svg"
@@ -70,38 +71,13 @@ export default function About() {
             </div>
         </div>
         <div className={styles.teamContainer}>
-
-                    <TeamMember 
-                        imageUrl={peppe} 
-                        name="Giuseppe" 
-                        description="Giuseppe è il nostro fantastico sviluppatore front-end." 
-                        details="Ulteriori informazioni su Giuseppe..." 
-                        />
-                    <TeamMember 
-                        imageUrl={andy} 
-                        name="Andy" 
-                        description="Andy è il nostro fantastico sviluppatore front-end." 
-                        details="Ulteriori informazioni su Andy..." 
-                        />
-                    <TeamMember 
-                        imageUrl={stefano} 
-                        name="Stefano" 
-                        description="Stefano è il nostro fantastico sviluppatore front-end." 
-                        details="Ulteriori informazioni su Stefano..." 
-                        />
-                    <TeamMember 
-                        imageUrl={mirko} 
-                        name="Mirko" 
-                        description="Mirko è il nostro fantastico sviluppatore front-end." 
-                        details="Ulteriori informazioni su Mirko..." 
-                        />
-                    <TeamMember 
-                        imageUrl={davide} 
-                        name="Davide" 
-                        description="Davide è il nostro fantastico sviluppatore front-end." 
-                        details="Ulteriori informazioni su Davide..." 
-                        />
-            </div>
+        {teamData.map((member, index) => (
+    <TeamMember 
+        key={index}
+        member={member} 
+    />
+))}
+        </div>
     </div>
     </DefaultLayout>
   );
