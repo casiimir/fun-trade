@@ -79,3 +79,11 @@
     }
     }
 }
+.textContainer {
+    flex: 1; 
+    @media (min-width: 768px) {
+        font-size: 0.8em; // Riduci la dimensione del testo su schermi desktop
+    }
+}
+
+
