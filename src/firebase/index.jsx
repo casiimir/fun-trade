@@ -170,7 +170,7 @@ export const authGoogle = async () => {
 						res.user.uid,
 						res.user.photoURL
 				  )
-				: null;
+				: localStorage.setItem("UserData", JSON.stringify(post));
 		});
 	return res.user;
 };
@@ -198,7 +198,7 @@ export const authGit = async () => {
 						res.user.uid,
 						res.user.photoURL
 				  )
-				: null;
+				: localStorage.setItem("UserData", JSON.stringify(post));
 		});
 	return res.user;
 };
