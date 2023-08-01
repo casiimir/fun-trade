@@ -57,14 +57,10 @@ export default function Home({ data }) {
     onAuthStateChanged(auth, (user) => {
       if (!user) {
         authGoogle().then((res) => {
-          const userData = data.find((user) => user.email === res.email);
-          localStorage.setItem("UserData", JSON.stringify(userData));
           router.push("/homepage");
         });
       } else {
         onAuthStateChanged(auth, (user) => {
-          const userData = data.find((dbUser) => dbUser.email === user.email);
-          localStorage.setItem("UserData", JSON.stringify(userData));
           router.push("/homepage");
         });
       }
@@ -79,14 +75,10 @@ export default function Home({ data }) {
     onAuthStateChanged(auth, (user) => {
       if (!user) {
         authGit().then((res) => {
-          const userData = data.find((user) => user.email === res.email);
-          localStorage.setItem("UserData", JSON.stringify(userData));
           router.push("/homepage");
         });
       } else {
         onAuthStateChanged(auth, (user) => {
-          const userData = data.find((dbUser) => dbUser.email === user.email);
-          localStorage.setItem("UserData", JSON.stringify(userData));
           router.push("/homepage");
         });
       }
