@@ -74,7 +74,7 @@ export const postData = async (
 			password,
 			balance: Math.floor(Math.random() * 1500),
 			avatar,
-			preference: [],
+			preference: ["bitcoin", "Dogecoin", "Tether", "Ethereum"],
 			transition: [
 				{
 					name: "Bitcoin",
