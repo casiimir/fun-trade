@@ -3,7 +3,6 @@ import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from "./Menu.module.scss";
-import { menuList } from "@/mock/menuList";
 
 //firebasae
 import { signOut } from "firebase/auth";
@@ -71,7 +70,7 @@ const Menu = ({ setIsBurgerOpen }) => {
               favorites
             </li>
           </Link>
-          <Link href="#">
+          <Link href="about">
             <li id="aboutus" className={styles.menuList__content}>
               about us
             </li>
