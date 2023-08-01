@@ -4,13 +4,12 @@
   margin-top: 0px;
   justify-content: center;
   align-items: center;
+  height: 90%;
 
   &::-webkit-scrollbar {
     display: none;
   }
-
 }
-
 
 .cardArgoment {
   display: flex;
@@ -21,11 +20,9 @@
   margin-right: 30px;
   margin-left: 30px;
   border-radius: 15px;
-  background: #ECF0F3;
-  box-shadow: -10px -10px 20px #C8D1DA, 10px 10px 20px #ffffff;
-
+  background: #ecf0f3;
+  box-shadow: -10px -10px 20px #c8d1da, 10px 10px 20px #ffffff;
 }
-
 
 .lessonArgoment {
   display: flex;
