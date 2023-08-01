@@ -65,9 +65,9 @@ const Menu = ({ setIsBurgerOpen }) => {
               academy
             </li>
           </Link>
-          <Link href="#">
-            <li id="favorites" className={styles.menuList__content}>
-              favorites
+          <Link href="cryptovalutes">
+            <li id="cryptovalutes" className={styles.menuList__content}>
+              cryptovalutes
             </li>
           </Link>
           <Link href="about">
