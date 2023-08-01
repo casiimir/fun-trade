@@ -18,9 +18,7 @@ const DefaultLayout = ({ children }) => {
       </header>
       <NavbarTop />
       <div className={styles.container}>
-        <aside className={styles.Sidebar}>
-          <Sidebar />
-        </aside>
+        <Sidebar />
         <section className={`${true && styles.content}`}>{children}</section>
       </div>
       <NavbarBottom />

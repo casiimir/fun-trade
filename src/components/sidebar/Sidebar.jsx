@@ -8,7 +8,6 @@ import { UserContext } from "@/pages/_app";
 import cryptoIcon from "../../assets/iconsProject/bitcoin.svg";
 import profileIcon from "../../mock/profile-icon.svg";
 import homeIcon from "../../assets/iconsProject/home.svg";
-import favoriteIcon from "../../assets/iconsProject/heart.svg";
 import academyIcon from "../../assets/iconsProject/school.svg";
 import logoIcon from "../../assets/iconsProject/logo.svg";
 import logoutIcon from "../../assets/iconsProject/logout.svg";
@@ -116,7 +115,7 @@ const Sidebar = () => {
                 <Image src={academyIcon} alt="FunAcademy" width={35} height={35} />
               </div>
               <div className={styles.fadein}>
-                <p className={`${styles.content} ${styles.label}`}>Fun Academy</p>
+                <p className={`${styles.content} ${styles.label}`}>academy</p>
               </div>
             </li>
           </Link>
@@ -124,7 +123,7 @@ const Sidebar = () => {
             <li
               id="favorites"
               className={`${styles.menuList__wrapper} ${
-                selectedPage === "#" && styles.selected
+                selectedPage === "cryptovalutes" && styles.selected
               }`}
               onClick={onHandleSelect}
             >
