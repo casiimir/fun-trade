@@ -38,7 +38,7 @@ export default function TeamMember({ member }) {
 
       <div className={styles.textContainer}>
         <h2 className={styles.name}>{member.name}</h2>
-        <p className={styles.description}>{member.description}</p>
+        <p className={styles.description}>{member.role}</p>
       </div>
     </div>
   );

@@ -46,7 +46,7 @@ const TeamPage = () => {
                     <Image src={imageUrl} alt="Member image" width={150} height={150}/>
                 </div>
                 <div className={styles.textContainer}>
-                  <h2 className={styles.title}>{name}</h2>
+                  <h2 className={styles.title}>{name} {member.surname}</h2>
                   <p>{role}</p>
                   <p>{description}</p>
                 </div>
@@ -68,6 +68,7 @@ const TeamPage = () => {
                       <p>GitHub: <a href={contacts.github}>{contacts.github}</a></p>
                       <p>Email: <a href={`mailto:${contacts.email}`}>{contacts.email}</a></p>
                       <p>Telefono: {contacts.phone}</p>
+                      <a href={contacts.cv} className={styles.button}>Scarica CV</a>
                     </>
                   )}
                 </div>
