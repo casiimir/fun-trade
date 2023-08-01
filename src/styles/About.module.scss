@@ -1,126 +1,126 @@
 .outerContainer {
-    display: flex;
-    flex-direction: column; 
-    margin: 20px;
-    gap: 20px; 
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  gap: 20px;
 
-    @media (max-width: 600px) {
-        flex-direction: column;
-    }
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 }
 
 .container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-    padding: 15px;
-    gap: 15px;
-    background-color: rgba(250, 250, 250, 0.784);
-    @include neumorphism;
-    margin-right: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 15px;
+  gap: 15px;
+  background-color: rgba(250, 250, 250, 0.784);
+  @include neumorphism;
+  margin-right: 50px;
 }
 
 .title1 {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 1em;
-    @include backgroundTitleGradientColor;
-    margin-left: 30px;
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 1em;
+  @include backgroundTitleGradientColor;
+  margin-left: 30px;
 }
-.title{
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 1em;
-    @include backgroundTitleGradientColor;
+.title {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 1em;
+  @include backgroundTitleGradientColor;
 }
-.info, .process {
-    font-size: 1em;
-    color: #666;
-    line-height: 1.5em;
-    margin-bottom: 1em;
+.info,
+.process {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.5em;
+  margin-bottom: 1em;
 }
 
 .subtitle {
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 0.5em;
-    @include backgroundTitleGradientColor;
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 0.5em;
+  @include backgroundTitleGradientColor;
 }
 .subtitle2 {
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 0.5em;
-    @include backgroundTitleGradientColor;
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 0.5em;
+  @include backgroundTitleGradientColor;
 }
 
 .iconContainer {
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between; 
-    flex-wrap: wrap; 
-    margin-top: 20px;
-    padding: 20px;
-    @include neumorphism;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 20px;
+  @include neumorphism;
 }
 
 .imageContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    text-align: center;
-    margin-right: 10px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 20px;
 }
 
 .pIcon {
-    margin-top: 10px;
-    padding: 10px;
-    @include neumorphism;
-    @include backgroundTitleGradientColor;
+  margin-top: 10px;
+  padding: 10px;
+  @include neumorphism;
+  @include backgroundTitleGradientColor;
 }
 
 .iconContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    .imageContainer {
-        flex: 0 0 calc(25% - 10px); 
+  .imageContainer {
+    flex: 0 0 calc(25% - 10px);
 
-        @media (max-width: 600px) { 
-            flex: 0 0 calc(20% - 10px)
-        }
+    @media (max-width: 600px) {
+      flex: 0 0 calc(20% - 10px);
     }
+  }
 }
 
 // team container
 .teamContainer {
-    display: flex;
-    flex-direction: row; 
-    align-items: flex-start;
-    overflow-y: auto;
-    
-    @media (max-width: 600px) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        overflow-x: scroll;
-       
-    }
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  @media (max-width: 600px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 }
 
 .teamContainer {
-    margin-top: -20px;
-    margin-bottom: 20px;
-
-    @media (max-width: 600px) {
-        margin-bottom: 20px; 
-    }
+  @media (max-width: 600px) {
+    height: auto;
+  }
 }
 .teamMemberContainer {
-    margin-right: 500px; 
-  }
+  margin-right: 500px;
+}

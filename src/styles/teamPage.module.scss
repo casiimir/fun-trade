@@ -1,76 +1,124 @@
-.teamPage{
-    background-color: rgba(250, 250, 250, 0.784);
-    @include neumorphism;
-    margin: 20px;
+.teamPage {
+  @include neumorphism;
+  @include flexboxCenter();
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-bottom: 15px;
+
+  @media (min-width: 601px) {
+    padding: 0 $paddingSmall;
+  }
 }
 
-.backArrow{
-    margin-left: 20px;
-    width: 70px;
+.backArrow {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.container {
+  width: 100%;
+  height: auto;
+  padding: $paddingSmall;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 
-    @media (max-width: 600px) {
-        align-items: center;
+  @media (max-width: 600px) {
+    img {
+      width: 200px;
+      height: 200px;
     }
+    align-items: center;
+  }
 }
 
-.topContainer, .bottomContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 20px;
-    margin-bottom: 20px;
+.topContainer,
+.bottomContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 
-    @media (max-width: 600px) {
-        align-items: center;
-    }
+  @media (max-width: 600px) {
+    align-items: center;
+  }
 }
 .textContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    p{
-     margin-top: 20px;
-     
-    }
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 
-    @media (max-width: 600px) {
-        align-items: center;
-        text-align: center;
-        margin-left: -20px;
+  @media (max-width: 600px) {
+    .description {
+      width: 100%;
+      height: 150px;
+      padding: $paddingExtraSmall;
+      overflow-y: scroll;
     }
+  }
+  strong {
+    text-align: center;
+    display: block;
+  }
+
+  p {
+    height: 100%;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: rem(26px);
+  }
+
+  @media (max-width: 600px) {
+    align-items: center;
+    text-align: center;
+    margin-left: -20px;
+  }
 }
+
 .title {
-    @extend %backgroundTitleGradientColor;
-    margin-top: 20px;
-    margin-bottom: 10px;
+  @extend %backgroundTitleGradientColor;
 }
 
-.contacts{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
+.contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 
-    @media (max-width: 600px) {
-        align-items: center;
-    }
+  strong {
+    text-align: center;
+    display: block;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    align-items: center;
+  }
 }
 .button {
-    display: inline-block;
-    @extend %backgroundTitleGradientColor;
-    font-weight: 600;
-    padding: 14px 20px;
-    margin: 20px 2px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    @include neumorphism;
-
+  display: inline-block;
+  @extend %backgroundTitleGradientColor;
+  font-weight: 600;
+  padding: 14px 20px;
+  margin: 20px 2px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  @include neumorphism;
 }
