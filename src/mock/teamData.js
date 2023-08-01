@@ -5,7 +5,12 @@ export const teamData = [
     imageUrl: "../assets/iconsProject/teamImg/peppe.svg",
     name: "Giuseppe",
     surname: "Talluto",
-    description: "Giuseppe è il nostro fantastico sviluppatore Full Stack.",
+    description: `Sono un giovane sviluppatore junior Full Stack con una passione sfrenata per la creazione di esperienze web coinvolgenti e innovative. Da ben 3 anni, mi immergo nel meraviglioso mondo delle tecnologie web, esplorando le profondità di React, Vue, Next.js e molte altre gemme del panorama frontend.
+      Ma non finisce qui! Sul lato server, mi destreggio con destrezza tra PHP, Laravel e Firebase, creando applicazioni robuste e scalabili che possono affrontare qualsiasi sfida. E sì, ho detto scalabili, non solo perché è una parola di tendenza, ma perché adoro creare soluzioni che possano crescere e adattarsi alle esigenze future.
+      Il mio rapporto con i database è come il burro d'arachidi con la marmellata - perfetto. Ho padronanza di MySQL e ho la capacità di modellare i dati in modo intelligente, garantendo prestazioni ottimali e un flusso di lavoro senza intoppi.
+      E vogliamo parlare di Git? Non c'è nulla di meglio di sfidare il mio team in una competizione di "risolvi il conflitto più velocemente". Scherzi a parte, lavorare in team è la mia dimensione naturale. Amo scambiare idee, imparare dagli altri e collaborare per raggiungere risultati sorprendenti.
+      Un'altra mia specialità è l'organizzazione - non solo dei file e delle cartelle, ma anche del mio ambiente di lavoro. Sono abituato a lavorare sotto pressione e mantengo la calma anche quando sembra che il mondo stia collassando.
+      Sono entusiasta di continuare a crescere e affrontare nuove sfide, perché è così che si evolve un vero sviluppatore. Quindi, se state cercando qualcuno che abbia il polso del mondo web e sappia come portare un po' di gioia in ogni progetto, sono la persona giusta per voi!`,
     details: "Ulteriori informazioni su Giuseppe...",
     role: "Junior Full Stack",
     techStack: ["JavaScript", "React", "Next.js"],
