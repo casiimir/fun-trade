@@ -1,3 +1,55 @@
+# Documentazione della Web App Funtrade
+
+## Introduzione
+
+La presente documentazione fornisce una panoramica dettagliata della Web App Funtrade, un'applicazione web basata sulle criptovalute sviluppata da un team di 5 junior frontend developer: Andy, Davide, Giuseppe, Mirko e Stefano. L'intero sviluppo, inclusi il codice e il design, è stato creato da zero dal nostro talentuoso designer Davide utilizzando Figma come strumento di design.
+
+## Panoramica del Progetto
+
+Funtrade è una piattaforma web che consente agli utenti di monitorare, analizzare e seguire il mercato delle criptovalute. Gli utenti possono visualizzare i prezzi in tempo reale di diverse criptovalute e seguire le tendenze del mercato. La piattaforma è stata sviluppata con un'interfaccia utente intuitiva, moderna e responsive per garantire un'esperienza di navigazione ottimale su tutti i dispositivi.
+
+## Tecnologie Utilizzate
+
+Il team ha utilizzato una combinazione di tecnologie moderne e strumenti per sviluppare Funtrade:
+
+- **Frontend**: La parte frontend dell'applicazione è stata sviluppata principalmente utilizzando JavaScript con il framework React.js. Il team ha utilizzato anche il framework Next.js per garantire una migliore gestione del routing e del rendering lato server. SASS è stato utilizzato per lo styling delle pagine e per facilitare la creazione di fogli di stile modulari.
+
+- **Design**: Il design dell'applicazione è stato realizzato da Davide, il nostro designer, utilizzando Figma come principale strumento di design collaborativo. I file di design sono stati condivisi con i developer per garantire una perfetta integrazione tra design e sviluppo.
+
+- **Gestione delle Dipendenze**: Per gestire le dipendenze e le librerie di terze parti, il team ha utilizzato npm (Node Package Manager).
+
+- **Hosting e Database**: L'applicazione è stata ospitata su Firebase, che ha fornito un hosting affidabile e scalabile. Inoltre, Firebase ha anche gestito il database in tempo reale per memorizzare e aggiornare i dati sugli utenti.
+
+- **Version Control**: Il team ha utilizzato Git come sistema di controllo versione per collaborare in modo efficiente e gestire il codice sorgente.
+
+## Architettura dell'Applicazione
+
+Funtrade segue un'architettura moderna basata sul framework React.js con Next.js. La struttura dell'applicazione è organizzata in diversi componenti riutilizzabili, ognuno responsabile di un particolare aspetto dell'interfaccia utente. L'architettura modulare consente una facile manutenzione e aggiunta di nuove funzionalità in futuro.
+
+Le principali funzionalità dell'applicazione includono:
+
+1. **Dashboard**: Qui gli utenti possono visualizzare una panoramica del mercato delle criptovalute, inclusi i grafici dei prezzi in tempo reale e le variazioni percentuali.
+
+2. **Dettagli delle Criptovalute**: Ogni criptovaluta ha una pagina dedicata con informazioni dettagliate, come il prezzo attuale.
+
+
+## Metodologia di Sviluppo
+
+Il team ha adottato una metodologia Agile per lo sviluppo dell'applicazione. Sono stati svolti sprint giornalieri durante i quali sono stati definiti gli obiettivi, assegnate le attività e monitorato il progresso. Le riunioni regolari di revisione e retrospettiva hanno consentito al team di migliorare continuamente il prodotto e l'efficienza del processo di sviluppo.
+
+## Conclusioni
+
+La Web App Funtrade è stata creata con passione e dedizione da un team di 5 junior frontend developer (Andy, Davide, Giuseppe, Mirko e Stefano) e il nostro talentuoso designer Davide. La piattaforma offre agli utenti un'esperienza intuitiva e completa per seguire il mercato delle criptovalute in tempo reale. L'architettura modulare e la metodologia di sviluppo Agile hanno contribuito al successo del progetto e alla realizzazione di un'applicazione di alta qualità.
+
+Grazie per aver scelto Funtrade e speriamo che l'applicazione soddisfi le vostre aspettative.
+
+Cordiali saluti,
+Il Team Funtrade (Andy, Davide, Giuseppe, Mirko e Stefano)
+
+
+
+///////////////////////////////////////////////////////////
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
