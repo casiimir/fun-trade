@@ -1,9 +1,9 @@
 .Sidebar {
   width: rem(85px);
   height: 100%;
-  // position: absolute;
-  // top: 0;
-  // left: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
   padding: $paddingLarge $paddingSmall;
   box-shadow: 2px 0px 10px 5px rgb(202, 202, 202);
   background-color: $background-main;
