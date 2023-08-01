@@ -7,16 +7,6 @@
   position: relative;
 }
 
-.Sidebar {
-  width: 85px;
-  height: auto;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  border-radius: rem(10px);
-}
-
 .content {
   width: 100%;
   padding: 0 $paddingSmall;

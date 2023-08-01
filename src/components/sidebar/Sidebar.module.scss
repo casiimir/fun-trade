@@ -1,6 +1,6 @@
 .Sidebar {
   width: rem(85px);
-  height: 100%;
+  height: auto;
   position: sticky;
   top: 0;
   left: 0;
@@ -9,6 +9,7 @@
   background-color: $background-main;
   transition: all 0.5s ease-in-out;
   border-radius: rem(10px);
+  z-index: 3;
 }
 
 .label {

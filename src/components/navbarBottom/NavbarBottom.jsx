@@ -5,7 +5,6 @@ import { UserContext } from "@/pages/_app";
 import styles from "./NavbarBottom.module.scss";
 // icone
 import cryptoIcon from "../../assets/iconsProject/bitcoin.svg";
-import heartIcon from "../../assets/iconsProject/heart.svg";
 import walletIcon from "../../assets/iconsProject/wallet.svg";
 import homeIcon from "../../assets/iconsProject/home.svg";
 import academyIcon from "../../assets/iconsProject/school.svg";
@@ -28,7 +27,7 @@ const NavbarBottom = () => {
               id="cryptovalutes"
             >
               <Image src={cryptoIcon} alt="favorite" width={30} height={30} />
-              <p className={styles.label}>cryptovalutes</p>
+              <p className={styles.label}>crypto</p>
             </li>
           </Link>
           <Link href="/profile">
