@@ -52,32 +52,32 @@ const Menu = ({ setIsBurgerOpen }) => {
         <ul className={styles.menuList}>
           <Link href="/homepage">
             <li id="homepage" className={styles.menuList__content}>
-              home
+              Home
             </li>
           </Link>
           <Link href="/profile">
             <li id="profile" className={styles.menuList__content}>
-              wallet
+              Wallet
             </li>
           </Link>
           <Link href="/funAcademy">
             <li id="funAcademy" className={styles.menuList__content}>
-              academy
+              Academy
             </li>
           </Link>
           <Link href="cryptovalutes">
             <li id="cryptovalutes" className={styles.menuList__content}>
-              cryptovalutes
+              Cryptovalutes
             </li>
           </Link>
           <Link href="about">
             <li id="aboutus" className={styles.menuList__content}>
-              about us
+              About us
             </li>
           </Link>
           <Link href="#">
             <li id="logout" className={styles.menuList__content} onClick={onHandleLogout}>
-              log out
+              Logout
             </li>
           </Link>
         </ul>

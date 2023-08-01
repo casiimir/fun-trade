@@ -1,4 +1,5 @@
 export const teamData = [
+
     {
       id: 1,
       imageUrl: "",
@@ -83,6 +84,6 @@ export const teamData = [
         email: "chiarellidavide99@gmail.com",
         cv: "https://drive.google.com/file/d/1MEgw1RnAITOAwx1SY4tE4ki4K1CO0ert/view?usp=drive_link",
       },
+
     },
-  ];
-  
+];

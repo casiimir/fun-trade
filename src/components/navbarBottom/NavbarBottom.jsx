@@ -27,7 +27,7 @@ const NavbarBottom = () => {
               id="cryptovalutes"
             >
               <Image src={cryptoIcon} alt="favorite" width={30} height={30} />
-              <p className={styles.label}>crypto</p>
+              <p className={styles.label}>Crypto</p>
             </li>
           </Link>
           <Link href="/profile">
@@ -39,7 +39,7 @@ const NavbarBottom = () => {
               id="profile"
             >
               <Image src={walletIcon} alt="wallet" width={30} height={30} />
-              <p className={styles.label}>wallet</p>
+              <p className={styles.label}>Wallet</p>
             </li>
           </Link>
           <Link href="/homepage">
@@ -51,7 +51,7 @@ const NavbarBottom = () => {
               id="homepage"
             >
               <Image src={homeIcon} alt="home" width={30} height={30} />
-              <p className={styles.label}>home</p>
+              <p className={styles.label}>Home</p>
             </li>
           </Link>
           <Link href="/funAcademy">
@@ -63,7 +63,7 @@ const NavbarBottom = () => {
               id="academy"
             >
               <Image src={academyIcon} alt="academy" width={30} height={30} />
-              <p className={styles.label}>academy</p>
+              <p className={styles.label}>Academy</p>
             </li>
           </Link>
           <Link href="/about">
@@ -75,7 +75,7 @@ const NavbarBottom = () => {
               id="settings"
             >
               <Image src={TeamIcon} alt="about us" width={30} height={30} />
-              <p className={styles.label}>about us</p>
+              <p className={styles.label}>About us</p>
             </li>
           </Link>
         </ul>
