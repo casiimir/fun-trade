@@ -48,7 +48,7 @@ const Sidebar = () => {
           <Image src={logoIcon} alt="logo" width={60} height={60} />
         </div>
         <div className={styles.fadein}>
-          <h2 className={`${styles.title} ${styles.label}`}>funtrade</h2>
+          <h2 className={`${styles.title} ${styles.label}`}>Funtrade</h2>
         </div>
       </div>
       <div className={styles.container}>
@@ -99,7 +99,7 @@ const Sidebar = () => {
                 <Image src={walletIcon} alt="wallet" width={35} height={35} />
               </div>
               <div className={styles.fadein}>
-                <p className={`${styles.content} ${styles.label}`}>wallet</p>
+                <p className={`${styles.content} ${styles.label}`}>Wallet</p>
               </div>
             </li>
           </Link>
@@ -115,7 +115,7 @@ const Sidebar = () => {
                 <Image src={academyIcon} alt="FunAcademy" width={35} height={35} />
               </div>
               <div className={styles.fadein}>
-                <p className={`${styles.content} ${styles.label}`}>academy</p>
+                <p className={`${styles.content} ${styles.label}`}>Academy</p>
               </div>
             </li>
           </Link>
@@ -131,7 +131,7 @@ const Sidebar = () => {
                 <Image src={cryptoIcon} alt="cryptovalutes" width={35} height={35} />
               </div>
               <div className={styles.fadein}>
-                <p className={`${styles.content} ${styles.label}`}>cryptovalutes</p>
+                <p className={`${styles.content} ${styles.label}`}>Cryptovalutes</p>
               </div>
             </li>
           </Link>
@@ -147,7 +147,7 @@ const Sidebar = () => {
                 <Image src={TeamIcon} alt="about us" width={35} height={35} />
               </div>
               <div className={styles.fadein}>
-                <p className={`${styles.content} ${styles.label}`}>about us</p>
+                <p className={`${styles.content} ${styles.label}`}>About us</p>
               </div>
             </li>
           </Link>
@@ -157,7 +157,7 @@ const Sidebar = () => {
                 <Image src={logoutIcon} alt="logout" width={35} height={35} />
               </div>
               <div className={styles.fadein}>
-                <p className={`${styles.content} ${styles.label}`}>logout</p>
+                <p className={`${styles.content} ${styles.label}`}>Logout</p>
               </div>
             </li>
           </Link>
