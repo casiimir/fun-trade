@@ -42,11 +42,10 @@ export default function InfoCard({ data }) {
           </div>
         </div>
         <div className={styles.InfoCard__preferiti}>
-          <p className={styles.InfoCard__preferitiTitle}>add</p>
           <Image src={heart} alt="back" width={20} height={20} />
         </div>
       </div>
-      <div className={styles.content}>
+      <div className={styles.InfoCard__content}>
         <div className={styles.InfoCard__containCard}>
           <div className={styles.InfoCard__charts}>
             <div className={styles.InfoCard__infoPrice}>
@@ -56,21 +55,17 @@ export default function InfoCard({ data }) {
             <Chart />
           </div>
           <div className={styles.InfoCard__cardContain}>
-            <div>
-              <h2 className={styles.InfoCard__otherCrypto}>Vedi anche</h2>
-              <div className={styles.InfoCard__cryptoList}>
-                {CryptoDatas.map((data) => (
-                  <Card data={data} />
-                ))}
-              </div>
+            <h2 className={styles.InfoCard__otherCrypto}>Vedi anche</h2>
+            <div className={styles.InfoCard__cryptoList}>
+              {CryptoDatas.map((data) => (
+                <Card data={data} />
+              ))}
             </div>
           </div>
         </div>
         <div className={styles.InfoCard__info}>
           <h3 className={styles.InfoCard__pName}>Carta d'identità</h3>
-          <p className={styles.InfoCard__description}>
-            {data?.description?.en?.slice(0, 500) + "..."}
-          </p>
+          <p className={styles.InfoCard__description}>{data?.description?.en}</p>
         </div>
       </div>
     </div>
