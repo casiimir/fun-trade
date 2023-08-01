@@ -6,16 +6,10 @@
 
 %paragraph {
   font-weight: 400;
-  &::first-letter {
-    text-transform: capitalize;
-  }
 }
 
 %paragraphBold {
   font-weight: bold;
-  &::first-letter {
-    text-transform: capitalize;
-  }
 }
 
 %neumorphism {
