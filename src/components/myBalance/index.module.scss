@@ -9,6 +9,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: -webkit-linear-gradient(#e49be6, #719ae9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .__h2Bentornato {
@@ -55,9 +58,6 @@
     box-shadow: 7px 7px 16px #b8b8b8, -7px -7px 16px #ffffff;
 
     .__h1MyBalance {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       display: none;
     }
 
@@ -65,6 +65,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      background: -webkit-linear-gradient(#e49be6, #719ae9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     p {
