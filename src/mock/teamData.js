@@ -83,16 +83,17 @@ export const teamData = [
     imageUrl: "./assets/iconsProject/teamImg/andy.svg",
     name: "Andy",
     surname: "Voda",
-    description: "Andy è il nostro fantastico sviluppatore front-end.",
+    description:
+      "Mi chiamo Andy e sono un junior frontend developer appassionato di tecnologia e programmazione. La mia curiosità è il motore che mi spinge a esplorare costantemente nuovi argomenti e tecnologie nel campo dello sviluppo. Sono sempre alla ricerca di nuove sfide e amo mettermi alla prova per affrontare problemi complessi e trovare soluzioni creative. La mia conoscenza di HTML, CSS e JavaScript mi permette di creare interfacce web intuitive e accattivanti, mentre l'uso dei framework React e Next.js mi consente di sviluppare applicazioni web moderne e performanti. Sono un'appassionato del lavoro di squadra e credo che la collaborazione sia fondamentale per ottenere risultati eccellenti. Sono entusiasta di contribuire a progetti stimolanti e continuare a crescere professionalmente",
     details: "Ulteriori informazioni su Andy...",
     role: "Sviluppatore Front-end",
     techStack: ["JavaScript", "React", "Next.js"],
     contacts: {
-      linkedin: "https://linkedin.com/andy",
-      github: "https://github.com/andy",
-      phone: "+39 123 456 789",
-      email: "andy@esempio.com",
-      cv: "https://drive.google.com/file/d/1MEgw1RnAITOAwx1SY4tE4ki4K1CO0ert/view?usp=drive_link",
+      linkedin: "www.linkedin.com/in/andy-voda-av",
+      github: "https://github.com/Andy22v",
+      phone: "+39 348 54 33 992",
+      email: "andy444v@gmail.com",
+      cv: "https://drive.google.com/file/d/1HIPS7QXIIHdz3oBQgqjEImsQNVMXtL06/view?usp=drive_link",
     },
   },
 ];
