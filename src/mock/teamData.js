@@ -4,15 +4,19 @@ export const teamData = [
     imageUrl: "./assets/iconsProject/teamImg/stefano.svg",
     name: "Stefano",
     surname: "Are",
-    description: "Stefano è il nostro fantastico sviluppatore front-end.",
+    description: `Sono Stefano e ho un passato lavorativo nel mondo dell'IT e dell'assistenza clienti, mi piacerebbe ora sviluppare la mia carriera nel mondo della programmazione web, un vecchio pallino sin da bambino quando compravo Hacker Journal in edicola e sognavo un giorno di saper scrivere del buon codice e destreggiarmi nel terminale. 
+        Questa passione unita al grande amore per le arti visuali e il mondo della grafica mi hanno spinto verso il front-end, sono curioso di natura, collaborativo e mi piacerebbe migliorare sempre di più il bagaglio di competenze, 
+        per questo sono aperto alla formazione continua per trovare un nuovo pattern lavorativo. 
+        Negli ultimi mesi ho affrontato con grande soddisfazione sia la positivissima esperienza formativa in Edgemony che un corso a tema cloud/virtualizzazione AWS.
+        Attualmente sto facendo upskill nel front-end ma in futuro mi piacerebbe sapermi muovere anche nel back-end dove già ho una buona conoscenza dei database relazionali.`,
     details: "Ulteriori informazioni su Stefano...",
     role: "Sviluppatore Front-end",
     techStack: ["JavaScript", "React", "Next.js"],
     contacts: {
-      linkedin: "https://linkedin.com/stefano",
-      github: "https://github.com/stefano",
-      phone: "+39 123 456 789",
-      email: "stefano@esempio.com",
+      linkedin: "https://linkedin.com/stefanoare",
+      github: "https://github.com/iamstefano",
+      phone: "+39 3478872510",
+      email: "stefanoare@proton.me",
       cv: "https://drive.google.com/file/d/1MEgw1RnAITOAwx1SY4tE4ki4K1CO0ert/view?usp=drive_link",
     },
   },
