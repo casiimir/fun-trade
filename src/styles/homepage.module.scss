@@ -46,7 +46,7 @@
           display: flex;
           flex-direction: column;
           width: 200px;
-          height: 150px
+          height: 150px;
         }
       }
 
@@ -188,7 +188,7 @@
           justify-content: space-between;
           align-self: center;
           width: 100%;
-          height: 750px;
+          height: 725px;
 
           &__info {
             display: flex;
@@ -255,7 +255,7 @@
       &__desktopRightWrapper {
         display: flex;
         width: 40%;
-        max-height: 733px;
+        max-height: 725px;
         gap: 12px;
         padding: 8px;
         background-color: $background-main;
@@ -264,7 +264,6 @@
         transition: box-shadow 0.4s ease-in-out;
         outline: none;
         overflow-y: auto;
-        margin-top: 14px;
 
         ::-webkit-scrollbar {
           display: none;
