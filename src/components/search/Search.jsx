@@ -38,7 +38,9 @@ const Search = ({ setIsModalOpen }) => {
   useEffect(() => {
     if (inputText && inputText != " ")
       setSearchResults(
-        cryptoList.filter((crypto) => crypto.name.toLowerCase().includes(inputText))
+        cryptoList.filter((crypto) =>
+          crypto.name.toLowerCase().includes(inputText.toLowerCase())
+        )
       );
     else setSearchResults([]);
   }, [inputText]);
