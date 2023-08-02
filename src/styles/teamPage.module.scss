@@ -68,8 +68,27 @@
       max-height: 150px;
       padding: $paddingExtraSmall;
       overflow-y: scroll;
+  
+      &::-webkit-scrollbar {
+        width: 6px;
+        
+      }
+  
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background: -webkit-linear-gradient(#E49BE6, #719AE9);
+        border-radius: 10px;
+      }
+  
+      &::-webkit-scrollbar-thumb:hover {
+        background: -webkit-linear-gradient(#E49BE6, #719AE9);
+      }
     }
   }
+  
   strong {
     text-align: center;
     display: block;
