@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="60" height="48"><svg width="60" height="48" viewBox="0 0 60 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.3332 27.1467V37.8133L29.9998 48L48.6665 37.8133V27.1467L29.9998 37.3333L11.3332 27.1467ZM29.9998 0L0.666504 16L29.9998 32L53.9998 18.9067V37.3333H59.3332V16L29.9998 0Z" fill="url(#paint0_linear_6_67)"></path>
+<defs>
+<linearGradient id="SvgjsLinearGradient1000" x1="11" y1="24" x2="59" y2="24" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E49BE6"></stop>
+<stop offset="1" stop-color="#A6C4FF"></stop>
+</linearGradient>
+</defs>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+</style></svg>
