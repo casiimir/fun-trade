@@ -25,11 +25,12 @@ export const teamData = [
     imageUrl: "./assets/iconsProject/teamImg/davide.svg",
     name: "Davide",
     surname: "Chiarelli",
-    description: "Ciao a tutti! 🙌 Mi chiamo Davide, e sono un Front-End Developer, ma anche uno Ux/Ui Designer pieno zeppo di creatività 🎨 e con una vera passione per il coding! 💻 Dopo un intenso corso di sviluppo front-end con Edgemony🧑🏽‍💻, ho messo a frutto le mie competenze per realizzare questa applicazione che stai osservando proprio ora - seguendo tutto il processo UX e UI - dalla ricerca e analisi, alla progettazione e prototipazione, fino alla realizzazione finale! 🖊️📐 Il mio obiettivo è semplice: creare esperienze web che siano esteticamente piacevoli, altamente funzionali e coinvolgenti - un po' come un'arcobaleno che si trasforma in un coltellino svizzero! 🔥🌈 HTML, CSS e JavaScript sono le mie lingue preferite, ma ho anche una buona padronanza dei framework React e Next.js 🥊 Adoro restare al passo con le ultime tendenze nel mondo dello sviluppo front-end e UX/UI design, sempre con l'obiettivo di trovare soluzioni intuitive ed eleganti. 🚀 Sono un eterno studente, affamato di nuove conoscenze e sempre pronto a esplorare nuove tecnologie 💡. Se hai un progetto che ti entusiasma, o semplicemente vuoi condividere idee, non esitare a contattarmi! 💌 Sono sempre pronto a tuffarmi in nuove sfide e opportunità. A presto! 🖖",
+    description:
+      "Ciao a tutti! 🙌 Mi chiamo Davide, e sono un Front-End Developer, ma anche uno Ux/Ui Designer pieno zeppo di creatività 🎨 e con una vera passione per il coding! 💻 Dopo un intenso corso di sviluppo front-end con Edgemony🧑🏽‍💻, ho messo a frutto le mie competenze per realizzare questa applicazione che stai osservando proprio ora - seguendo tutto il processo UX e UI - dalla ricerca e analisi, alla progettazione e prototipazione, fino alla realizzazione finale! 🖊️📐 Il mio obiettivo è semplice: creare esperienze web che siano esteticamente piacevoli, altamente funzionali e coinvolgenti - un po' come un'arcobaleno che si trasforma in un coltellino svizzero! 🔥🌈 HTML, CSS e JavaScript sono le mie lingue preferite, ma ho anche una buona padronanza dei framework React e Next.js 🥊 Adoro restare al passo con le ultime tendenze nel mondo dello sviluppo front-end e UX/UI design, sempre con l'obiettivo di trovare soluzioni intuitive ed eleganti. 🚀 Sono un eterno studente, affamato di nuove conoscenze e sempre pronto a esplorare nuove tecnologie 💡. Se hai un progetto che ti entusiasma, o semplicemente vuoi condividere idee, non esitare a contattarmi! 💌 Sono sempre pronto a tuffarmi in nuove sfide e opportunità. A presto! 🖖",
     details: "Ulteriori informazioni su Davide...",
     role: "Front-end Junior & ux designer",
     techStack: ["JavaScript", "React", "Next.js"],
-    
+
     details: "Ulteriori informazioni su Davide...",
     role: "Front-end Junior & ux designer",
     techStack: ["JavaScript", "React", "Next.js"],
@@ -56,7 +57,7 @@ export const teamData = [
       github: "https://github.com/mirkemme",
       phone: "+39 370 105 49 11",
       email: "mirkomontaina@gmail.com",
-      cv: "https://drive.google.com/file/d/1S4Mb45kj5sjcdKqV86sXp71_JX-egJYU/view?usp=sharing",
+      cv: "https://drive.google.com/file/d/1WNE4a4WVn6-lYGlQ0jNdRfFQJO04nnz-/view?usp=drive_link",
     },
   },
   {
