@@ -69,29 +69,32 @@ const TeamPage = () => {
                   </ul> */}
             </div>
             <div className={styles.contacts}>
-              <h3 className={styles.title}>Contacts</h3>
               {contacts && (
                 <>
-                  <p>
-                    <strong>LinkedIn</strong>
-                    <a href={contacts.linkedin}>{contacts.linkedin}</a>
-                  </p>
-                  <p>
-                    <strong>GitHub</strong>
-                    <a href={contacts.github}>{contacts.github}</a>
-                  </p>
-                  <p>
-                    <strong>Email</strong>
-                    <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
-                  </p>
-                  <p>
-                    <strong>Telefono</strong>
-                    {contacts.phone}
-                  </p>
-
-                  <a href={contacts.cv} className={styles.button}>
-                    Scarica CV
-                  </a>
+                  <div className={styles.contacts__list}>
+                    <h3 className={styles.contacts__list__title}>Contacts</h3>
+                    <p>
+                      <strong>LinkedIn</strong>
+                      <a href={contacts.linkedin}>{contacts.linkedin}</a>
+                    </p>
+                    <p>
+                      <strong>GitHub</strong>
+                      <a href={contacts.github}>{contacts.github}</a>
+                    </p>
+                    <p>
+                      <strong>Email</strong>
+                      <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
+                    </p>
+                    <p>
+                      <strong>Telefono</strong>
+                      {contacts.phone}
+                    </p>
+                  </div>
+                  <div className={styles.contacts__cv}>
+                    <a href={contacts.cv} className={styles.button}>
+                      Scarica CV
+                    </a>
+                  </div>
                 </>
               )}
             </div>
