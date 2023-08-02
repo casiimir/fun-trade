@@ -21,9 +21,9 @@ export default function TeamMember({ member }) {
   const memberImage = imageMap[member.name];
 
   return (
-    <div className={styles.teamMemberContainer}>
-      <div className={styles.imageContainer}>
-        <Link href={`/team?name=${member.name}`}>
+    <Link href={`/team?name=${member.name}`}>
+      <div className={styles.teamMemberContainer}>
+        <div className={styles.imageContainer}>
           <Image
             src={memberImage}
             alt={member.name}
@@ -32,15 +32,15 @@ export default function TeamMember({ member }) {
             width="110"
             height="110"
           />
-        </Link>
-      </div>
+        </div>
 
-      <div className={styles.textContainer}>
-        <h2 className={styles.name}>
-          {member.name} {member.surname}
-        </h2>
-        <p className={styles.description}>{member.role}</p>
+        <div className={styles.textContainer}>
+          <h2 className={styles.name}>
+            {member.name} {member.surname}
+          </h2>
+          <p className={styles.description}>{member.role}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
