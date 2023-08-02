@@ -91,8 +91,11 @@
   }
 }
 
+.contacts__list__title,
 .title {
   @extend %backgroundTitleGradientColor;
+  text-align: center;
+  padding: $paddingExtraSmall;
 }
 
 .contacts {
@@ -125,5 +128,26 @@
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  @include neumorphism;
+  @extend %neumorphism;
+  transition: all 0.25s ease-in-out;
+
+  &:active {
+    @extend %neumorphismActive;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &__list {
+      width: auto;
+
+      &__title {
+        width: auto;
+      }
+    }
+  }
 }
