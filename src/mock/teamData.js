@@ -57,7 +57,7 @@ export const teamData = [
       github: "https://github.com/mirkemme",
       phone: "+39 370 105 49 11",
       email: "mirkomontaina@gmail.com",
-      cv: "https://drive.google.com/file/d/1WNE4a4WVn6-lYGlQ0jNdRfFQJO04nnz-/view?usp=drive_link",
+      cv: "https://drive.google.com/file/d/1yzmnsMeRgbgA0MV_GWmWdkUMeRAwnqhv/view?usp=drive_link",
     },
   },
   {
