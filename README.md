@@ -5,8 +5,7 @@
 La presente documentazione fornisce una panoramica dettagliata della Web App Funtrade,
 un'applicazione web basata sulle criptovalute sviluppata da un team di cinque Junior
 Front-End Developer: Stefano Are, Davide Chiarelli, Mirko Montaina, Giuseppe Talluto ed
-Andy Voda. L'intero sviluppo, inclusi il codice e il design, è stato creato da zero dal
-nostro talentuoso designer Davide utilizzando Figma come strumento di design.
+Andy Voda. L'intero design è stato creato da zero dal nostro talentuoso designer Davide utilizzando Figma.
 
 ## Panoramica del Progetto
 
