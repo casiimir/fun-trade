@@ -17,7 +17,7 @@ export const teamData = [
       github: "https://github.com/iamstefano",
       phone: "+39 3478872510",
       email: "stefanoare@proton.me",
-      cv: "https://drive.google.com/file/d/1MEgw1RnAITOAwx1SY4tE4ki4K1CO0ert/view?usp=drive_link",
+      cv: "https://drive.google.com/file/d/1gnFkwONRSnZ0fuBsAyioV-pxfsaOG8rY/view?usp=sharing",
     },
   },
   {
