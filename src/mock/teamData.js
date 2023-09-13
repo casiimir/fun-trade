@@ -97,7 +97,7 @@ export const teamData = [
       github: "https://github.com/Andy22v",
       phone: "+39 348 54 33 992",
       email: "andy444v@gmail.com",
-      cv: "https://drive.google.com/file/d/1HIPS7QXIIHdz3oBQgqjEImsQNVMXtL06/view?usp=drive_link",
+      cv: "https://drive.google.com/file/d/1M5-DpGLUL9ahu_YGAbyYp8l5807qDZKx/view?usp=drive_link",
     },
   },
 ];
