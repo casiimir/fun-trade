@@ -21,7 +21,7 @@ Il team ha utilizzato una combinazione di tecnologie moderne e strumenti per svi
 Funtrade:
 
 - **Frontend**: La parte frontend dell'applicazione è stata sviluppata principalmente
-  utilizzando JavaScript con il framework React.js. Il team ha utilizzato anche il
+  utilizzando JavaScript con la libreria React.js. Il team ha utilizzato anche il
   framework Next.js per garantire una migliore gestione del routing e del rendering lato
   server. SASS è stato utilizzato per lo styling delle pagine e per facilitare la
   creazione di fogli di stile modulari.
