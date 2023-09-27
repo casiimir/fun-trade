@@ -107,10 +107,7 @@ export default function Home({ data }) {
           <h2 className={styles.main__login__title}>Accedi</h2>
           <form className={styles.main__login__form} onSubmit={onHandleSubmit}>
             <div className={styles.main__login__form__email}>
-              <label
-                htmlFor="email"
-                className={styles.main__login__form__email__label}
-              >
+              <label htmlFor="email" className={styles.main__login__form__email__label}>
                 Email
               </label>
               <input
@@ -149,9 +146,7 @@ export default function Home({ data }) {
           </form>
           <div className={styles.main__login__link}>
             <div className={styles.main__login__link__title}>
-              <h3 className={styles.main__login__link__title__h3}>
-                Oppure accedi con
-              </h3>
+              <h3 className={styles.main__login__link__title__h3}>Oppure accedi con</h3>
             </div>
             <div className={styles.main__login__link__icons}>
               <Image
