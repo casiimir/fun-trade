@@ -1,40 +1,72 @@
 .Card,
 .Negative {
+  @extend %neumorphism;
+  width: 100%;
+  height: 160px;
+  gap: 15px;
+  padding: 5px;
+  border-radius: rem(10px);
   cursor: pointer;
+
+  &__info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    &__title {
+      font-weight: 500;
+      font-size: rem(18px);
+      text-align: center;
+    }
+
+    &__balance {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__negative {
+        color: red;
+      }
+
+      &__positive {
+        color: rgb(35, 209, 35);
+      }
+
+      &__p {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__chart {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .Negative {
-    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
-    padding: 5px;
-    background: rgb(255, 255, 255);
-    box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+    justify-content: space-around;
     background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 1) 48%,
       rgba(255, 141, 141, 0.4023984593837535) 100%,
       rgb(250 178 178 / 58%) 100%
     );
-    border-radius: rem(10px);
     outline: none;
     transition: box-shadow 0.4s ease-in-out;
   }
 
   .Card {
-    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
-    border-radius: 15px;
-    padding: 5px;
-    background: rgb(255, 255, 255);
+    justify-content: space-around;
     box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
     background: linear-gradient(
       90deg,
@@ -42,7 +74,6 @@
       rgba(181, 255, 141, 0.4023984593837535) 100%,
       rgba(255, 255, 255, 1) 100%
     );
-    border-radius: rem(10px);
     outline: none;
     transition: box-shadow 0.4s ease-in-out;
 
@@ -51,81 +82,42 @@
       aspect-ratio: 1;
     }
 
-    &__info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      &__balance {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &__negative {
-          color: red;
-        }
-
-        &__positive {
-          color: rgb(35, 209, 35);
-        }
-
-        &__p {
-          font-size: 10px;
-        }
-      }
-    }
-
     &__chart {
-      width: 200px;
-      height: 60px;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 50%;
+      height: 100%;
     }
   }
 }
 
 @media screen and (min-width: 768px) {
   .Negative {
+    height: 160px;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
-    padding: 5px;
-    background: rgb(255, 255, 255);
-    box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+    justify-content: space-evenly;
     background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 1) 48%,
       rgba(255, 141, 141, 0.4023984593837535) 100%,
       rgb(250 178 178 / 58%) 100%
     );
-    border-radius: rem(10px);
     outline: none;
     transition: box-shadow 0.4s ease-in-out;
   }
 
   .Card {
+    height: 160px;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
-    border-radius: 15px;
-    padding: 5px;
-    background: rgb(255, 255, 255);
-    box-shadow: 8px 8px 14px #c6cacc, -8px -8px 14px #ffffff;
+    justify-content: space-evenly;
     background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 1) 48%,
       rgba(181, 255, 141, 0.4023984593837535) 100%,
       rgba(255, 255, 255, 1) 100%
     );
-    border-radius: rem(10px);
     outline: none;
     transition: box-shadow 0.4s ease-in-out;
 
@@ -134,37 +126,8 @@
       aspect-ratio: 1;
     }
 
-    &__info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      &__balance {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &__negative {
-          color: red;
-        }
-
-        &__positive {
-          color: rgb(35, 209, 35);
-        }
-
-        &__p {
-          font-size: 15px;
-        }
-      }
-    }
-
     &__chart {
-      width: 400px;
-      height: 140px;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: auto;
     }
   }
 }

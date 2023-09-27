@@ -5,8 +5,7 @@
 La presente documentazione fornisce una panoramica dettagliata della Web App Funtrade,
 un'applicazione web basata sulle criptovalute sviluppata da un team di cinque Junior
 Front-End Developer: Stefano Are, Davide Chiarelli, Mirko Montaina, Giuseppe Talluto ed
-Andy Voda. L'intero sviluppo, inclusi il codice e il design, è stato creato da zero dal
-nostro talentuoso designer Davide utilizzando Figma come strumento di design.
+Andy Voda. L'intero design è stato creato da zero dal nostro talentuoso designer Davide utilizzando Figma.
 
 ## Panoramica del Progetto
 
@@ -22,7 +21,7 @@ Il team ha utilizzato una combinazione di tecnologie moderne e strumenti per svi
 Funtrade:
 
 - **Frontend**: La parte frontend dell'applicazione è stata sviluppata principalmente
-  utilizzando JavaScript con il framework React.js. Il team ha utilizzato anche il
+  utilizzando JavaScript con la libreria React.js. Il team ha utilizzato anche il
   framework Next.js per garantire una migliore gestione del routing e del rendering lato
   server. SASS è stato utilizzato per lo styling delle pagine e per facilitare la
   creazione di fogli di stile modulari.
